@@ -32,10 +32,5 @@ def loadUser_action(FilePath):
 
 filePath = 'C:\\Users\\Jamming\\Desktop\\JDATA用户购买时间预测_A榜\\jdata_user_action.csv'
 be_dic = loadUser_action(filePath)
-# count = 0
-# for line in be_dic.keys():
-#     temp = be_dic[line]
-#     for kk in temp.keys():
-#         count += 1
-# print(f'总量:{count}')
+
 print(f'用户数:{len(be_dic.keys())}')
