@@ -3,6 +3,24 @@
 import csv
 
 
+def staticUserId(file):
+    # 判断test中用户ID是否有重复
+    file_object = open(file, 'r', encoding='UTF-8')
+    files = file_object.readlines()
+    count = 0
+    user_Id_set = set()
+
+    for line in files:
+        user_Id = line.split('\t')[0]
+        user_Id_set.add(user_Id)
+        count += 1
+    # 1351781 行
+    print(count, '行')
+    # set中含有： 1351781 行
+    print('set中含有：', len(user_Id_set), '行')
+    file_object.close()
+
+
 def loadUser_action(FilePath):
     count = 0
     mulitBuyUser = dict()
@@ -31,6 +49,7 @@ def loadUser_action(FilePath):
 
 
 filePath = 'C:\\Users\\Jamming\\Desktop\\JDATA用户购买时间预测_A榜\\jdata_user_action.csv'
-be_dic = loadUser_action(filePath)
-
-print(f'用户数:{len(be_dic.keys())}')
+file_path = "E:\\CCIR测试数据\\testing_set.txt"
+# be_dic = loadUser_action(filePath)
+# print(f'用户数:{len(be_dic.keys())}')
+staticUserId(file_path)

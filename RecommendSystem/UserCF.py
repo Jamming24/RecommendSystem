@@ -70,7 +70,8 @@ def UserSimilarity(User_behavior):
                 SimilarityWeight[row, col] = inverseMatrix[row][col] / math.sqrt(
                     len(User_behavior[u]) * len(User_behavior[v]) * 1.0)
     # print(SimilarityWeight)
-    np.savetxt('E:\\迅雷下载\\ml-latest-small\\UserCF_Weight.txt', SimilarityWeight, fmt='%f', delimiter=' ', newline='\r\n')
+    np.savetxt('E:\\迅雷下载\\ml-latest-small\\UserCF_Weight.txt', SimilarityWeight, fmt='%f', delimiter=' ',
+               newline='\r\n')
     return SimilarityWeight
 
 
@@ -112,12 +113,15 @@ def PrintRecommendlist():
     filePath = 'E:\\迅雷下载\\ml-latest-small\\ratings.csv'
     User_behavior = loadData(filePath)
     # 用户ID 1-671
-    recommendlist = Recommend('671', 15, UserSimilarity(User_behavior), User_behavior)
+    recommendlist = Recommend('371', 15, UserSimilarity(User_behavior), User_behavior)
     # 将获得的推荐字典按照Value排序
     dic = sorted(recommendlist.items(), key=lambda e: e[1], reverse=True)
     # 打印前100个
     count = 0
     for k in dic:
-        if count < 100:
-            print(count+1, '>>>>', k)
+        if count < 20:
+            print(count + 1, '>>>>', k)
             count += 1
+
+
+PrintRecommendlist()
