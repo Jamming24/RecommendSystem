@@ -5,10 +5,13 @@
       <w>bname</w>
       <w>connet</w>
       <w>csvfile</w>
+      <w>dataline</w>
+      <w>datas</w>
       <w>filepath</w>
       <w>gethotitle</w>
       <w>intersectionidlist</w>
       <w>itemlist</w>
+      <w>itemset</w>
       <w>jieba</w>
       <w>kuser</w>
       <w>maping</w>
@@ -21,8 +24,10 @@
       <w>recommendlist</w>
       <w>relevent</w>
       <w>similarylist</w>
+      <w>simlarity</w>
       <w>sortlist</w>
       <w>templist</w>
+      <w>tiao</w>
       <w>titlelist</w>
       <w>userbehavior</w>
       <w>userbehavoir</w>
