@@ -36,6 +36,7 @@ def build_dataset(words, vocabulary_size):
 
 def generate_batch(batch_size, num_skips, skip_window):
     global data_index
+    # 利用断言来判断参数是否满足条件
     assert batch_size % num_skips == 0
     assert num_skips <= 2 * skip_window
     batch = np.ndarray(shape=(batch_size), dtype=np.int32)
@@ -153,7 +154,6 @@ if __name__ == '__main__':
                     print(log_str)
 
         final_embeddings = normalized_embeddings.eval()
-
         tsne = TSNE(perplexity=30, n_components=2, init='pca', n_iter=5000)
         plot_only = 100
         low_dim_embs = tsne.fit_transform(final_embeddings[:plot_only, :])
