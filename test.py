@@ -63,8 +63,9 @@ def Subtract(num1,num2):
 # num = input()
 # num1 = int(num.split(',')[0])
 # num2 = int(num.split(',')[1])
-print(Subtract(20, 30))
+# print(Subtract(20, 30))
 
+assert 1 == 0
 
 # num1 = 100
 # num2 = 50
