@@ -1,7 +1,7 @@
 # encoding:utf-8
 import math
-import os
 import multiprocessing
+import os
 
 
 def loadUserBehavior(behaviorFilePath):
@@ -13,50 +13,38 @@ def loadUserBehavior(behaviorFilePath):
     behaviorData = file_object.readlines()
     for data in behaviorData:
         behavior_list = list()
-        try:
-            datas = data.split('\t')
-            # 用户ID
-            user_Id = datas[0]
-            # 用户行为数量
-            # behavior_num = datas[1]
-            # 用户行为记录
-            behavior_content = datas[2]
-        except Exception:
-            print("出错")
-        else:
-            # 建立用户行为倒排表
-            answer_questions = behavior_content.split(',')
-            for answer_ques in answer_questions:
-                try:
-                    attr = answer_ques.split("|")
-                    action_id = attr[0]
-                    start_time = attr[1]
-                    end_time = attr[2]
-                except Exception:
-                    print("行为信息部分切分过程中数组下标异常")
-                else:
-                    time_difference = int(start_time) - int(end_time)
-                    if time_difference < 0:
-                        ###########################################
-                        # 再这里可以通过计算时间戳的差值进行权重的转换
-                        score = 1 / (1 + 1 / (math.exp(time_difference / 60)))
-                        answer_ques_score = [action_id, score]
-                        behavior_list.append(answer_ques_score)
-                        ###########################################
-                        # print(action_id)
-                        # print(start_time)
-                        # print(end_time)
-                        if action_id in user_behavior_inverse_table.keys():
-                            user_list = user_behavior_inverse_table[action_id]
-                            user_list.append(user_Id)
-                            user_behavior_inverse_table[action_id] = user_list
-                        else:
-                            user_list = [user_Id]
-                            user_behavior_inverse_table[action_id] = user_list
+        datas = data.split('\t')
+        # 用户ID
+        user_Id = datas[0]
+        # 用户行为数量
+        # behavior_num = datas[1]
+        # 用户行为记录
+        behavior_content = datas[2]
+        # 建立用户行为倒排表
+        answer_questions = behavior_content.split(',')
+        for answer_ques in answer_questions:
+            attr = answer_ques.split("|")
+            if len(attr) == 3:
+                action_id = attr[0]
+                start_time = attr[1]
+                end_time = attr[2]
+                if int(end_time) != 0:
+                    time_difference = int(end_time) - int(start_time)
+                    ###########################################
+                    # 再这里可以通过计算时间戳的差值进行权重的转换
+                    score = round(1 / (1 + 1 / (math.exp(time_difference / 60))), 2)
+                    answer_ques_score = [action_id, score]
+                    behavior_list.append(answer_ques_score)
+                    ###########################################
+                    if action_id in user_behavior_inverse_table.keys():
+                        user_list = user_behavior_inverse_table[action_id]
+                        user_list.append(user_Id)
+                        user_behavior_inverse_table[action_id] = user_list
                     else:
-                        continue
-            # 讲用户行为存到用户行为字典
-            user_behavior_dic[user_Id] = behavior_list
+                        user_list = [user_Id]
+                        user_behavior_inverse_table[action_id] = user_list
+                # 讲用户行为存到用户行为字典
+        user_behavior_dic[user_Id] = behavior_list
     print("use_behavior_dic长度：", len(user_behavior_dic))
     print("user_behavior_inverse_table长度：", len(user_behavior_inverse_table))
     file_object.close()
@@ -66,22 +54,24 @@ def loadUserBehavior(behaviorFilePath):
 def computerSimilarity_betweenUser(user_behavior_dic, user_behavior_inverse_table, n, out_Floder):
     # 用户行为记录字典, 用户行为记录倒排表字典, 保存前n个最相关用户
     # 使用进程池技术
-    pool = multiprocessing.Pool()
+    pool = multiprocessing.Pool(8)
     user_list_temp = []
     file_count = 1
     for user in user_behavior_dic.keys():
         # simple_user_behavior [('A178557187', 0.710949502625004), ('A195626999', 0.598687660112452),
         user_list_temp.append(user)
-        if len(user_list_temp) == 300:
+        if len(user_list_temp) == 1000:
             part_user_list = user_list_temp.copy()
             out_file = os.path.join(out_Floder, f"Similarity_betweenUser_Part_{file_count}.txt")
+            # temp_user_behavior_dic = user_behavior_dic.copy()
+            # temp_user_behavior_inverse_table = user_behavior_inverse_table.copy()
             pool.apply_async(userThreadCompute, args=(part_user_list, user_behavior_dic, user_behavior_inverse_table, n, out_file))
             # userThreadCompute(user_list_temp, user_behavior_dic, user_behavior_inverse_table, n, out_file)
             user_list_temp.clear()
             file_count += 1
 
     print('最后一部分的用户数：', len(user_list_temp))
-    userThreadCompute(user_list_temp, user_behavior_dic, user_behavior_inverse_table, n, out_file)
+    # userThreadCompute(user_list_temp, user_behavior_dic, user_behavior_inverse_table, n, out_file)
     out_file = os.path.join(out_Floder, f"Similarity_betweenUser_Part_{file_count}.txt")
     pool.apply_async(userThreadCompute, args=(user_list_temp, user_behavior_dic, user_behavior_inverse_table, n, out_file))
     pool.close()
@@ -124,58 +114,20 @@ def computerCOS(UserA_dic, UserB_dic):
     denominator_userA = 0.0
     denominator_userB = 0.0
     for a_key in UserA_dic.keys():
-        denominator_userA += math.pow(float(UserA_dic[a_key]), 2)
+        denominator_userA += round(math.pow(float(UserA_dic[a_key]), 2), 2)
         if a_key in UserB_dic.keys():
-            numerator += float(UserA_dic[a_key]) * float(UserB_dic[a_key])
+            numerator += round(float(UserA_dic[a_key]) * float(UserB_dic[a_key]), 2)
         else:
             continue
     for b_key in UserB_dic:
-        denominator_userB += math.pow(float(UserB_dic[b_key]), 2)
-    denominator = math.sqrt(denominator_userA * denominator_userB)
-    cos_value = numerator / denominator
+        denominator_userB += round(math.pow(float(UserB_dic[b_key]), 2), 2)
+    denominator = round(math.sqrt(denominator_userA * denominator_userB), 2)
+    cos_value = round(numerator / denominator, 2)
     return cos_value
 
 
-def getRecommend_list(simlarity_user, user_behavior_dic):
-    user_Recommend_dic = dict()
-    for user_id in user_behavior_dic:
-        # 最相关的n个用户
-        relevant_Users = simlarity_user[user_id]
-        simple_user_list_score = dict()
-        for relevant_user in relevant_Users:
-            user_score = relevant_user[1]
-            user_behavior_score = user_behavior_dic[relevant_user[0]]
-            for score in user_behavior_score:
-                simple_user_list_score[score[0]] = float(score[1]) * float(user_score)
-        sort_simple_user_list = sorted(simple_user_list_score.items(), key=lambda e: e[1], reverse=True)[:100]
-        user_Recommend_dic[user_id] = sort_simple_user_list
-    return user_Recommend_dic
-
-
-# def print_recommend_list(out_file_commit, out_file_all, recommend_list):
-#     out_file_commit_object = open(out_file_commit, 'w', encoding='UTF-8')
-#     out_file_all_object = open(out_file_all, 'w', encoding='UTF-8')
-#     for user in recommend_list:
-#         all_line = user + ','
-#         commit = user + ','
-#         for index in range(len(user_recommend[user])):
-#             if index == len(user_recommend[user]) - 1:
-#                 all_line += "(" + user_recommend[user][index][0] + "," + str(user_recommend[user][index][1]) + ")"
-#                 commit += user_recommend[user][index][0]
-#             else:
-#                 all_line += "(" + user_recommend[user][index][0] + "," + str(user_recommend[user][index][1]) + "),"
-#                 commit += user_recommend[user][index][0] + ","
-#         out_file_commit_object.write(commit + '\n')
-#         out_file_all_object.write(all_line + '\n')
-#
-#     out_file_commit_object.close()
-#     out_file_all_object.close()
-#     return recommend_list
-
 if __name__ == '__main__':
-    BehaviorFilePath = "E:\\CCIR测试数据\\testing_set_Part.txt"
-    out_Floder = "E:\\CCIR测试数据\\Similarity_betweenUser_Floder"
+    BehaviorFilePath = "E:\\CCIR\\testing_set_Part.txt"
+    out_Floder = "E:\\CCIR\\Similarity_betweenUser_Floder"
     test_user_behavior_dic, test_user_behavior_inverse_table = loadUserBehavior(BehaviorFilePath)
     computerSimilarity_betweenUser(test_user_behavior_dic, test_user_behavior_inverse_table, 100, out_Floder)
-# user_recommend = getRecommend_list(test_Similarity_betweenUser, test_user_behavior_dic)
-# print_recommend_list(out_file_commit, out_file_all, user_recommend)
