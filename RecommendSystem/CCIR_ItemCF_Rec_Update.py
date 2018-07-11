@@ -1,6 +1,6 @@
 # encoding:utf-8
 # 遍历test文件, 对于每个用户看的文章，找到这篇文章最相似的10条文章，最后所有的根据所有最相思的文章
-# 取交集为用户进行推荐
+# 引入了用户评分机制
 
 import os
 import math
@@ -136,7 +136,8 @@ def multiprocessing_manager(User_Behavior_Dict, Item_Similary_dict, n, k):
 
     last_part_User_Behavior_Dict = temp_User_Behavior_Dict.copy()
     last__Item_Similary_dict = Item_Similary_dict.copy()
-    pool.apply_async(multiprocessing_computer, args=(last_part_User_Behavior_Dict, last__Item_Similary_dict, k))
+    result = pool.apply_async(multiprocessing_computer, args=(last_part_User_Behavior_Dict, last__Item_Similary_dict, k))
+    result_list.append(result)
     temp_User_Behavior_Dict.clear()
     pool.close()
     pool.join()

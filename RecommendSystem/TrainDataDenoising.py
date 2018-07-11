@@ -7,10 +7,10 @@ def loadTrainSet(train_file, answer_id_Dict):
     for line in file_object:
         temp = line.split('\t')
         User_ID = temp[0]
-        answer_ID = temp[len(temp)-1]
-        answer_time = temp[len(temp)-3]
+        answer_ID = temp[len(temp) - 1]
+        answer_time = temp[len(temp) - 3]
         Behavior_list = temp[2].split(",")
-        Behavior_list.append("A"+answer_id_Dict[answer_ID]+"|0"+"|"+answer_time[:10])
+        Behavior_list.append("A" + answer_id_Dict[answer_ID] + "|0" + "|" + answer_time[:10])
         if "" in Behavior_list:
             Behavior_list.remove("")
         if User_ID in Train_Set_dic.keys():
@@ -52,10 +52,10 @@ def DataDenoising(Train_Set_dic, OutPath):
     file_object = open(OutPath, 'w', encoding='UTF-8')
     for user in Clean_Train_Set:
         list = Clean_Train_Set[user]
-        line = user+"\t"+str(len(list))+"\t"
+        line = user + "\t" + str(len(list)) + "\t"
         for li in list:
             line = line + li + ","
-        file_object.write(line+'\n')
+        file_object.write(line + '\n')
     file_object.close()
 
 
@@ -72,7 +72,7 @@ def get_IDfocusOnlessThree(User_info_file, cool_user_file):
             user_list.append(User)
     print(f"关注数量少于等于3的用户数:{len(user_list)}")
     for id in user_list:
-        cool_ID.write(id+"\n")
+        cool_ID.write(id + "\n")
     cool_ID.close()
     return user_list
 
@@ -85,8 +85,8 @@ def loadTest_Set(test_file, lessFocusUserId):
         t = line.split('\t')
         user = t[0]
         benum = t[1]
-        querynum = t[len(t)-2]
-        if (int(benum)+int(querynum)) < 20:
+        querynum = t[len(t) - 2]
+        if (int(benum) + int(querynum)) < 20:
             Cool_User_list.append(user)
     print(f"行为查询数量之和小于20的用户数:{len(Cool_User_list)}")
     Cool_User_list = list(set(Cool_User_list).intersection(set(lessFocusUserId)))
@@ -109,6 +109,35 @@ def getCool_user_test(testfile, cool_user, Outfile):
     OutFile_object.close()
 
 
+def getCool_user_train(lessFocusIDfile, lessBehaviorIDfile, purity_train_file, cool_user_out_file, hot_user_out_file):
+    cool_user_list = []
+    hot_user_list = []
+    purity_train_file_object = open(purity_train_file, 'r', encoding='UTF-8')
+    lessfocus_list_object = open(lessFocusIDfile, 'r', encoding='UTF-8')
+    lessBehaviorIDfile_object = open(lessBehaviorIDfile, 'r', encoding='UTF-8')
+    cool_user_out_file_object = open(cool_user_out_file, 'w', encoding='UTF-8')
+    hot_user_out_file_object = open(hot_user_out_file, 'w', encoding='UTF-8')
+    lessfocus_list = lessfocus_list_object.writelines()
+    lessBehaviorID_list = lessBehaviorIDfile_object.writelines()
+    cool_user_train_ID = list(set(lessfocus_list).intersection(set(lessBehaviorID_list)))
+    print(f"冷启动用户ID数量为:{len(cool_user_train_ID)}")
+    for line in purity_train_file_object:
+        if line.split('\t')[0] in cool_user_train_ID:
+            cool_user_list.append(line)
+        else:
+            hot_user_list.append(line)
+    print(f"冷启动用户数量:{len(cool_user_list)}")
+    for index in cool_user_list:
+        cool_user_out_file_object.write(index+"\n")
+    for index in hot_user_list:
+        hot_user_out_file_object.write(index+"\n")
+    purity_train_file_object.close()
+    lessfocus_list_object.close()
+    lessBehaviorIDfile_object.close()
+    cool_user_out_file_object.close()
+    hot_user_out_file_object.close()
+
+
 if __name__ == '__main__':
     train_file = "E:\\CCIR\\training_set_Part.txt"
     dictfile = "E:\\CCIR\\answer_id.dict"
@@ -120,9 +149,12 @@ if __name__ == '__main__':
     # answer_id_Dict = load_answer_id_Dict(dictfile)
     # Train_Set = loadTrainSet(train_file, answer_id_Dict)
     # DataDenoising(Train_Set, OutPath)
-    lessfocus_list = get_IDfocusOnlessThree(user_info_file, cool_user_file)
-    cool_user_ID = loadTest_Set(test_file, lessfocus_list)
-    getCool_user_test(test_file, cool_user_ID, cool_user_test)
-    # a = [2, 3, 4, 5]
-    # b = [2, 5, 8]
-    # print(list(set(a).union(set(b))))
+    # lessfocus_list = get_IDfocusOnlessThree(user_info_file, cool_user_file)
+    # cool_user_ID = loadTest_Set(test_file, lessfocus_list)
+    # getCool_user_test(test_file, cool_user_ID, cool_user_test)
+    a = [2, 3, 4, 5]
+    b = [2, 5, 8]
+    c = list(set(a).intersection(set(b)))
+    print(list(set(a).intersection(set(b))))
+    print(len(c))
+    print(list(set(a).difference(set(b))))

@@ -29,7 +29,8 @@ def loadUserBehavior(behaviorFilePath):
                 start_time = attr[1]
                 end_time = attr[2]
                 if int(end_time) != 0:
-                    time_difference = int(end_time) - int(start_time)
+                    time_difference = int(start_time) - int(end_time)
+                    # print(time_difference)
                     ###########################################
                     # 再这里可以通过计算时间戳的差值进行权重的转换
                     score = round(1 / (1 + 1 / (math.exp(time_difference / 60))), 2)
@@ -88,6 +89,7 @@ def userThreadCompute(part_user_list, user_behavior_dic, user_behavior_inverse_t
         simple_user_similarity = dict()
         for user_behavior in simple_user_behavior:
             behavior_id = user_behavior[0]
+            print(user_behavior)
             user_list = user_behavior_inverse_table[behavior_id]
             # 计算完成之后 直接保存于userA最相关的K个用的相似度，其余用于予以舍弃
             # 假设每个用户保留前20个 相关用户 需要消耗 135W x 20 =2700万 项空间 大约是27M整数倍的空间

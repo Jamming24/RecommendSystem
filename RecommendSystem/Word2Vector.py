@@ -32,7 +32,7 @@ def load_marp():
 
 def load_wiki():
     wiki_content = []
-    with open(r'D:\tianliuyang\E\wiki_google\google_sen.txt', 'r', encoding='utf-8') as fr:
+    with open(r'D:\tianliuya\wiki_google\google_sen.txt', 'r', encoding='utf-8') as fr:
         for line in fr:
             wiki_content.append(line)
     return wiki_content

@@ -11,7 +11,7 @@ def subprocess(number,name):
     print('当前进程号：%s，开始时间：%s' % (pid, datetime.now().isoformat()))
     time.sleep(10)  # 当前进程休眠30秒
     print('当前进程号：%s，结束时间：%s' % (pid, datetime.now().isoformat()))
-    print(name)
+    return name
 
 
 def mainprocess():
