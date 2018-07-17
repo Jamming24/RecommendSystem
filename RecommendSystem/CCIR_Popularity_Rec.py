@@ -1,56 +1,28 @@
 # encoding:utf-8
 # 计算思想 筛选出与用户A相似度最高的n个用户，统计这n个用户阅读次数最多的k个答案
 # 统计阅读次数，对阅读次数进行归一化处理，作为流行度分数，去流行度为前100的作为用户推荐列表
-import math
+import os
 
 
-def load_UserCF_Similary(User_Similary_file, k):
-    # 加载用户相似度得分文件 k值为最相关的k个用户
-    related_User_list = set()
-    User_Similary_dict = dict()
-    file_object = open(User_Similary_file, 'r', encoding='UTF-8')
-    for line in file_object:
-        tt = line.split(" ")
-        userID = tt[0]
-        Similary_User = tt[1:k-1]
-        Similary_UserScore_list = []
-        for item in Similary_User:
-            t = item.split(",")
-            Similary_UserScore_list.append([t[0], t[1]])
-            related_User_list.add(t[0])
-        User_Similary_dict[userID] = Similary_UserScore_list
-    file_object.close()
-    print(f"用户相似度大小：{len(User_Similary_dict)}")
-    print(f"相关用户数量{len(related_User_list)}")
-    return User_Similary_dict, related_User_list
-
-
-def load_test_train_behavior(training_test_set_file, related_User_list):
-    related_User_Behavior_Dict = dict()
-    file_object = open(training_test_set_file, 'r', encoding='UTF-8')
-    for line in file_object:
-        temp = line.strip("\n").split("\t")
-        userID = temp[0]
-        if userID in related_User_list:
-            answer_list = []
-            for answer in temp[2].split(","):
-                if len(answer) != 0:
-                    t = answer.split("|")
-                    start_time = t[1]
-                    end_time = t[2]
-                    if int(end_time) != 0:
-                        time_difference = int(start_time) - int(end_time)
-                        if time_difference >= 0 or int(start_time) == 0:
-                            answer_list.append([t[0], 1.0])
-                        else:
-                            # print(answer)
-                            score = 1 / (1 + 1 / (math.exp(time_difference / 60)))
-                            answer_list.append([t[0], round(score, 6)])
-            if len(answer_list) != 0:
-                related_User_Behavior_Dict[userID] = answer_list
-    print(f"总用户数量{len(User_Behavior_Dict)}")
-    file_object.close()
-    return related_User_Behavior_Dict
+def loadUserSimilarity(similarity_floder, k):
+    # 每个用户取前k个最相关用户    k <= 100
+    User_Similary_Dict = dict()
+    filename_list = os.listdir(similarity_floder)
+    for file in filename_list:
+        all_lines = open(os.path.join(similarity_floder, file), 'r', encoding='UTF-8').readlines()
+        for line in all_lines:
+            user_list = []
+            temp = line.split(":")
+            UserID = temp[1][:32]
+            if len(temp) >= k+2:
+                n = k + 2
+            else:
+                n = len(temp)
+            for i in range(2, n):
+                user_list.append(temp[i][1:33])
+            if len(user_list) != 0:
+                User_Similary_Dict[UserID] = user_list
+    return User_Similary_Dict
 
 
 def load_small_test(small_test_file):
@@ -74,40 +46,79 @@ def load_small_test(small_test_file):
     return User_Behavior_Dict, test_ID
 
 
-def Computer_Popularity_degree(User_Behavior_Dict, related_User_Behavior_Dict, User_Similary_dict):
+def Computer_Popularity_degree(User_Behavior_Dict, User_Similary_dict):
+    User_Popularity_dict = dict()
     for userID in User_Behavior_Dict.keys():
-        Simple_user_rec_dict = dict()
+        Simple_user_popular_dict = dict()
         if userID in User_Similary_dict.keys():
             related_user_list = User_Similary_dict[userID]
-            delet_list = User_Behavior_Dict[userID]
-            for item in related_user_list:
-                related_userID = item[0]
-                related_score = float(item[1])
-                if related_userID in related_User_Behavior_Dict.keys():
-                    for relared_item in related_User_Behavior_Dict[related_userID]:
-                        temp_list.add(relared_item[0])
-                        behavior_score = float(relared_item[1])
-                        new_score = related_score * behavior_score
-                        Simple_user_rec_dict[relared_item[0]] = new_score
-                        # print(related_score, ">>>>", behavior_score, ">>>>", new_score)
-            temp_list = temp_list.difference(set(delet_list))
-            temp_list.intersection(candidate_list)
-            temp_dict = dict()
-            for key in Simple_user_rec_dict.keys():
-                if key in temp_list:
-                    temp_dict[key] = Simple_user_rec_dict[key]
-            temp_list.clear()
-            del delet_list
-            del Simple_user_rec_dict
-            Simple_user_rec_tuple_list = sorted(temp_dict.items(), key=lambda e: e[1], reverse=True)
-            temp_dict.clear()
-            if len(Simple_user_rec_tuple_list) != 0:
-                commit_simiply_user_rec = []
-                for id in Simple_user_rec_tuple_list:
-                    if id[0][0] == 'A':
-                        out_file.write(userID+" ")
-                        out_file.write(id[0]+":"+str(id[1]))
-                        commit_simiply_user_rec.append(answer_id_dict[id[0][1:len(id[0])]])
-                User_Recommond_Dict[userID] = commit_simiply_user_rec
-                out_file.write("\n")
-    print(f"推荐用户数量：{len(User_Recommond_Dict)}")
+            item_list = User_Behavior_Dict[userID]
+            for itemUser in related_user_list:
+                if itemUser in User_Behavior_Dict.keys():
+                    for relared_item in User_Behavior_Dict[itemUser]:
+                        # 相关用户的所阅读过的文章ID
+                        if relared_item in Simple_user_popular_dict.keys():
+                            count = Simple_user_popular_dict[relared_item]
+                            count += 1
+                            Simple_user_popular_dict[relared_item] = count
+                        else:
+                            Simple_user_popular_dict[relared_item] = 1
+            for id in item_list:
+                if id in Simple_user_popular_dict.keys():
+                    del Simple_user_popular_dict[id]
+        if len(Simple_user_popular_dict) != 0:
+            sort_popular_item = sorted(Simple_user_popular_dict.items(), key=lambda e: e[1], reverse=True)
+            User_Popularity_dict[userID] = sort_popular_item
+    print(f"推荐用户数量：{len(User_Popularity_dict)}")
+    return User_Popularity_dict
+
+
+def load_answer_dict(answer_id_dict_file):
+    answer_id_dict = dict()
+    file_object = open(answer_id_dict_file, 'r', encoding='UTF-8')
+    for line in file_object:
+        answer_id_dict[line.split('\t')[0]] = line.split('\t')[1][:32]
+    file_object.close()
+    return answer_id_dict
+
+
+def load_candidate(candidate_file, reverse_answer_id_dict):
+    candidate_list = []
+    file_object = open(candidate_file, 'r', encoding='UTF-8')
+    for line in file_object:
+        candidate_list.append("A"+reverse_answer_id_dict[line.split('\t')[1][:32]])
+    print(len(candidate_list))
+    return candidate_list
+
+
+def get_Commit_csv(test_ID, User_Recommond_Dict, csv_out_file, n):
+    out_file_object = open(csv_out_file, 'w', encoding='UTF-8')
+    for user in test_ID:
+        if user in User_Recommond_Dict.keys():
+            result_list = User_Recommond_Dict[user]
+            for index in range(0, n):
+                if index < len(result_list):
+                    ansID = result_list[index]
+                    commit_ID = ansID[:4] + ansID[len(ansID)-4:len(ansID)]
+                    out_file_object.write(commit_ID + ",")
+                else:
+                    out_file_object.write("-1,")
+        else:
+            for i in range(0, n):
+                if i == 99:
+                    out_file_object.write("-1")
+                else:
+                    out_file_object.write("-1,")
+        out_file_object.write("\n")
+    out_file_object.close()
+
+
+if __name__ == '__main__':
+    small_test_file = "E:\\CCIR\\testing_set_135089.txt"
+    similarity_floder = "E:\\CCIR\\Similarity_betweenUser_Floder"
+    User_Behavior_Dict, test_ID = load_small_test(small_test_file)
+    User_Similary_Dict = loadUserSimilarity(similarity_floder, 40)
+    User_Popularity_dict = Computer_Popularity_degree(User_Behavior_Dict, User_Similary_Dict)
+    for key in User_Popularity_dict.keys():
+        print(key)
+        print(User_Popularity_dict[key][:5])
