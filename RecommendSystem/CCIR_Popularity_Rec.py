@@ -119,6 +119,4 @@ if __name__ == '__main__':
     User_Behavior_Dict, test_ID = load_small_test(small_test_file)
     User_Similary_Dict = loadUserSimilarity(similarity_floder, 40)
     User_Popularity_dict = Computer_Popularity_degree(User_Behavior_Dict, User_Similary_Dict)
-    for key in User_Popularity_dict.keys():
-        print(key)
-        print(User_Popularity_dict[key][:5])
+
