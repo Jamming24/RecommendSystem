@@ -24,7 +24,7 @@ def load_real_cool_user_behavior(real_cool_user_behavior_file):
 
 
 def load_real_cool_user_info(all_user_info_file, cool_user_id_list):
-    # 返回冷启动用户关注话题
+    # 返回冷启动用户关注话题，和用户阅读答案所属于话题，以及用户阅读答案对应的问题的话题
     file_object = open(all_user_info_file, 'r', encoding='UTF-8')
     real_cool_user_topic_dic = dict()
     for line in file_object:
@@ -40,12 +40,46 @@ def load_real_cool_user_info(all_user_info_file, cool_user_id_list):
 
 def load_topic_inverse_answer(topic_inverse_answer_file):
     topic_inverse_answer_dic = dict()
-    file_object = open(topic_inverse_answer_file)
+    file_object = open(topic_inverse_answer_file, 'r', encoding='UTF-8')
     for line in file_object:
         tt = line.split('\t')
         topic_inverse_answer_dic[tt[0]] = tt[1].strip('\n').split(',')[:-1]
     file_object.close()
     return topic_inverse_answer_dic
+
+
+def load_topic_inverse_question(topic_inverse_question_file):
+    # 得到用户关注话题的对应的相关问题列表
+    file_object = open(topic_inverse_question_file, 'r', encoding='UTF-8')
+    topic_inverse_question_dic = dict()
+    for line in file_object:
+        tt = line.split('\t')
+        topic_inverse_question_dic[tt[0]] = tt[1].strip('\n').split(',')[:-1]
+    file_object.close()
+    print(f"topic_inverse_question_dic的数量:{len(topic_inverse_question_dic)}")
+    return topic_inverse_question_dic
+
+
+def get_question_inverse_answer(topic_inverse_question_dic, question_inverse_answer_file):
+    # 得到问题对应的答案列表 要得到question_topic_inverse_answer_dic
+    question_topic_inverse_answer_dic = dict()
+    file_object = open(question_inverse_answer_file, 'r', encoding='UTF-8')
+    question_inverse_answer_dic = dict()
+    for line in file_object:
+        tt = line.split('\t')
+        question_inverse_answer_dic[tt[0]] = tt[1].strip('\n').split(',')[:-1]
+    file_object.close()
+    for topic in topic_inverse_question_dic.keys():
+        answer_list = []
+        for question in topic_inverse_question_dic[topic]:
+            if question in question_inverse_answer_dic:
+                temp_list = question_inverse_answer_dic[question]
+                # print('?>>>>>>', temp_list)
+                answer_list.extend(temp_list)
+        if len(answer_list) != 0:
+            question_topic_inverse_answer_dic[topic] = answer_list
+    print(f"question_topic_inverse_answer_dic的数量为:{len(question_topic_inverse_answer_dic)}")
+    return question_topic_inverse_answer_dic
 
 
 def estimate_excellent_answer(candidate_answer_file):
@@ -156,23 +190,40 @@ def get_Commit_csv(test_ID, Commit_user_recommond_dict, csv_out_file, n):
         out_file_object.write("\n")
     out_file_object.close()
 
+# def get_UserQuestion_OtherAnswer(user_question_table, question_inverse_answer_file):
+    # 返回用户所阅读文章对应问题的 其他答案列表  这个适合对高频用户使用 暂时不需要实现
+
+# def get_UserReadAnswer_AboutQuestion(candidate_answer_file):
+    # 返回用户阅读答案对应的问题ID 这个适合对高频用户使用 暂时不需要实现
+
 
 if __name__ == '__main__':
     # all_user_info_file = "E:\\CCIR\\real_cool_user\\all_user_info.txt"
     # real_cool_user_behavior_file = "E:\\CCIR\\real_cool_user\\testing_set_135089_real_cool_user.txt"
     # topic_inverse_answer_file = "E:\\CCIR\\real_cool_user\\topic_inverse_answer.txt"
+    # topic_inverse_question_file = "E:\\CCIR\\real_cool_user\\topic_inverse_question.txt"
     # candidate_answer_file = "E:\\CCIR\\real_cool_user\\candidate_answer.txt"
-    # outfile = "E:\\CCIR\\real_cool_user\\real_cool_user_Reclist.txt"
-    # # 第一部分 计算中带有得分的用户推荐列表 ################################################
+    # outfile = "E:\\CCIR\\real_cool_user\\real_cool_user_Reclist_with_question.txt"
+    question_inverse_answer_file = "E:\\CCIR\\real_cool_user\\question_inverse_answer.txt"
+    # # # 第一部分 计算中带有得分的用户推荐列表 ################################################
     # cool_user_id_list = load_real_cool_user_behavior(real_cool_user_behavior_file)
     # real_cool_user_topic_dic = load_real_cool_user_info(all_user_info_file, cool_user_id_list)
     # topic_inverse_answer_dic = load_topic_inverse_answer(topic_inverse_answer_file)
+    # topic_inverse_question_dic = load_topic_inverse_question(topic_inverse_question_file)
     # candidate_answer_quality = estimate_excellent_answer(candidate_answer_file)
+    # # 对topic_inverse_answer_dic 进行扩展
+    # question_topic_inverse_answer_dic = get_question_inverse_answer(topic_inverse_question_dic, question_inverse_answer_file)
+    # for topic in topic_inverse_answer_dic.keys():
+    #     if topic in question_topic_inverse_answer_dic.keys():
+    #         answer_list = topic_inverse_answer_dic[topic]
+    #         temp_list = question_topic_inverse_answer_dic[topic]
+    #         answer_list.extend(temp_list)
+    #         topic_inverse_question_dic[topic] = answer_list
     # get_real_cool_user_Rec(real_cool_user_topic_dic, topic_inverse_answer_dic, candidate_answer_quality, outfile)
     # ##################################################################################
     best_result_file = "E:\\CCIR\\ItemCF_best\\120_ItemCf_Rec_result.txt"
-    real_cool_user_Reclist_file = "E:\\CCIR\\real_cool_user\\real_cool_user_Reclist.txt"
-    csv_out_file = "E:\\CCIR\\real_cool_user\\result.csv"
+    real_cool_user_Reclist_file = "E:\\CCIR\\real_cool_user\\real_cool_user_Reclist_with_question.txt"
+    csv_out_file = "E:\\CCIR\\real_cool_user\\result_with_question.csv"
     small_test_file = "E:\\CCIR\\testing_set_135089.txt"
     test_ID = load_small_testID(small_test_file)
     ItemCF_Rec = load_120_ItemCF_result(best_result_file)
