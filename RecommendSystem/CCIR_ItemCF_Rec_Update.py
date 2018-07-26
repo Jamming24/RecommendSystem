@@ -151,7 +151,6 @@ def multiprocessing_manager(User_Behavior_Dict, Item_Similary_dict, n, k):
 def get_RecommandList(User_Behavior_Dict, User_Recommond_Dict, answer_id_dict, Outfile):
     # k值为与商品最相关的k个商品
     max_relevant_Users_file_object = open(Outfile, 'w', encoding='UTF-8')
-
     Commit_user_recommond_dict = dict()
     max_relevant_list = []
     for userID in User_Recommond_Dict.keys():

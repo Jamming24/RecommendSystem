@@ -123,26 +123,6 @@ def load_answer_info(answer_info_file,Out_file):
     Out_file_object.close()
 
 
-def get_RecommandList(User_Behavior_Dict, User_Similary_Dict, answer_id_dict, candidate_list):
-    User_Recommond_Dict = dict()
-    temp = []
-    for userID in User_Similary_Dict.keys():
-        simiply_user_rec = []
-        for similaryUser in User_Similary_Dict[userID]:
-            if similaryUser in User_Behavior_Dict.keys():
-                temp = list(set(temp).union(set(User_Behavior_Dict[similaryUser])))
-        if userID in User_Behavior_Dict.keys():
-            temp = list(set(temp).difference(set(User_Behavior_Dict[userID])))
-            temp = list(set(temp).intersection(set(candidate_list)))
-            for a in temp:
-                if a[0] == 'A':
-                    simiply_user_rec.append(answer_id_dict[a[1:len(a)]])
-        temp.clear()
-
-        if len(simiply_user_rec) != 0:
-            User_Recommond_Dict[userID] = simiply_user_rec
-    return User_Recommond_Dict
-
 
 def load_answer_dict(answer_id_dict_file):
     answer_id_dict = dict()
