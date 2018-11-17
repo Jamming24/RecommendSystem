@@ -5,7 +5,7 @@ import random
 import HuffmanTree
 import snowballstemmer
 import math
-
+# 提交晚了
 
 def loadCorpusData(dataFile, sliding_window):
     train_data = []
