@@ -2,26 +2,26 @@
 import json
 from time import time
 
-from GAN_Tian.seqgan.Gan import Gan
-from GAN_Tian.seqgan.SeqganDataLoader import DataLoader, DisDataloader
-from GAN_Tian.seqgan.SeqganDiscriminator import Discriminator
-from GAN_Tian.seqgan.SeqganGenerator import Generator
-from GAN_Tian.seqgan.SeqganReward import Reward
+from seqgan.Gan import Gan
+from seqgan.SeqganDataLoader import DataLoader, DisDataloader
+from seqgan.SeqganDiscriminator import Discriminator
+from seqgan.SeqganGenerator import Generator
+from seqgan.SeqganReward import Reward
 # 评价和文本处理的代码
-from GAN_Tian.seqgan.utils.metrics.Cfg import Cfg
-from GAN_Tian.seqgan.utils.metrics.EmbSim import EmbSim
-from GAN_Tian.seqgan.utils.metrics.Nll import Nll
-from GAN_Tian.seqgan.utils.oracle.OracleCfg import OracleCfg
-from GAN_Tian.seqgan.utils.oracle.OracleLstm import OracleLstm
-from GAN_Tian.seqgan.utils.text_process import *
-from GAN_Tian.seqgan.utils.utils import *
+from seqgan.utils.metrics.Cfg import Cfg
+from seqgan.utils.metrics.EmbSim import EmbSim
+from seqgan.utils.metrics.Nll import Nll
+from seqgan.utils.oracle.OracleCfg import OracleCfg
+from seqgan.utils.oracle.OracleLstm import OracleLstm
+from seqgan.utils.text_process import *
+from seqgan.utils.utils import *
 
 
 class Seqgan(Gan):
     def __init__(self, oracle=None):
         super().__init__()
         # you can change parameters, generator here
-        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.vocab_size = 2000  # 词库大小，被设定为5000
         self.emb_dim = 32  # 32
         self.hidden_dim = 32  # 32
         self.sequence_length = 20  # 序列长度
@@ -29,18 +29,19 @@ class Seqgan(Gan):
         self.num_filters = [100, 200]  # 两层核个数，即通道数量
         self.l2_reg_lambda = 0.2  # 正则化参数
         self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
-        self.batch_size = 64  # 批大小
-        self.generate_num = 4096 # 生成样例的数量，被设定为10000
+        self.batch_size = 32  # 批大小
+        self.generate_num = 1024 # 生成样例的数量，被设定为10000
         self.start_token = 0  # 开始的时候的选取的令牌值
+        self.rollout_num = 16
 
-
-        self.pre_epoch_num = 50  # 预训练的轮数 生成和判别共用      #  80
-        self.adversarial_epoch_num = 80  # 对抗训练的轮数    # 100
+        self.pre_epoch_num = 10  # 预训练的轮数 生成和判别共用      #  80
+        self.adversarial_epoch_num = 50  # 对抗训练的轮数    # 100
         self.adversarial_epoch_dis_num = 15  # 一次對抗中，進行幾次判別  # 15原始
 
 
         # self.positive = 'data/msrp_demo_positive.txt'
-        self.positive = 'data/quora_50K_positive.txt'
+        # self.positive = 'data/quora_50K_positive.txt'
+        self.positive = 'data/quora_1024_positive.txt'
         self.positive_file = 'save/positive.txt'  # 原始句对用于判别的正例文件
         self.negitive_file = 'save/negitive.txt'  # 原始句子+生成的句子构成的反例文件
         self.oracle_file = 'save/oracle.txt'  # 原始的文件
@@ -56,7 +57,7 @@ class Seqgan(Gan):
         inll.set_name('nll-test')
         self.add_metric(inll)
 
-        from GAN_Tian.seqgan.utils.metrics.DocEmbSim import DocEmbSim
+        from seqgan.utils.metrics.DocEmbSim import DocEmbSim
         docsim = DocEmbSim(oracle_file=self.oracle_file, generator_file=self.generator_file,
                            num_vocabulary=self.vocab_size)
         self.add_metric(docsim)
@@ -90,7 +91,8 @@ class Seqgan(Gan):
         self.dis_data_loader.load_train_data(self.positive_file, self.negitive_file)
 
         # 貌似分成了三批进行计算判别，写死了的@@@@@@@@@@@@@@@@@这个数据可以修改
-        for i in range(3):
+        # print('1-16批判别损失：')
+        for i in range(16):
             self.dis_data_loader.next_batch()
             x_batch, y_batch = self.dis_data_loader.next_batch()
             # 喂数据
@@ -100,7 +102,7 @@ class Seqgan(Gan):
             }
             # 计算损失
             loss, _ = self.sess.run([self.discriminator.d_loss, self.discriminator.train_op], feed)
-            print('第', i, '批的判别损失：', loss)
+            # print(loss, end=' ')
 
     # 评价程序
     def evaluate(self):
@@ -122,12 +124,15 @@ class Seqgan(Gan):
 
     # 初始化真实数据的训练配置
     def init_real_trainng(self, data_loc=None):
-        from GAN_Tian.seqgan.utils.text_process import text_precess, text_to_code, text_to_code_p
-        from GAN_Tian.seqgan.utils.text_process import get_tokenlized, get_word_list, get_dict
+        from seqgan.utils.text_process import text_precess, text_to_code, text_to_code_p
+        from seqgan.utils.text_process import get_tokenlized, get_word_list, get_dict
         if data_loc is None:
             data_loc = 'data/image_coco.txt'
         # 先给他禁了，这个重置了词库大小和序列长度，不能禁止这个，——改
         self.sequence_length, self.vocab_size = text_precess(data_loc)
+        print('sequence_length:',self.sequence_length)
+        print('vocab_size:',self.vocab_size)
+
         # 设定生成器和判别器的各项参数
         generator = Generator(num_vocabulary=self.vocab_size, batch_size=self.batch_size, emb_dim=self.emb_dim,
                               hidden_dim=self.hidden_dim, sequence_length=self.sequence_length,
@@ -166,7 +171,7 @@ class Seqgan(Gan):
 
     # 初始化真实数据的评价指标
     def init_real_metric(self):
-        from GAN_Tian.seqgan.utils.metrics.DocEmbSim import DocEmbSim
+        from seqgan.utils.metrics.DocEmbSim import DocEmbSim
         docsim = DocEmbSim(oracle_file=self.oracle_file, generator_file=self.generator_file,
                            num_vocabulary=self.vocab_size)
         self.add_metric(docsim)
@@ -177,8 +182,8 @@ class Seqgan(Gan):
 
     # 开始真实数据的训练
     def train_real(self, data_loc=None):
-        from GAN_Tian.seqgan.utils.text_process import code_to_text
-        from GAN_Tian.seqgan.utils.text_process import get_tokenlized
+        from seqgan.utils.text_process import code_to_text
+        from seqgan.utils.text_process import get_tokenlized
         # 调用配置函数，配置并初始化判别器和生成器，并得到原始数据获得的 单词-索引 和 索引-单词 字典
         wi_dict, iw_dict = self.init_real_trainng(data_loc)
         # 初始化真实数据的评价指标
@@ -204,6 +209,7 @@ class Seqgan(Gan):
         # 建立真实数据的批次
         self.gen_data_loader.create_batches(self.oracle_file)
         # 开始预训练生成文本
+        print('======================================================================================================')
         print('start pre-train generator:')
         for epoch in range(self.pre_epoch_num):
             start = time()
@@ -220,13 +226,15 @@ class Seqgan(Gan):
                 self.evaluate()
 
         # 开始预训练判别
+        print('======================================================================================================')
         print('start pre-train discriminator:')
         self.reset_epoch()
         for epoch in range(self.pre_epoch_num):
-            print('discriminator epoch:' + str(epoch))
+            # print('\ndiscriminator epoch:' + str(epoch))
             self.train_discriminator()
 
         self.reset_epoch()
+        print('\n======================================================================================================')
         print('adversarial training:')
         # 奖励的配置
         self.reward = Reward(self.generator, update_rate=0.8)
@@ -238,10 +246,10 @@ class Seqgan(Gan):
                 # 又从0开始生成了一遍
                 samples = self.generator.generate(self.sess)
 
-                # 将生成的负样例与原始句子进行组合作为训练预料——改——先不动
+                # 将生成的负样例与原始句子进行组合作为训练预料——改——先不动--這個問題在get_reward()函數內部解決了
                 # sample_negative = self.combin_orc_gen_reward(gen=samples)
                 # rollout_num 延迟收益中的过程序列数，即进行16步之后再计算收益，过程存储在中间变量里
-                rewards = self.reward.get_reward(self.sess, samples, rollout_num=16, discriminator=self.discriminator)
+                rewards = self.reward.get_reward(self.sess, samples, rollout_num=self.rollout_num, discriminator=self.discriminator)
                 # 先不动
                 # rewards = self.reward.get_reward(self.sess, sample_negative, rollout_num=16, discriminator=self.discriminator)
                 feed = {
@@ -249,7 +257,7 @@ class Seqgan(Gan):
                     self.generator.rewards: rewards
                 }
                 loss, _ = self.sess.run([self.generator.g_loss, self.generator.g_updates], feed_dict=feed)
-                print('第', index, '次reward更新损失：', loss)
+                print('\n第', index, '次reward更新损失：', loss)
                 # print(loss)
             end = time()
             self.add_epoch()
@@ -264,5 +272,5 @@ class Seqgan(Gan):
             self.reward.update_params()
             # 貌似每进行一次对抗就进行了15次判别
             for _ in range(self.adversarial_epoch_dis_num):
-                print('train_discriminator_', _ + 1)
+                # print('\ntrain_discriminator_', _ + 1)
                 self.train_discriminator()
