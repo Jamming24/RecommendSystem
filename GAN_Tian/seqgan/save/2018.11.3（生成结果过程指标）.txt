@@ -1,0 +1,2152 @@
+D:\Anaconda3\envs\tensorflow1.0\python.exe D:/Workspace_Python/Gans/seqgan/main.py
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library cublas64_80.dll locally
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library cudnn64_5.dll locally
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library cufft64_80.dll locally
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library nvcuda.dll locally
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library curand64_80.dll locally
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:885] Found device 0 with properties:
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.6575
+pciBusID 0000:01:00.0
+Total memory: 11.00GiB
+Free memory: 9.10GiB
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:906] DMA: 0
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:916] 0:   Y
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "BestSplits" device_type: "CPU"') for unknown op: BestSplits
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "CountExtremelyRandomStats" device_type: "CPU"') for unknown op: CountExtremelyRandomStats
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "FinishedNodes" device_type: "CPU"') for unknown op: FinishedNodes
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "GrowTree" device_type: "CPU"') for unknown op: GrowTree
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "ReinterpretStringToFloat" device_type: "CPU"') for unknown op: ReinterpretStringToFloat
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "SampleInputs" device_type: "CPU"') for unknown op: SampleInputs
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "ScatterAddNdim" device_type: "CPU"') for unknown op: ScatterAddNdim
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "TopNInsert" device_type: "CPU"') for unknown op: TopNInsert
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "TopNRemove" device_type: "CPU"') for unknown op: TopNRemove
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "TreePredictions" device_type: "CPU"') for unknown op: TreePredictions
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "UpdateFertileSlots" device_type: "CPU"') for unknown op: UpdateFertileSlots
+g_predictions: <class 'tensorflow.python.ops.tensor_array_ops.TensorArray'> <tensorflow.python.ops.tensor_array_ops.TensorArray object at 0x000002586CB38D68>
+start pre-train generator:
+generator epoch:0	 time:321.4325156211853	 loss:-0.505048
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 681.3276162147522
+time elapsed of nll-test: 161.74923658370972
+evaluate epoch:1	EmbeddingSimilarity:-0.0157212518166	nll-test:-0.700686
+generator epoch:1	 time:320.78271079063416	 loss:-0.700846
+generator epoch:2	 time:320.7807993888855	 loss:-0.700889
+generator epoch:3	 time:319.6123490333557	 loss:-0.706637
+generator epoch:4	 time:318.1683530807495	 loss:-0.713115
+generator epoch:5	 time:321.4740629196167	 loss:-0.713386
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.376307487487793
+time elapsed of nll-test: 163.05056500434875
+evaluate epoch:6	EmbeddingSimilarity:-0.0157455824365	nll-test:-0.713557
+generator epoch:6	 time:320.7819802761078	 loss:-0.713513
+generator epoch:7	 time:320.44541692733765	 loss:-0.713587
+generator epoch:8	 time:320.61748933792114	 loss:-0.713629
+generator epoch:9	 time:321.9140338897705	 loss:-0.71368
+generator epoch:10	 time:320.4037892818451	 loss:-0.713724
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.456297636032104
+time elapsed of nll-test: 162.6380295753479
+evaluate epoch:11	EmbeddingSimilarity:-0.0157341090611	nll-test:-0.713814
+generator epoch:11	 time:320.01112246513367	 loss:-0.71379
+generator epoch:12	 time:321.7547838687897	 loss:-0.713886
+generator epoch:13	 time:321.08708453178406	 loss:-0.713943
+generator epoch:14	 time:286.8406398296356	 loss:-0.714007
+generator epoch:15	 time:305.9906094074249	 loss:-0.714019
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.341167688369751
+time elapsed of nll-test: 162.19170022010803
+evaluate epoch:16	EmbeddingSimilarity:-0.0157324203801	nll-test:-0.714073
+generator epoch:16	 time:321.081579208374	 loss:-0.714079
+generator epoch:17	 time:321.61497735977173	 loss:-0.71414
+generator epoch:18	 time:321.30645871162415	 loss:-0.714202
+generator epoch:19	 time:320.3880441188812	 loss:-0.714274
+generator epoch:20	 time:320.50884675979614	 loss:-0.714304
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.406246423721313
+time elapsed of nll-test: 162.7278048992157
+evaluate epoch:21	EmbeddingSimilarity:-0.0157275843464	nll-test:-0.714349
+generator epoch:21	 time:322.0895586013794	 loss:-0.714332
+generator epoch:22	 time:321.36088514328003	 loss:-0.714372
+generator epoch:23	 time:321.7929217815399	 loss:-0.714426
+generator epoch:24	 time:321.14080357551575	 loss:-0.714431
+generator epoch:25	 time:319.05689239501953	 loss:-0.714439
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.369300365447998
+time elapsed of nll-test: 163.08068823814392
+evaluate epoch:26	EmbeddingSimilarity:-0.0157324657858	nll-test:-0.714445
+generator epoch:26	 time:319.7523376941681	 loss:-0.714442
+generator epoch:27	 time:320.35035514831543	 loss:-0.714476
+generator epoch:28	 time:322.7126817703247	 loss:-0.71451
+generator epoch:29	 time:323.1243591308594	 loss:-0.714528
+generator epoch:30	 time:323.4086289405823	 loss:-0.71453
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.336242914199829
+time elapsed of nll-test: 162.2339460849762
+evaluate epoch:31	EmbeddingSimilarity:-0.015732132265	nll-test:-0.714591
+generator epoch:31	 time:322.7839870452881	 loss:-0.714588
+generator epoch:32	 time:319.57411074638367	 loss:-0.714646
+generator epoch:33	 time:321.3620767593384	 loss:-0.714716
+generator epoch:34	 time:320.6263258457184	 loss:-0.714769
+generator epoch:35	 time:319.21746492385864	 loss:-0.714779
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.326218128204346
+time elapsed of nll-test: 162.69121623039246
+evaluate epoch:36	EmbeddingSimilarity:-0.0157665187001	nll-test:-0.714819
+generator epoch:36	 time:322.26335620880127	 loss:-0.714792
+generator epoch:37	 time:322.7406258583069	 loss:-0.714827
+generator epoch:38	 time:320.1981933116913	 loss:-0.714867
+generator epoch:39	 time:319.08361291885376	 loss:-0.714898
+generator epoch:40	 time:322.6235406398773	 loss:-0.714899
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.56035041809082
+time elapsed of nll-test: 162.67502975463867
+evaluate epoch:41	EmbeddingSimilarity:-0.0157302907631	nll-test:-0.714938
+generator epoch:41	 time:321.0069591999054	 loss:-0.714925
+generator epoch:42	 time:323.6570019721985	 loss:-0.714944
+generator epoch:43	 time:322.77513360977173	 loss:-0.714957
+generator epoch:44	 time:322.30540132522583	 loss:-0.714967
+generator epoch:45	 time:322.4494295120239	 loss:-0.71498
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.462295055389404
+time elapsed of nll-test: 162.96017503738403
+evaluate epoch:46	EmbeddingSimilarity:-0.0157331016465	nll-test:-0.714973
+generator epoch:46	 time:322.9246783256531	 loss:-0.714988
+generator epoch:47	 time:320.64167857170105	 loss:-0.714998
+generator epoch:48	 time:323.25676345825195	 loss:-0.715
+generator epoch:49	 time:322.87859773635864	 loss:-0.71502
+start pre-train discriminator:
+discriminator epoch:0
+第 0 批的判别损失： [ 0.60043973]
+第 1 批的判别损失： [ 0.61437082]
+第 2 批的判别损失： [ 0.59665877]
+discriminator epoch:1
+第 0 批的判别损失： [ 0.59946764]
+第 1 批的判别损失： [ 0.65441465]
+第 2 批的判别损失： [ 0.5684436]
+discriminator epoch:2
+第 0 批的判别损失： [ 0.62531805]
+第 1 批的判别损失： [ 0.65522629]
+第 2 批的判别损失： [ 0.62042046]
+discriminator epoch:3
+第 0 批的判别损失： [ 0.60313213]
+第 1 批的判别损失： [ 0.61659199]
+第 2 批的判别损失： [ 0.60881352]
+discriminator epoch:4
+第 0 批的判别损失： [ 0.60389602]
+第 1 批的判别损失： [ 0.56562656]
+第 2 批的判别损失： [ 0.60919267]
+discriminator epoch:5
+第 0 批的判别损失： [ 0.54087812]
+第 1 批的判别损失： [ 0.56077397]
+第 2 批的判别损失： [ 0.56971693]
+discriminator epoch:6
+第 0 批的判别损失： [ 0.54303449]
+第 1 批的判别损失： [ 0.53587741]
+第 2 批的判别损失： [ 0.61582106]
+discriminator epoch:7
+第 0 批的判别损失： [ 0.57195383]
+第 1 批的判别损失： [ 0.5698663]
+第 2 批的判别损失： [ 0.52292931]
+discriminator epoch:8
+第 0 批的判别损失： [ 0.56549096]
+第 1 批的判别损失： [ 0.55837739]
+第 2 批的判别损失： [ 0.51318908]
+discriminator epoch:9
+第 0 批的判别损失： [ 0.54206997]
+第 1 批的判别损失： [ 0.51284838]
+第 2 批的判别损失： [ 0.55140257]
+discriminator epoch:10
+第 0 批的判别损失： [ 0.54431468]
+第 1 批的判别损失： [ 0.49448293]
+第 2 批的判别损失： [ 0.56572419]
+discriminator epoch:11
+第 0 批的判别损失： [ 0.48918545]
+第 1 批的判别损失： [ 0.54005587]
+第 2 批的判别损失： [ 0.48636562]
+discriminator epoch:12
+第 0 批的判别损失： [ 0.48134765]
+第 1 批的判别损失： [ 0.53528935]
+第 2 批的判别损失： [ 0.64555711]
+discriminator epoch:13
+第 0 批的判别损失： [ 0.5310933]
+第 1 批的判别损失： [ 0.48073035]
+第 2 批的判别损失： [ 0.53417766]
+discriminator epoch:14
+第 0 批的判别损失： [ 0.47564727]
+第 1 批的判别损失： [ 0.46935764]
+第 2 批的判别损失： [ 0.47137931]
+discriminator epoch:15
+第 0 批的判别损失： [ 0.60985059]
+第 1 批的判别损失： [ 0.61882782]
+第 2 批的判别损失： [ 0.51055318]
+discriminator epoch:16
+第 0 批的判别损失： [ 0.57876217]
+第 1 批的判别损失： [ 0.46596014]
+第 2 批的判别损失： [ 0.46482521]
+discriminator epoch:17
+第 0 批的判别损失： [ 0.45737854]
+第 1 批的判别损失： [ 0.54360962]
+第 2 批的判别损失： [ 0.51672053]
+discriminator epoch:18
+第 0 批的判别损失： [ 0.58708155]
+第 1 批的判别损失： [ 0.52065313]
+第 2 批的判别损失： [ 0.49314591]
+discriminator epoch:19
+第 0 批的判别损失： [ 0.59646732]
+第 1 批的判别损失： [ 0.45591733]
+第 2 批的判别损失： [ 0.48772967]
+discriminator epoch:20
+第 0 批的判别损失： [ 0.50198066]
+第 1 批的判别损失： [ 0.51346886]
+第 2 批的判别损失： [ 0.44774687]
+discriminator epoch:21
+第 0 批的判别损失： [ 0.50285602]
+第 1 批的判别损失： [ 0.45255217]
+第 2 批的判别损失： [ 0.57780272]
+discriminator epoch:22
+第 0 批的判别损失： [ 0.44715115]
+第 1 批的判别损失： [ 0.44300503]
+第 2 批的判别损失： [ 0.55954325]
+discriminator epoch:23
+第 0 批的判别损失： [ 0.44219562]
+第 1 批的判别损失： [ 0.51233518]
+第 2 批的判别损失： [ 0.5168646]
+discriminator epoch:24
+第 0 批的判别损失： [ 0.51490837]
+第 1 批的判别损失： [ 0.50534493]
+第 2 批的判别损失： [ 0.50501007]
+discriminator epoch:25
+第 0 批的判别损失： [ 0.49347264]
+第 1 批的判别损失： [ 0.49937543]
+第 2 批的判别损失： [ 0.43553928]
+discriminator epoch:26
+第 0 批的判别损失： [ 0.4340896]
+第 1 批的判别损失： [ 0.43561327]
+第 2 批的判别损失： [ 0.4328993]
+discriminator epoch:27
+第 0 批的判别损失： [ 0.59095901]
+第 1 批的判别损失： [ 0.55524123]
+第 2 批的判别损失： [ 0.49497932]
+discriminator epoch:28
+第 0 批的判别损失： [ 0.43782708]
+第 1 批的判别损失： [ 0.49841595]
+第 2 批的判别损失： [ 0.42934471]
+discriminator epoch:29
+第 0 批的判别损失： [ 0.56319177]
+第 1 批的判别损失： [ 0.53630936]
+第 2 批的判别损失： [ 0.49622524]
+discriminator epoch:30
+第 0 批的判别损失： [ 0.4335354]
+第 1 批的判别损失： [ 0.56032979]
+第 2 批的判别损失： [ 0.43170783]
+discriminator epoch:31
+第 0 批的判别损失： [ 0.55275792]
+第 1 批的判别损失： [ 0.50569141]
+第 2 批的判别损失： [ 0.42548206]
+discriminator epoch:32
+第 0 批的判别损失： [ 0.57196081]
+第 1 批的判别损失： [ 0.42415157]
+第 2 批的判别损失： [ 0.49142909]
+discriminator epoch:33
+第 0 批的判别损失： [ 0.4864288]
+第 1 批的判别损失： [ 0.42434049]
+第 2 批的判别损失： [ 0.52266091]
+discriminator epoch:34
+第 0 批的判别损失： [ 0.64201164]
+第 1 批的判别损失： [ 0.43452358]
+第 2 批的判别损失： [ 0.60780716]
+discriminator epoch:35
+第 0 批的判别损失： [ 0.431113]
+第 1 批的判别损失： [ 0.42501628]
+第 2 批的判别损失： [ 0.41828772]
+discriminator epoch:36
+第 0 批的判别损失： [ 0.41410637]
+第 1 批的判别损失： [ 0.46307337]
+第 2 批的判别损失： [ 0.49252185]
+discriminator epoch:37
+第 0 批的判别损失： [ 0.41461784]
+第 1 批的判别损失： [ 0.48212424]
+第 2 批的判别损失： [ 0.56671071]
+discriminator epoch:38
+第 0 批的判别损失： [ 0.41763678]
+第 1 批的判别损失： [ 0.46436137]
+第 2 批的判别损失： [ 0.41535273]
+discriminator epoch:39
+第 0 批的判别损失： [ 0.40923041]
+第 1 批的判别损失： [ 0.5677048]
+第 2 批的判别损失： [ 0.41053122]
+discriminator epoch:40
+第 0 批的判别损失： [ 0.4072378]
+第 1 批的判别损失： [ 0.57497954]
+第 2 批的判别损失： [ 0.41484347]
+discriminator epoch:41
+第 0 批的判别损失： [ 0.40573382]
+第 1 批的判别损失： [ 0.52020615]
+第 2 批的判别损失： [ 0.46664631]
+discriminator epoch:42
+第 0 批的判别损失： [ 0.41146666]
+第 1 批的判别损失： [ 0.40220261]
+第 2 批的判别损失： [ 0.477846]
+discriminator epoch:43
+第 0 批的判别损失： [ 0.50787181]
+第 1 批的判别损失： [ 0.44357425]
+第 2 批的判别损失： [ 0.40674815]
+discriminator epoch:44
+第 0 批的判别损失： [ 0.40225309]
+第 1 批的判别损失： [ 0.47097695]
+第 2 批的判别损失： [ 0.40289754]
+discriminator epoch:45
+第 0 批的判别损失： [ 0.39744398]
+第 1 批的判别损失： [ 0.39433211]
+第 2 批的判别损失： [ 0.44854391]
+discriminator epoch:46
+第 0 批的判别损失： [ 0.3948659]
+第 1 批的判别损失： [ 0.43099496]
+第 2 批的判别损失： [ 0.44763479]
+discriminator epoch:47
+第 0 批的判别损失： [ 0.5670203]
+第 1 批的判别损失： [ 0.47075844]
+第 2 批的判别损失： [ 0.5432744]
+discriminator epoch:48
+第 0 批的判别损失： [ 0.42020923]
+第 1 批的判别损失： [ 0.45382938]
+第 2 批的判别损失： [ 0.3999154]
+discriminator epoch:49
+第 0 批的判别损失： [ 0.55784285]
+第 1 批的判别损失： [ 0.40761435]
+第 2 批的判别损失： [ 0.39733934]
+adversarial training:
+第 0 次reward更新损失： -1860.51
+adversarial epoch:0	 time:71.30788922309875
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.307205200195312
+time elapsed of nll-test: 162.29678773880005
+evaluate epoch:51	EmbeddingSimilarity:-0.0157517358231	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.38954183]
+第 1 批的判别损失： [ 0.45346761]
+第 2 批的判别损失： [ 0.38887596]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.38774928]
+第 1 批的判别损失： [ 0.43672442]
+第 2 批的判别损失： [ 0.52217072]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.39478686]
+第 1 批的判别损失： [ 0.43565279]
+第 2 批的判别损失： [ 0.45078257]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.39311594]
+第 1 批的判别损失： [ 0.42446256]
+第 2 批的判别损失： [ 0.44493082]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.42990303]
+第 1 批的判别损失： [ 0.38944873]
+第 2 批的判别损失： [ 0.38211501]
+第 0 次reward更新损失： -1850.91
+adversarial epoch:1	 time:71.75113606452942
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.62002754]
+第 1 批的判别损失： [ 0.40127471]
+第 2 批的判别损失： [ 0.43590981]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.44112062]
+第 1 批的判别损失： [ 0.38600519]
+第 2 批的判别损失： [ 0.41846344]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.46052787]
+第 1 批的判别损失： [ 0.42312932]
+第 2 批的判别损失： [ 0.39036036]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.43039435]
+第 1 批的判别损失： [ 0.38263583]
+第 2 批的判别损失： [ 0.47847641]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.4611457]
+第 1 批的判别损失： [ 0.39821434]
+第 2 批的判别损失： [ 0.43089551]
+第 0 次reward更新损失： -1487.46
+adversarial epoch:2	 time:71.73212671279907
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.38255757]
+第 1 批的判别损失： [ 0.37595004]
+第 2 批的判别损失： [ 0.37477329]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.43303993]
+第 1 批的判别损失： [ 0.37441945]
+第 2 批的判别损失： [ 0.36969966]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.46522501]
+第 1 批的判别损失： [ 0.37235245]
+第 2 批的判别损失： [ 0.37155479]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.36825117]
+第 1 批的判别损失： [ 0.46413285]
+第 2 批的判别损失： [ 0.38230199]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.43191487]
+第 1 批的判别损失： [ 0.38075146]
+第 2 批的判别损失： [ 0.37477297]
+第 0 次reward更新损失： -1592.71
+adversarial epoch:3	 time:71.75613856315613
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.36569044]
+第 1 批的判别损失： [ 0.36505526]
+第 2 批的判别损失： [ 0.46459481]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.41113761]
+第 1 批的判别损失： [ 0.39127833]
+第 2 批的判别损失： [ 0.37013707]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.36559874]
+第 1 批的判别损失： [ 0.36166748]
+第 2 批的判别损失： [ 0.37750855]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.36014944]
+第 1 批的判别损失： [ 0.44235015]
+第 2 批的判别损失： [ 0.39164338]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.36535764]
+第 1 批的判别损失： [ 0.44518065]
+第 2 批的判别损失： [ 0.36653543]
+第 0 次reward更新损失： -1389.91
+adversarial epoch:4	 time:71.86120009422302
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.35715908]
+第 1 批的判别损失： [ 0.35593462]
+第 2 批的判别损失： [ 0.37672928]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.35648328]
+第 1 批的判别损失： [ 0.35978979]
+第 2 批的判别损失： [ 0.35432798]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.35286286]
+第 1 批的判别损失： [ 0.350979]
+第 2 批的判别损失： [ 0.35009015]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.4028517]
+第 1 批的判别损失： [ 0.38593894]
+第 2 批的判别损失： [ 0.38178733]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.35834083]
+第 1 批的判别损失： [ 0.37312895]
+第 2 批的判别损失： [ 0.36092076]
+第 0 次reward更新损失： -1232.54
+adversarial epoch:5	 time:71.68610858917236
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.426267623901367
+time elapsed of nll-test: 161.9245800971985
+evaluate epoch:56	EmbeddingSimilarity:-0.0157330309168	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.34967455]
+第 1 批的判别损失： [ 0.35382786]
+第 2 批的判别损失： [ 0.3463389]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.34425882]
+第 1 批的判别损失： [ 0.39448595]
+第 2 批的判别损失： [ 0.38189614]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.35919863]
+第 1 批的判别损失： [ 0.34472966]
+第 2 批的判别损失： [ 0.3441844]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.35266474]
+第 1 批的判别损失： [ 0.34210515]
+第 2 批的判别损失： [ 0.34076354]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.34057111]
+第 1 批的判别损失： [ 0.33800024]
+第 2 批的判别损失： [ 0.39492461]
+第 0 次reward更新损失： -1007.49
+adversarial epoch:6	 time:71.7191207408905
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.34201896]
+第 1 批的判别损失： [ 0.36411837]
+第 2 批的判别损失： [ 0.34325716]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.34546456]
+第 1 批的判别损失： [ 0.33624464]
+第 2 批的判别损失： [ 0.38345173]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.34173763]
+第 1 批的判别损失： [ 0.33617592]
+第 2 批的判别损失： [ 0.33702305]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.33268562]
+第 1 批的判别损失： [ 0.40341181]
+第 2 批的判别损失： [ 0.33580002]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.331902]
+第 1 批的判别损失： [ 0.33213225]
+第 2 批的判别损失： [ 0.3613117]
+第 0 次reward更新损失： -796.65
+adversarial epoch:7	 time:72.26537418365479
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.35871762]
+第 1 批的判别损失： [ 0.34427947]
+第 2 批的判别损失： [ 0.33759552]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.37257022]
+第 1 批的判别损失： [ 0.33827406]
+第 2 批的判别损失： [ 0.33942443]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.3301405]
+第 1 批的判别损失： [ 0.32837579]
+第 2 批的判别损失： [ 0.32780066]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.35065776]
+第 1 批的判别损失： [ 0.33794975]
+第 2 批的判别损失： [ 0.32878134]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.33240941]
+第 1 批的判别损失： [ 0.32925084]
+第 2 批的判别损失： [ 0.32600603]
+第 0 次reward更新损失： -845.149
+adversarial epoch:8	 time:71.42295551300049
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.32168686]
+第 1 批的判别损失： [ 0.3216221]
+第 2 批的判别损失： [ 0.32049832]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.31875861]
+第 1 批的判别损失： [ 0.35709706]
+第 2 批的判别损失： [ 0.32227287]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.35010001]
+第 1 批的判别损失： [ 0.32611167]
+第 2 批的判别损失： [ 0.32438231]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.32260016]
+第 1 批的判别损失： [ 0.33307147]
+第 2 批的判别损失： [ 0.32797378]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.33466578]
+第 1 批的判别损失： [ 0.31977931]
+第 2 批的判别损失： [ 0.31590596]
+第 0 次reward更新损失： -681.239
+adversarial epoch:9	 time:71.66308641433716
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.31384254]
+第 1 批的判别损失： [ 0.31994915]
+第 2 批的判别损失： [ 0.31891665]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.31423819]
+第 1 批的判别损失： [ 0.31380635]
+第 2 批的判别损失： [ 0.31031403]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.31932297]
+第 1 批的判别损失： [ 0.31034291]
+第 2 批的判别损失： [ 0.32159761]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.34603414]
+第 1 批的判别损失： [ 0.32481351]
+第 2 批的判别损失： [ 0.3141326]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.30773097]
+第 1 批的判别损失： [ 0.30841914]
+第 2 批的判别损失： [ 0.30764395]
+第 0 次reward更新损失： -576.593
+adversarial epoch:10	 time:71.70811748504639
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.376245021820068
+time elapsed of nll-test: 162.70401525497437
+evaluate epoch:61	EmbeddingSimilarity:-0.0157332909149	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.30547205]
+第 1 批的判别损失： [ 0.30644599]
+第 2 批的判别损失： [ 0.31349325]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.3048853]
+第 1 批的判别损失： [ 0.30364388]
+第 2 批的判别损失： [ 0.30232069]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.30476469]
+第 1 批的判别损失： [ 0.30284855]
+第 2 批的判别损失： [ 0.35615638]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.30390495]
+第 1 批的判别损失： [ 0.3000668]
+第 2 批的判别损失： [ 0.30112982]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.30294743]
+第 1 批的判别损失： [ 0.29828542]
+第 2 批的判别损失： [ 0.2987799]
+第 0 次reward更新损失： -550.298
+adversarial epoch:11	 time:71.57903957366943
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.29663709]
+第 1 批的判别损失： [ 0.30186611]
+第 2 批的判别损失： [ 0.29933313]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.296224]
+第 1 批的判别损失： [ 0.29818925]
+第 2 批的判别损失： [ 0.29808763]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.29303229]
+第 1 批的判别损失： [ 0.29474452]
+第 2 批的判别损失： [ 0.29273525]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.29069921]
+第 1 批的判别损失： [ 0.29122123]
+第 2 批的判别损失： [ 0.29074237]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.3041079]
+第 1 批的判别损失： [ 0.29961488]
+第 2 批的判别损失： [ 0.2938841]
+第 0 次reward更新损失： -263.489
+adversarial epoch:12	 time:71.61206412315369
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.28906173]
+第 1 批的判别损失： [ 0.29719514]
+第 2 批的判别损失： [ 0.28944185]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.29382658]
+第 1 批的判别损失： [ 0.2870841]
+第 2 批的判别损失： [ 0.2883862]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.29989767]
+第 1 批的判别损失： [ 0.2876499]
+第 2 批的判别损失： [ 0.28385821]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.28524297]
+第 1 批的判别损失： [ 0.28150696]
+第 2 批的判别损失： [ 0.28212067]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.28135258]
+第 1 批的判别损失： [ 0.2791681]
+第 2 批的判别损失： [ 0.27894858]
+第 0 次reward更新损失： -523.784
+adversarial epoch:13	 time:71.63106870651245
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.27824602]
+第 1 批的判别损失： [ 0.28020337]
+第 2 批的判别损失： [ 0.27779326]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.28403807]
+第 1 批的判别损失： [ 0.28195083]
+第 2 批的判别损失： [ 0.27739793]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.2758117]
+第 1 批的判别损失： [ 0.2757228]
+第 2 批的判别损失： [ 0.27739486]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.27445319]
+第 1 批的判别损失： [ 0.27301869]
+第 2 批的判别损失： [ 0.27619001]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.27332127]
+第 1 批的判别损失： [ 0.27068958]
+第 2 批的判别损失： [ 0.28985301]
+第 0 次reward更新损失： -67.7211
+adversarial epoch:14	 time:71.68409991264343
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.27278486]
+第 1 批的判别损失： [ 0.2744098]
+第 2 批的判别损失： [ 0.27548438]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.26939949]
+第 1 批的判别损失： [ 0.26870561]
+第 2 批的判别损失： [ 0.26789036]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.26748231]
+第 1 批的判别损失： [ 0.26635259]
+第 2 批的判别损失： [ 0.26886296]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.26524851]
+第 1 批的判别损失： [ 0.2640273]
+第 2 批的判别损失： [ 0.26774198]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.26369455]
+第 1 批的判别损失： [ 0.26806408]
+第 2 批的判别损失： [ 0.26584649]
+第 0 次reward更新损失： -218.282
+adversarial epoch:15	 time:71.87320613861084
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.438281297683716
+time elapsed of nll-test: 162.30179572105408
+evaluate epoch:66	EmbeddingSimilarity:-0.0157322270868	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.26398888]
+第 1 批的判别损失： [ 0.27499729]
+第 2 批的判别损失： [ 0.26682264]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.26054454]
+第 1 批的判别损失： [ 0.26130822]
+第 2 批的判别损失： [ 0.25893006]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.25894663]
+第 1 批的判别损失： [ 0.25858173]
+第 2 批的判别损失： [ 0.25770703]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.25641888]
+第 1 批的判别损失： [ 0.26124769]
+第 2 批的判别损失： [ 0.25640973]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.25591537]
+第 1 批的判别损失： [ 0.25928068]
+第 2 批的判别损失： [ 0.25488076]
+第 0 次reward更新损失： -102.791
+adversarial epoch:16	 time:71.38893270492554
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.25589985]
+第 1 批的判别损失： [ 0.25422806]
+第 2 批的判别损失： [ 0.25771239]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.25359058]
+第 1 批的判别损失： [ 0.25306472]
+第 2 批的判别损失： [ 0.25067857]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.24959253]
+第 1 批的判别损失： [ 0.24954231]
+第 2 批的判别损失： [ 0.24945581]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.24783944]
+第 1 批的判别损失： [ 0.25009346]
+第 2 批的判别损失： [ 0.24704963]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.24965529]
+第 1 批的判别损失： [ 0.24637368]
+第 2 批的判别损失： [ 0.24663509]
+第 0 次reward更新损失： -135.664
+adversarial epoch:17	 time:71.60906410217285
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.24534217]
+第 1 批的判别损失： [ 0.24650389]
+第 2 批的判别损失： [ 0.2449768]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.24359816]
+第 1 批的判别损失： [ 0.24253741]
+第 2 批的判别损失： [ 0.24766745]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.24287614]
+第 1 批的判别损失： [ 0.24205157]
+第 2 批的判别损失： [ 0.24059957]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.2396479]
+第 1 批的判别损失： [ 0.23935126]
+第 2 批的判别损失： [ 0.23862784]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.2379275]
+第 1 批的判别损失： [ 0.23763372]
+第 2 批的判别损失： [ 0.23718722]
+第 0 次reward更新损失： -245.066
+adversarial epoch:18	 time:71.81020212173462
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.23774834]
+第 1 批的判别损失： [ 0.2369343]
+第 2 批的判别损失： [ 0.23519479]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.23583624]
+第 1 批的判别损失： [ 0.23486282]
+第 2 批的判别损失： [ 0.24381082]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.23451963]
+第 1 批的判别损失： [ 0.2335245]
+第 2 批的判别损失： [ 0.23273818]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.2324973]
+第 1 批的判别损失： [ 0.2315525]
+第 2 批的判别损失： [ 0.23118509]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.23037939]
+第 1 批的判别损失： [ 0.22985312]
+第 2 批的判别损失： [ 0.22879177]
+第 0 次reward更新损失： -155.582
+adversarial epoch:19	 time:71.42496347427368
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.22854108]
+第 1 批的判别损失： [ 0.22845888]
+第 2 批的判别损失： [ 0.22764407]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.22671218]
+第 1 批的判别损失： [ 0.22618867]
+第 2 批的判别损失： [ 0.22660558]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.22526552]
+第 1 批的判别损失： [ 0.22482172]
+第 2 批的判别损失： [ 0.22453356]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.22450154]
+第 1 批的判别损失： [ 0.22362886]
+第 2 批的判别损失： [ 0.22261803]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.2224697]
+第 1 批的判别损失： [ 0.22244485]
+第 2 批的判别损失： [ 0.22132567]
+第 0 次reward更新损失： -90.4934
+adversarial epoch:20	 time:71.6050591468811
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.468298196792603
+time elapsed of nll-test: 163.00919222831726
+evaluate epoch:71	EmbeddingSimilarity:-0.015732126242	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.22077443]
+第 1 批的判别损失： [ 0.22013344]
+第 2 批的判别损失： [ 0.21945581]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.21942399]
+第 1 批的判别损失： [ 0.21829444]
+第 2 批的判别损失： [ 0.21802647]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.22457092]
+第 1 批的判别损失： [ 0.2181672]
+第 2 批的判别损失： [ 0.21750914]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.21654505]
+第 1 批的判别损失： [ 0.2156927]
+第 2 批的判别损失： [ 0.21682025]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.21466]
+第 1 批的判别损失： [ 0.21419393]
+第 2 批的判别损失： [ 0.21491857]
+第 0 次reward更新损失： -52.3817
+adversarial epoch:21	 time:72.06932044029236
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.21330197]
+第 1 批的判别损失： [ 0.2125528]
+第 2 批的判别损失： [ 0.21174085]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.21190536]
+第 1 批的判别损失： [ 0.21129143]
+第 2 批的判别损失： [ 0.21051461]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.21003498]
+第 1 批的判别损失： [ 0.20972961]
+第 2 批的判别损失： [ 0.20885482]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.20916921]
+第 1 批的判别损失： [ 0.20809361]
+第 2 批的判别损失： [ 0.20746538]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.20671394]
+第 1 批的判别损失： [ 0.20620239]
+第 2 批的判别损失： [ 0.20593593]
+第 0 次reward更新损失： -110.131
+adversarial epoch:22	 time:71.57904863357544
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.20510387]
+第 1 批的判别损失： [ 0.20471711]
+第 2 批的判别损失： [ 0.20453341]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.2036358]
+第 1 批的判别损失： [ 0.20347683]
+第 2 批的判别损失： [ 0.20359516]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.20237675]
+第 1 批的判别损失： [ 0.20193012]
+第 2 批的判别损失： [ 0.20214383]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.20099647]
+第 1 批的判别损失： [ 0.20025015]
+第 2 批的判别损失： [ 0.20221688]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.19978517]
+第 1 批的判别损失： [ 0.1991604]
+第 2 批的判别损失： [ 0.19857109]
+第 0 次reward更新损失： -31.1848
+adversarial epoch:23	 time:72.02929830551147
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.19798994]
+第 1 批的判别损失： [ 0.19781496]
+第 2 批的判别损失： [ 0.19756374]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.19650482]
+第 1 批的判别损失： [ 0.19788662]
+第 2 批的判别损失： [ 0.19567804]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.19509153]
+第 1 批的判别损失： [ 0.19444004]
+第 2 批的判别损失： [ 0.19386856]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.19375071]
+第 1 批的判别损失： [ 0.19293855]
+第 2 批的判别损失： [ 0.19246545]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.19225079]
+第 1 批的判别损失： [ 0.19166429]
+第 2 批的判别损失： [ 0.19098467]
+第 0 次reward更新损失： -112.098
+adversarial epoch:24	 time:71.60053038597107
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.19071895]
+第 1 批的判别损失： [ 0.19012688]
+第 2 批的判别损失： [ 0.18951702]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.19065295]
+第 1 批的判别损失： [ 0.18889143]
+第 2 批的判别损失： [ 0.18826069]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.1885877]
+第 1 批的判别损失： [ 0.18761273]
+第 2 批的判别损失： [ 0.18685782]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.18641163]
+第 1 批的判别损失： [ 0.18607381]
+第 2 批的判别损失： [ 0.18533973]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.18496285]
+第 1 批的判别损失： [ 0.1848195]
+第 2 批的判别损失： [ 0.1841266]
+第 0 次reward更新损失： -63.5618
+adversarial epoch:25	 time:72.2454354763031
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.53345537185669
+time elapsed of nll-test: 162.7665102481842
+evaluate epoch:76	EmbeddingSimilarity:-0.0157330918234	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.18359309]
+第 1 批的判别损失： [ 0.18307519]
+第 2 批的判别损失： [ 0.18379083]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.18249305]
+第 1 批的判别损失： [ 0.18207392]
+第 2 批的判别损失： [ 0.18124829]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.18092483]
+第 1 批的判别损失： [ 0.18035802]
+第 2 批的判别损失： [ 0.18167208]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.18004471]
+第 1 批的判别损失： [ 0.17922136]
+第 2 批的判别损失： [ 0.17861135]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.17829122]
+第 1 批的判别损失： [ 0.17776674]
+第 2 批的判别损失： [ 0.17794704]
+第 0 次reward更新损失： -29.3146
+adversarial epoch:26	 time:71.98073196411133
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.17690745]
+第 1 批的判别损失： [ 0.17649837]
+第 2 批的判别损失： [ 0.17648877]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.17599235]
+第 1 批的判别损失： [ 0.17512372]
+第 2 批的判别损失： [ 0.17465061]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.17439274]
+第 1 批的判别损失： [ 0.1739092]
+第 2 批的判别损失： [ 0.17326058]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.17284019]
+第 1 批的判别损失： [ 0.17236374]
+第 2 批的判别损失： [ 0.17194942]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.17141551]
+第 1 批的判别损失： [ 0.17105883]
+第 2 批的判别损失： [ 0.17102027]
+第 0 次reward更新损失： -44.4243
+adversarial epoch:27	 time:71.63653802871704
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.17024252]
+第 1 批的判别损失： [ 0.16977583]
+第 2 批的判别损失： [ 0.16926928]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.16885599]
+第 1 批的判别损失： [ 0.16853499]
+第 2 批的判别损失： [ 0.16832903]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.16799767]
+第 1 批的判别损失： [ 0.16793489]
+第 2 批的判别损失： [ 0.16698633]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.16658565]
+第 1 批的判别损失： [ 0.16593421]
+第 2 批的判别损失： [ 0.16579393]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.16514094]
+第 1 批的判别损失： [ 0.16457178]
+第 2 批的判别损失： [ 0.16417755]
+第 0 次reward更新损失： -71.7577
+adversarial epoch:28	 time:71.65989446640015
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.16378321]
+第 1 批的判别损失： [ 0.16395937]
+第 2 批的判别损失： [ 0.16299793]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.16266324]
+第 1 批的判别损失： [ 0.16229616]
+第 2 批的判别损失： [ 0.16163673]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.16132885]
+第 1 批的判别损失： [ 0.1607976]
+第 2 批的判别损失： [ 0.16046682]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.16015437]
+第 1 批的判别损失： [ 0.15980333]
+第 2 批的判别损失： [ 0.15914537]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.15902932]
+第 1 批的判别损失： [ 0.15834829]
+第 2 批的判别损失： [ 0.15805049]
+第 0 次reward更新损失： -43.4014
+adversarial epoch:29	 time:72.17442584037781
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.15773152]
+第 1 批的判别损失： [ 0.15725422]
+第 2 批的判别损失： [ 0.15675466]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.15731026]
+第 1 批的判别损失： [ 0.15613697]
+第 2 批的判别损失： [ 0.1556281]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.15514517]
+第 1 批的判别损失： [ 0.15643528]
+第 2 批的判别损失： [ 0.15476391]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.15417117]
+第 1 批的判别损失： [ 0.15363729]
+第 2 批的判别损失： [ 0.15318836]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.15281384]
+第 1 批的判别损失： [ 0.15272249]
+第 2 批的判别损失： [ 0.15215001]
+第 0 次reward更新损失： -10.4503
+adversarial epoch:30	 time:71.91927671432495
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.303207874298096
+time elapsed of nll-test: 162.29889011383057
+evaluate epoch:81	EmbeddingSimilarity:-0.0157292240585	nll-test:-0.71503
+train_discriminator_ 1
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\pool_allocator.cc:247] PoolAllocator: After 55224582 get requests, put_count=55224581 evicted_count=1000 eviction_rate=1.81079e-05 and unsatisfied allocation rate=1.99368e-05
+第 0 批的判别损失： [ 0.15168631]
+第 1 批的判别损失： [ 0.15120849]
+第 2 批的判别损失： [ 0.15080348]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.15035044]
+第 1 批的判别损失： [ 0.1499972]
+第 2 批的判别损失： [ 0.14986517]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.14922066]
+第 1 批的判别损失： [ 0.14896402]
+第 2 批的判别损失： [ 0.14840704]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.14840166]
+第 1 批的判别损失： [ 0.14767185]
+第 2 批的判别损失： [ 0.14738731]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.14720841]
+第 1 批的判别损失： [ 0.14660136]
+第 2 批的判别损失： [ 0.14619055]
+第 0 次reward更新损失： -15.3323
+adversarial epoch:31	 time:71.5010416507721
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.14625497]
+第 1 批的判别损失： [ 0.14558014]
+第 2 批的判别损失： [ 0.14500794]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.14459093]
+第 1 批的判别损失： [ 0.14426132]
+第 2 批的判别损失： [ 0.14395884]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.14353214]
+第 1 批的判别损失： [ 0.14304197]
+第 2 批的判别损失： [ 0.14275418]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.14228663]
+第 1 批的判别损失： [ 0.14219554]
+第 2 批的判别损失： [ 0.14165556]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.14118005]
+第 1 批的判别损失： [ 0.14079186]
+第 2 批的判别损失： [ 0.14043188]
+第 0 次reward更新损失： -21.723
+adversarial epoch:32	 time:71.71952176094055
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.14003399]
+第 1 批的判别损失： [ 0.1396865]
+第 2 批的判别损失： [ 0.13940953]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.13891572]
+第 1 批的判别损失： [ 0.13856475]
+第 2 批的判别损失： [ 0.13820519]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.13790382]
+第 1 批的判别损失： [ 0.13746759]
+第 2 批的判别损失： [ 0.13706332]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.13709603]
+第 1 批的判别损失： [ 0.13641518]
+第 2 批的判别损失： [ 0.13601421]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.13563079]
+第 1 批的判别损失： [ 0.13531774]
+第 2 批的判别损失： [ 0.13491598]
+第 0 次reward更新损失： -33.056
+adversarial epoch:33	 time:71.30893301963806
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.13461761]
+第 1 批的判别损失： [ 0.1342541]
+第 2 批的判别损失： [ 0.13384371]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.13345598]
+第 1 批的判别损失： [ 0.1337392]
+第 2 批的判别损失： [ 0.13297552]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.13258441]
+第 1 批的判别损失： [ 0.13231973]
+第 2 批的判别损失： [ 0.13167575]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.13131595]
+第 1 批的判别损失： [ 0.13096701]
+第 2 批的判别损失： [ 0.13088949]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.13032092]
+第 1 批的判别损失： [ 0.12992412]
+第 2 批的判别损失： [ 0.12984012]
+第 0 次reward更新损失： -11.2067
+adversarial epoch:34	 time:71.97830557823181
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.12941715]
+第 1 批的判别损失： [ 0.12888746]
+第 2 批的判别损失： [ 0.12853421]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.12826978]
+第 1 批的判别损失： [ 0.12805445]
+第 2 批的判别损失： [ 0.12753581]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.12720832]
+第 1 批的判别损失： [ 0.12682775]
+第 2 批的判别损失： [ 0.1265226]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.12622173]
+第 1 批的判别损失： [ 0.12578578]
+第 2 批的判别损失： [ 0.1254987]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.12515941]
+第 1 批的判别损失： [ 0.12499769]
+第 2 批的判别损失： [ 0.1244812]
+第 0 次reward更新损失： -22.2669
+adversarial epoch:35	 time:71.97428703308105
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.439284563064575
+time elapsed of nll-test: 162.6870834827423
+evaluate epoch:86	EmbeddingSimilarity:-0.0157281759512	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.12431238]
+第 1 批的判别损失： [ 0.12381599]
+第 2 批的判别损失： [ 0.123556]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.12308258]
+第 1 批的判别损失： [ 0.12276146]
+第 2 批的判别损失： [ 0.12264286]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.12214185]
+第 1 批的判别损失： [ 0.12177277]
+第 2 批的判别损失： [ 0.12147018]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.12110753]
+第 1 批的判别损失： [ 0.12079006]
+第 2 批的判别损失： [ 0.12049324]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.12014555]
+第 1 批的判别损失： [ 0.11978377]
+第 2 批的判别损失： [ 0.11945195]
+第 0 次reward更新损失： -20.9978
+adversarial epoch:36	 time:72.01131391525269
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.11910343]
+第 1 批的判别损失： [ 0.11882656]
+第 2 批的判别损失： [ 0.1184767]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.11814627]
+第 1 批的判别损失： [ 0.11787347]
+第 2 批的判别损失： [ 0.11747467]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.11716555]
+第 1 批的判别损失： [ 0.11683223]
+第 2 批的判别损失： [ 0.11650609]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.11641142]
+第 1 批的判别损失： [ 0.11589459]
+第 2 批的判别损失： [ 0.11561261]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.11545163]
+第 1 批的判别损失： [ 0.11493762]
+第 2 批的判别损失： [ 0.11459654]
+第 0 次reward更新损失： -15.3227
+adversarial epoch:37	 time:71.41498112678528
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.11430094]
+第 1 批的判别损失： [ 0.11402405]
+第 2 批的判别损失： [ 0.11368481]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.11332785]
+第 1 批的判别损失： [ 0.11439642]
+第 2 批的判别损失： [ 0.11279399]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.1128473]
+第 1 批的判别损失： [ 0.11232813]
+第 2 批的判别损失： [ 0.11179742]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.11150306]
+第 1 批的判别损失： [ 0.11118369]
+第 2 批的判别损失： [ 0.11086771]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.11057821]
+第 1 批的判别损失： [ 0.11027993]
+第 2 批的判别损失： [ 0.10995016]
+第 0 次reward更新损失： -21.1692
+adversarial epoch:38	 time:72.01232314109802
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.10968052]
+第 1 批的判别损失： [ 0.10939724]
+第 2 批的判别损失： [ 0.10913282]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.10883274]
+第 1 批的判别损失： [ 0.10846204]
+第 2 批的判别损失： [ 0.10818571]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.10781257]
+第 1 批的判别损失： [ 0.10753822]
+第 2 批的判别损失： [ 0.10725275]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.10693137]
+第 1 批的判别损失： [ 0.10659202]
+第 2 批的判别损失： [ 0.1066654]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.10600903]
+第 1 批的判别损失： [ 0.10574292]
+第 2 批的判别损失： [ 0.105399]
+第 0 次reward更新损失： -14.1752
+adversarial epoch:39	 time:71.38396382331848
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.10526404]
+第 1 批的判别损失： [ 0.1049281]
+第 2 批的判别损失： [ 0.10464168]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.10451771]
+第 1 批的判别损失： [ 0.1039845]
+第 2 批的判别损失： [ 0.10369635]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.10340559]
+第 1 批的判别损失： [ 0.10320832]
+第 2 批的判别损失： [ 0.10284492]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.10248542]
+第 1 批的判别损失： [ 0.10239162]
+第 2 批的判别损失： [ 0.10196505]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.10172652]
+第 1 批的判别损失： [ 0.10136385]
+第 2 批的判别损失： [ 0.10105997]
+第 0 次reward更新损失： -13.7841
+adversarial epoch:40	 time:71.40997767448425
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.386253356933594
+time elapsed of nll-test: 162.69279766082764
+evaluate epoch:91	EmbeddingSimilarity:-0.0157366396616	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.100741]
+第 1 批的判别损失： [ 0.10057028]
+第 2 批的判别损失： [ 0.10019495]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.09986001]
+第 1 批的判别损失： [ 0.09966861]
+第 2 批的判别损失： [ 0.09932323]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.09984221]
+第 1 批的判别损失： [ 0.09879683]
+第 2 批的判别损失： [ 0.09849824]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.09827314]
+第 1 批的判别损失： [ 0.09794421]
+第 2 批的判别损失： [ 0.09770858]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.09751929]
+第 1 批的判别损失： [ 0.09709893]
+第 2 批的判别损失： [ 0.09678824]
+第 0 次reward更新损失： -17.9619
+adversarial epoch:41	 time:71.82126069068909
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.09786207]
+第 1 批的判别损失： [ 0.09685209]
+第 2 批的判别损失： [ 0.096099]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.09570025]
+第 1 批的判别损失： [ 0.09547383]
+第 2 批的判别损失： [ 0.09517169]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.09487116]
+第 1 批的判别损失： [ 0.09462568]
+第 2 批的判别损失： [ 0.0943883]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.09405638]
+第 1 批的判别损失： [ 0.09378965]
+第 2 批的判别损失： [ 0.09351099]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.09323826]
+第 1 批的判别损失： [ 0.09325069]
+第 2 批的判别损失： [ 0.09277306]
+第 0 次reward更新损失： -9.9733
+adversarial epoch:42	 time:71.45151686668396
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.09242258]
+第 1 批的判别损失： [ 0.09256629]
+第 2 批的判别损失： [ 0.09192091]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.09170285]
+第 1 批的判别损失： [ 0.09146578]
+第 2 批的判别损失： [ 0.09112079]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.09088344]
+第 1 批的判别损失： [ 0.0909626]
+第 2 批的判别损失： [ 0.09036409]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.09017083]
+第 1 批的判别损失： [ 0.08998354]
+第 2 批的判别损失： [ 0.08956898]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.08926705]
+第 1 批的判别损失： [ 0.08903518]
+第 2 批的判别损失： [ 0.08874721]
+第 0 次reward更新损失： -9.11775
+adversarial epoch:43	 time:71.34345984458923
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.08857158]
+第 1 批的判别损失： [ 0.08824235]
+第 2 批的判别损失： [ 0.08796158]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.08769126]
+第 1 批的判别损失： [ 0.08745798]
+第 2 批的判别损失： [ 0.08718688]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.08704761]
+第 1 批的判别损失： [ 0.08680524]
+第 2 批的判别损失： [ 0.0864317]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.08616264]
+第 1 批的判别损失： [ 0.0859776]
+第 2 批的判别损失： [ 0.0856717]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.08545835]
+第 1 批的判别损失： [ 0.08515757]
+第 2 批的判别损失： [ 0.08489282]
+第 0 次reward更新损失： -14.1157
+adversarial epoch:44	 time:71.30043411254883
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.08462827]
+第 1 批的判别损失： [ 0.08440481]
+第 2 批的判别损失： [ 0.08412366]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.0852054]
+第 1 批的判别损失： [ 0.08376281]
+第 2 批的判别损失： [ 0.08349894]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.08318026]
+第 1 批的判别损失： [ 0.08301328]
+第 2 批的判别损失： [ 0.08266112]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.08242405]
+第 1 批的判别损失： [ 0.0821815]
+第 2 批的判别损失： [ 0.08196691]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.08177902]
+第 1 批的判别损失： [ 0.081518]
+第 2 批的判别损失： [ 0.08119512]
+第 0 次reward更新损失： -12.0201
+adversarial epoch:45	 time:71.51555228233337
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.463233232498169
+time elapsed of nll-test: 162.56490659713745
+evaluate epoch:96	EmbeddingSimilarity:-0.0157344592408	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.08098835]
+第 1 批的判别损失： [ 0.08092143]
+第 2 批的判别损失： [ 0.08049755]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.08027288]
+第 1 批的判别损失： [ 0.07997008]
+第 2 批的判别损失： [ 0.07973191]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.07961541]
+第 1 批的判别损失： [ 0.07925612]
+第 2 批的判别损失： [ 0.07900564]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.07877894]
+第 1 批的判别损失： [ 0.07860799]
+第 2 批的判别损失： [ 0.07826759]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.07804254]
+第 1 批的判别损失： [ 0.07780165]
+第 2 批的判别损失： [ 0.0776404]
+第 0 次reward更新损失： -19.7657
+adversarial epoch:46	 time:71.71087312698364
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.07738474]
+第 1 批的判别损失： [ 0.07714404]
+第 2 批的判别损失： [ 0.07733429]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.07675229]
+第 1 批的判别损失： [ 0.07651076]
+第 2 批的判别损失： [ 0.07625733]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.07595249]
+第 1 批的判别损失： [ 0.07584421]
+第 2 批的判别损失： [ 0.07554762]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.07530144]
+第 1 批的判别损失： [ 0.07504223]
+第 2 批的判别损失： [ 0.07479402]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.07465795]
+第 1 批的判别损失： [ 0.07465789]
+第 2 批的判别损失： [ 0.07425765]
+第 0 次reward更新损失： -8.07804
+adversarial epoch:47	 time:71.70708656311035
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.0740042]
+第 1 批的判别损失： [ 0.07366344]
+第 2 批的判别损失： [ 0.07342854]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.07327513]
+第 1 批的判别损失： [ 0.07299128]
+第 2 批的判别损失： [ 0.07297429]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.0726895]
+第 1 批的判别损失： [ 0.07242798]
+第 2 批的判别损失： [ 0.07214521]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.07197415]
+第 1 批的判别损失： [ 0.07172333]
+第 2 批的判别损失： [ 0.07141177]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.07134253]
+第 1 批的判别损失： [ 0.07103224]
+第 2 批的判别损失： [ 0.07081365]
+第 0 次reward更新损失： -9.82561
+adversarial epoch:48	 time:71.65506625175476
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.07054327]
+第 1 批的判别损失： [ 0.07041486]
+第 2 批的判别损失： [ 0.07009768]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.06994765]
+第 1 批的判别损失： [ 0.06964727]
+第 2 批的判别损失： [ 0.07010537]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.06932732]
+第 1 批的判别损失： [ 0.06911338]
+第 2 批的判别损失： [ 0.06886157]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.06866459]
+第 1 批的判别损失： [ 0.06842264]
+第 2 批的判别损失： [ 0.06828883]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.06796668]
+第 1 批的判别损失： [ 0.06774686]
+第 2 批的判别损失： [ 0.06753257]
+第 0 次reward更新损失： -10.434
+adversarial epoch:49	 time:71.77402567863464
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.06731299]
+第 1 批的判别损失： [ 0.06712359]
+第 2 批的判别损失： [ 0.06687766]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.0666596]
+第 1 批的判别损失： [ 0.06645119]
+第 2 批的判别损失： [ 0.06624221]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.06602792]
+第 1 批的判别损失： [ 0.06586758]
+第 2 批的判别损失： [ 0.06567144]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.06540975]
+第 1 批的判别损失： [ 0.06558218]
+第 2 批的判别损失： [ 0.06507461]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.06482095]
+第 1 批的判别损失： [ 0.06458321]
+第 2 批的判别损失： [ 0.06457905]
+第 0 次reward更新损失： -7.45101
+adversarial epoch:50	 time:71.79507422447205
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.422270774841309
+time elapsed of nll-test: 162.18967652320862
+evaluate epoch:101	EmbeddingSimilarity:-0.0157310998016	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.06424923]
+第 1 批的判别损失： [ 0.0640238]
+第 2 批的判别损失： [ 0.0638149]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.06357107]
+第 1 批的判别损失： [ 0.06359727]
+第 2 批的判别损失： [ 0.06342679]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.06301317]
+第 1 批的判别损失： [ 0.06312846]
+第 2 批的判别损失： [ 0.06263233]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.06242103]
+第 1 批的判别损失： [ 0.06217286]
+第 2 批的判别损失： [ 0.06199393]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.06176502]
+第 1 批的判别损失： [ 0.06156242]
+第 2 批的判别损失： [ 0.0615548]
+第 0 次reward更新损失： -8.07318
+adversarial epoch:51	 time:71.68209338188171
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.06139157]
+第 1 批的判别损失： [ 0.06104017]
+第 2 批的判别损失： [ 0.06083164]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.0605902]
+第 1 批的判别损失： [ 0.0604152]
+第 2 批的判别损失： [ 0.06026156]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.06000253]
+第 1 批的判别损失： [ 0.05983677]
+第 2 批的判别损失： [ 0.05965685]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.05976888]
+第 1 批的判别损失： [ 0.05929904]
+第 2 批的判别损失： [ 0.0591322]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.05885944]
+第 1 批的判别损失： [ 0.05866877]
+第 2 批的判别损失： [ 0.05854153]
+第 0 次reward更新损失： -9.41684
+adversarial epoch:52	 time:71.69509220123291
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.05835066]
+第 1 批的判别损失： [ 0.05809327]
+第 2 批的判别损失： [ 0.05789565]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.05771437]
+第 1 批的判别损失： [ 0.05755289]
+第 2 批的判别损失： [ 0.05734877]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.05712192]
+第 1 批的判别损失： [ 0.05692535]
+第 2 批的判别损失： [ 0.05706517]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.05660044]
+第 1 批的判别损失： [ 0.05641609]
+第 2 批的判别损失： [ 0.05632256]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.05604526]
+第 1 批的判别损失： [ 0.05585522]
+第 2 批的判别损失： [ 0.05565738]
+第 0 次reward更新损失： -18.4954
+adversarial epoch:53	 time:71.56401991844177
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.05544912]
+第 1 批的判别损失： [ 0.05529277]
+第 2 批的判别损失： [ 0.05510632]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.05521415]
+第 1 批的判别损失： [ 0.05477528]
+第 2 批的判别损失： [ 0.05469123]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.05439412]
+第 1 批的判别损失： [ 0.05422419]
+第 2 批的判别损失： [ 0.05418972]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.0538435]
+第 1 批的判别损失： [ 0.05365315]
+第 2 批的判别损失： [ 0.05345959]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.05330199]
+第 1 批的判别损失： [ 0.05341372]
+第 2 批的判别损失： [ 0.05300985]
+第 0 次reward更新损失： -11.8148
+adversarial epoch:54	 time:71.31488132476807
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.05277929]
+第 1 批的判别损失： [ 0.05269551]
+第 2 批的判别损失： [ 0.05244055]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.05228127]
+第 1 批的判别损失： [ 0.05212661]
+第 2 批的判别损失： [ 0.05214267]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.05184161]
+第 1 批的判别损失： [ 0.05177006]
+第 2 批的判别损失： [ 0.05148167]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.05132603]
+第 1 批的判别损失： [ 0.0510419]
+第 2 批的判别损失： [ 0.0508943]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.05068289]
+第 1 批的判别损失： [ 0.0506268]
+第 2 批的判别损失： [ 0.05037705]
+第 0 次reward更新损失： -10.9531
+adversarial epoch:55	 time:71.337895154953
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.621382474899292
+time elapsed of nll-test: 162.45084190368652
+evaluate epoch:106	EmbeddingSimilarity:-0.0157272846842	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.05022527]
+第 1 批的判别损失： [ 0.05000813]
+第 2 批的判别损失： [ 0.04984701]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.04966408]
+第 1 批的判别损失： [ 0.04949564]
+第 2 批的判别损失： [ 0.04930903]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.04948135]
+第 1 批的判别损失： [ 0.04899886]
+第 2 批的判别损失： [ 0.0488636]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.04873357]
+第 1 批的判别损失： [ 0.04853456]
+第 2 批的判别损失： [ 0.0483411]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.04824496]
+第 1 批的判别损失： [ 0.04806913]
+第 2 批的判别损失： [ 0.04783309]
+第 0 次reward更新损失： -18.4012
+adversarial epoch:56	 time:71.81015920639038
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.04765576]
+第 1 批的判别损失： [ 0.04747247]
+第 2 批的判别损失： [ 0.04743597]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.04717172]
+第 1 批的判别损失： [ 0.04707285]
+第 2 批的判别损失： [ 0.04700398]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.04668295]
+第 1 批的判别损失： [ 0.04672044]
+第 2 批的判别损失： [ 0.04643885]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.04623894]
+第 1 批的判别损失： [ 0.04603422]
+第 2 批的判别损失： [ 0.04588634]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.04583471]
+第 1 批的判别损失： [ 0.04560378]
+第 2 批的判别损失： [ 0.04542097]
+第 0 次reward更新损失： -16.7534
+adversarial epoch:57	 time:71.8457293510437
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.04524672]
+第 1 批的判别损失： [ 0.04556593]
+第 2 批的判别损失： [ 0.04496859]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.04489813]
+第 1 批的判别损失： [ 0.0446401]
+第 2 批的判别损失： [ 0.04450197]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.04434596]
+第 1 批的判别损失： [ 0.04418103]
+第 2 批的判别损失： [ 0.04400957]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.04384548]
+第 1 批的判别损失： [ 0.04368969]
+第 2 批的判别损失： [ 0.0435584]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.04355372]
+第 1 批的判别损失： [ 0.04327267]
+第 2 批的判别损失： [ 0.04313785]
+第 0 次reward更新损失： -17.4798
+adversarial epoch:58	 time:71.72502613067627
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.04293411]
+第 1 批的判别损失： [ 0.04286522]
+第 2 批的判别损失： [ 0.04262273]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.04249039]
+第 1 批的判别损失： [ 0.04231357]
+第 2 批的判别损失： [ 0.04217671]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.04200868]
+第 1 批的判别损失： [ 0.04232488]
+第 2 批的判别损失： [ 0.04177652]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.04159429]
+第 1 批的判别损失： [ 0.04147042]
+第 2 批的判别损失： [ 0.04147736]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.04122853]
+第 1 批的判别损失： [ 0.04111933]
+第 2 批的判别损失： [ 0.04090874]
+第 0 次reward更新损失： -11.5049
+adversarial epoch:59	 time:71.58850836753845
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.04074167]
+第 1 批的判别损失： [ 0.04057136]
+第 2 批的判别损失： [ 0.04058108]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.04028202]
+第 1 批的判别损失： [ 0.04028974]
+第 2 批的判别损失： [ 0.03998026]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.03987939]
+第 1 批的判别损失： [ 0.04035301]
+第 2 批的判别损失： [ 0.03974638]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.03955183]
+第 1 批的判别损失： [ 0.03938686]
+第 2 批的判别损失： [ 0.03919208]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.03902937]
+第 1 批的判别损失： [ 0.03893743]
+第 2 批的判别损失： [ 0.03884536]
+第 0 次reward更新损失： -8.89317
+adversarial epoch:60	 time:71.58250737190247
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.471359252929688
+time elapsed of nll-test: 162.71136498451233
+evaluate epoch:111	EmbeddingSimilarity:-0.0157325536233	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.03861341]
+第 1 批的判别损失： [ 0.0384925]
+第 2 批的判别损失： [ 0.03860343]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.03832097]
+第 1 批的判别损失： [ 0.03808932]
+第 2 批的判别损失： [ 0.0379087]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.03787413]
+第 1 批的判别损失： [ 0.03762992]
+第 2 批的判别损失： [ 0.03748692]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.03734609]
+第 1 批的判别损失： [ 0.03726274]
+第 2 批的判别损失： [ 0.03747373]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.03704217]
+第 1 批的判别损失： [ 0.03685953]
+第 2 批的判别损失： [ 0.03669843]
+第 0 次reward更新损失： -11.8186
+adversarial epoch:61	 time:72.34149694442749
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.03655059]
+第 1 批的判别损失： [ 0.03643365]
+第 2 批的判别损失： [ 0.03627544]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.03617525]
+第 1 批的判别损失： [ 0.03603864]
+第 2 批的判别损失： [ 0.03590508]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.0357281]
+第 1 批的判别损失： [ 0.0355961]
+第 2 批的判别损失： [ 0.0355558]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.03553012]
+第 1 批的判别损失： [ 0.03520728]
+第 2 批的判别损失： [ 0.0351898]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.03502127]
+第 1 批的判别损失： [ 0.03481269]
+第 2 批的判别损失： [ 0.03469402]
+第 0 次reward更新损失： -17.7697
+adversarial epoch:62	 time:71.98930835723877
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.03465285]
+第 1 批的判别损失： [ 0.03444117]
+第 2 批的判别损失： [ 0.03433821]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.0341684]
+第 1 批的判别损失： [ 0.03404186]
+第 2 批的判别损失： [ 0.03392614]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.03378337]
+第 1 批的判别损失： [ 0.03364656]
+第 2 批的判别损失： [ 0.03372877]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.03356916]
+第 1 批的判别损失： [ 0.03378046]
+第 2 批的判别损失： [ 0.0333086]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.03317441]
+第 1 批的判别损失： [ 0.03300261]
+第 2 批的判别损失： [ 0.0328612]
+第 0 次reward更新损失： -12.8221
+adversarial epoch:63	 time:71.82621169090271
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.03269307]
+第 1 批的判别损失： [ 0.0325848]
+第 2 批的判别损失： [ 0.03296747]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.03238459]
+第 1 批的判别损失： [ 0.0322821]
+第 2 批的判别损失： [ 0.03211602]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.03211885]
+第 1 批的判别损失： [ 0.03188515]
+第 2 批的判别损失： [ 0.03171224]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.03173585]
+第 1 批的判别损失： [ 0.03150775]
+第 2 批的判别损失： [ 0.03162365]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.03131713]
+第 1 批的判别损失： [ 0.03125863]
+第 2 批的判别损失： [ 0.03112564]
+第 0 次reward更新损失： -12.2257
+adversarial epoch:64	 time:71.56207013130188
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.03095101]
+第 1 批的判别损失： [ 0.03078155]
+第 2 批的判别损失： [ 0.03077529]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.03053482]
+第 1 批的判别损失： [ 0.03039891]
+第 2 批的判别损失： [ 0.03050531]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.03060753]
+第 1 批的判别损失： [ 0.03010486]
+第 2 批的判别损失： [ 0.03000776]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.03000939]
+第 1 批的判别损失： [ 0.02979218]
+第 2 批的判别损失： [ 0.02971225]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.02957191]
+第 1 批的判别损失： [ 0.02950939]
+第 2 批的判别损失： [ 0.02933349]
+第 0 次reward更新损失： -12.6643
+adversarial epoch:65	 time:71.78719091415405
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.486313819885254
+time elapsed of nll-test: 162.5234911441803
+evaluate epoch:116	EmbeddingSimilarity:-0.0157325445211	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.02915389]
+第 1 批的判别损失： [ 0.02904127]
+第 2 批的判别损失： [ 0.02918521]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.0288891]
+第 1 批的判别损失： [ 0.02878493]
+第 2 批的判别损失： [ 0.02862294]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.02849389]
+第 1 批的判别损失： [ 0.02841019]
+第 2 批的判别损失： [ 0.02826621]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.02813152]
+第 1 批的判别损失： [ 0.0280415]
+第 2 批的判别损失： [ 0.02801064]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.02781287]
+第 1 批的判别损失： [ 0.02778183]
+第 2 批的判别损失： [ 0.02782075]
+第 0 次reward更新损失： -13.1418
+adversarial epoch:66	 time:72.04484701156616
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.02748711]
+第 1 批的判别损失： [ 0.02748194]
+第 2 批的判别损失： [ 0.02730832]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.02716194]
+第 1 批的判别损失： [ 0.02704546]
+第 2 批的判别损失： [ 0.0269286]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.02697404]
+第 1 批的判别损失： [ 0.02690451]
+第 2 批的判别损失： [ 0.02666926]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.02651876]
+第 1 批的判别损失： [ 0.02641674]
+第 2 批的判别损失： [ 0.02631135]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.02619266]
+第 1 批的判别损失： [ 0.02655642]
+第 2 批的判别损失： [ 0.02613597]
+第 0 次reward更新损失： -11.5322
+adversarial epoch:67	 time:71.40549373626709
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.02597594]
+第 1 批的判别损失： [ 0.02589189]
+第 2 批的判别损失： [ 0.02572981]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.02573555]
+第 1 批的判别损失： [ 0.02566434]
+第 2 批的判别损失： [ 0.02545347]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.02530647]
+第 1 批的判别损失： [ 0.02521036]
+第 2 批的判别损失： [ 0.02543838]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.02507812]
+第 1 批的判别损失： [ 0.02489992]
+第 2 批的判别损失： [ 0.02478909]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.02469718]
+第 1 批的判别损失： [ 0.02458635]
+第 2 批的判别损失： [ 0.02448018]
+第 0 次reward更新损失： -21.0038
+adversarial epoch:68	 time:71.9941053390503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.02449676]
+第 1 批的判别损失： [ 0.02435244]
+第 2 批的判别损失： [ 0.02419357]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.02439549]
+第 1 批的判别损失： [ 0.02400992]
+第 2 批的判别损失： [ 0.02397429]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.02381837]
+第 1 批的判别损失： [ 0.02376002]
+第 2 批的判别损失： [ 0.02367534]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.0236816]
+第 1 批的判别损失： [ 0.02361587]
+第 2 批的判别损失： [ 0.02366171]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.02333787]
+第 1 批的判别损失： [ 0.02337156]
+第 2 批的判别损失： [ 0.02323066]
+第 0 次reward更新损失： -10.4816
+adversarial epoch:69	 time:71.70211100578308
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.02300559]
+第 1 批的判别损失： [ 0.02299545]
+第 2 批的判别损失： [ 0.02286146]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.02291267]
+第 1 批的判别损失： [ 0.02273255]
+第 2 批的判别损失： [ 0.02257131]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.0224235]
+第 1 批的判别损失： [ 0.02231394]
+第 2 批的判别损失： [ 0.02243694]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.02213215]
+第 1 批的判别损失： [ 0.02202796]
+第 2 批的判别损失： [ 0.02197617]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.02185242]
+第 1 批的判别损失： [ 0.02191979]
+第 2 批的判别损失： [ 0.021657]
+第 0 次reward更新损失： -19.0014
+adversarial epoch:70	 time:71.74012923240662
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.518325090408325
+time elapsed of nll-test: 162.56093668937683
+evaluate epoch:121	EmbeddingSimilarity:-0.0157337306138	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.02169456]
+第 1 批的判别损失： [ 0.02159802]
+第 2 批的判别损失： [ 0.02148178]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.0214189]
+第 1 批的判别损失： [ 0.02124163]
+第 2 批的判别损失： [ 0.02113304]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.0210319]
+第 1 批的判别损失： [ 0.02097373]
+第 2 批的判别损失： [ 0.02124131]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.02085947]
+第 1 批的判别损失： [ 0.0207655]
+第 2 批的判别损失： [ 0.02062212]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.02050397]
+第 1 批的判别损失： [ 0.02045089]
+第 2 批的判别损失： [ 0.02033097]
+第 0 次reward更新损失： -30.8543
+adversarial epoch:71	 time:72.21039390563965
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.02051206]
+第 1 批的判别损失： [ 0.0201786]
+第 2 批的判别损失： [ 0.02022433]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.02006301]
+第 1 批的判别损失： [ 0.01992689]
+第 2 批的判别损失： [ 0.01982687]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.01975899]
+第 1 批的判别损失： [ 0.02006429]
+第 2 批的判别损失： [ 0.01968869]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.01954623]
+第 1 批的判别损失： [ 0.01943576]
+第 2 批的判别损失： [ 0.01962947]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.01926872]
+第 1 批的判别损失： [ 0.01917551]
+第 2 批的判别损失： [ 0.01919034]
+第 0 次reward更新损失： -18.9015
+adversarial epoch:72	 time:71.5510265827179
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.01907218]
+第 1 批的判别损失： [ 0.01939624]
+第 2 批的判别损失： [ 0.01914276]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.01894376]
+第 1 批的判别损失： [ 0.01896141]
+第 2 批的判别损失： [ 0.01865602]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.0186296]
+第 1 批的判别损失： [ 0.01849072]
+第 2 批的判别损失： [ 0.01863584]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.01878675]
+第 1 批的判别损失： [ 0.01834884]
+第 2 批的判别损失： [ 0.01825129]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.01817048]
+第 1 批的判别损失： [ 0.01804471]
+第 2 批的判别损失： [ 0.01801757]
+第 0 次reward更新损失： -14.6191
+adversarial epoch:73	 time:71.96725916862488
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.0179848]
+第 1 批的判别损失： [ 0.01782496]
+第 2 批的判别损失： [ 0.01771888]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.01789528]
+第 1 批的判别损失： [ 0.01758511]
+第 2 批的判别损失： [ 0.01750676]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.01748061]
+第 1 批的判别损失： [ 0.01747256]
+第 2 批的判别损失： [ 0.01725334]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.01719322]
+第 1 批的判别损失： [ 0.01731126]
+第 2 批的判别损失： [ 0.01702387]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.01705453]
+第 1 批的判别损失： [ 0.01686302]
+第 2 批的判别损失： [ 0.0167841]
+第 0 次reward更新损失： -22.3433
+adversarial epoch:74	 time:71.73101687431335
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.01690883]
+第 1 批的判别损失： [ 0.01665602]
+第 2 批的判别损失： [ 0.01657978]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.01655762]
+第 1 批的判别损失： [ 0.01659057]
+第 2 批的判别损失： [ 0.01659691]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.01630752]
+第 1 批的判别损失： [ 0.01632913]
+第 2 批的判别损失： [ 0.01613927]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.01608671]
+第 1 批的判别损失： [ 0.01600838]
+第 2 批的判别损失： [ 0.01591145]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.01647485]
+第 1 批的判别损失： [ 0.0159473]
+第 2 批的判别损失： [ 0.0159957]
+第 0 次reward更新损失： -10.7515
+adversarial epoch:75	 time:71.97826552391052
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.599370241165161
+time elapsed of nll-test: 163.1912820339203
+evaluate epoch:126	EmbeddingSimilarity:-0.0157325492224	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.01570193]
+第 1 批的判别损失： [ 0.01590103]
+第 2 批的判别损失： [ 0.0156027]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.01548706]
+第 1 批的判别损失： [ 0.01571101]
+第 2 批的判别损失： [ 0.01544958]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.01532995]
+第 1 批的判别损失： [ 0.01521194]
+第 2 批的判别损失： [ 0.01529133]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.01506797]
+第 1 批的判别损失： [ 0.01497957]
+第 2 批的判别损失： [ 0.014945]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.01494623]
+第 1 批的判别损失： [ 0.01484642]
+第 2 批的判别损失： [ 0.01469808]
+第 0 次reward更新损失： -20.4971
+adversarial epoch:76	 time:71.91519737243652
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.01464698]
+第 1 批的判别损失： [ 0.01488017]
+第 2 批的判别损失： [ 0.01471984]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.0144702]
+第 1 批的判别损失： [ 0.01491027]
+第 2 批的判别损失： [ 0.01445144]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.01470457]
+第 1 批的判别损失： [ 0.01447476]
+第 2 批的判别损失： [ 0.01425651]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.01427179]
+第 1 批的判别损失： [ 0.01406377]
+第 2 批的判别损失： [ 0.01402914]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.01405146]
+第 1 批的判别损失： [ 0.01397615]
+第 2 批的判别损失： [ 0.01380979]
+第 0 次reward更新损失： -13.9462
+adversarial epoch:77	 time:71.54802441596985
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.01397842]
+第 1 批的判别损失： [ 0.01382753]
+第 2 批的判别损失： [ 0.01367526]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.01355223]
+第 1 批的判别损失： [ 0.01347518]
+第 2 批的判别损失： [ 0.01339953]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.0135866]
+第 1 批的判别损失： [ 0.0134122]
+第 2 批的判别损失： [ 0.01330702]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.01323627]
+第 1 批的判别损失： [ 0.01308555]
+第 2 批的判别损失： [ 0.01303481]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.013092]
+第 1 批的判别损失： [ 0.01304457]
+第 2 批的判别损失： [ 0.01296544]
+第 0 次reward更新损失： -15.0095
+adversarial epoch:78	 time:71.61605930328369
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.01318415]
+第 1 批的判别损失： [ 0.01291031]
+第 2 批的判别损失： [ 0.01304969]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.01268398]
+第 1 批的判别损失： [ 0.01263859]
+第 2 批的判别损失： [ 0.01267556]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.01265143]
+第 1 批的判别损失： [ 0.01252738]
+第 2 批的判别损失： [ 0.01237995]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.0123848]
+第 1 批的判别损失： [ 0.01250328]
+第 2 批的判别损失： [ 0.01232751]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.01214304]
+第 1 批的判别损失： [ 0.01226417]
+第 2 批的判别损失： [ 0.01210032]
+第 0 次reward更新损失： -10.3222
+adversarial epoch:79	 time:72.2664258480072
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 9.629384994506836
+time elapsed of nll-test: 162.7060101032257
+evaluate epoch:130	EmbeddingSimilarity:-0.0157321687638	nll-test:-0.71503
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.01195917]
+第 1 批的判别损失： [ 0.01199911]
+第 2 批的判别损失： [ 0.01204007]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.01191008]
+第 1 批的判别损失： [ 0.01186712]
+第 2 批的判别损失： [ 0.01169891]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.0116222]
+第 1 批的判别损失： [ 0.01157591]
+第 2 批的判别损失： [ 0.01148393]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.01154645]
+第 1 批的判别损失： [ 0.01152376]
+第 2 批的判别损失： [ 0.01133787]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.01126406]
+第 1 批的判别损失： [ 0.01148556]
+第 2 批的判别损失： [ 0.01125213]
+
+Process finished with exit code 0

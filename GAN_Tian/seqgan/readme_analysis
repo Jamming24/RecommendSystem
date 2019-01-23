@@ -1,0 +1,91 @@
+GAN的类就是一个大壳子；先预先定义好的
+seqgan
+分析其代码结构：
+超参数：
+        super().__init__() 继承了GAN类下的所有参数
+        self.vocab_size = 20  # 词库大小，被设定为5000
+        self.emb_dim = 32
+        self.hidden_dim = 32
+        self.sequence_length = 20  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃时，保留的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 128  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+存储中间文件：
+        self.oracle_file = 'save/oracle.txt'  # 原始的文件
+        self.generator_file = 'save/generator.txt'  # 生成的令牌文件
+        self.test_file = 'save/test_file.txt'  # 生成的用来测试的文件
+
+评价指标：两个——NLL（负对数似然）——DocEmbSim（文档嵌入相似）
+
+方法：
+train_discriminator判别器训练
+
+
+
+从main--》seqgan
+main直接调用seqgan文件中的train_real方法，
+train_real方法调用init_real_training进行初始G和D的配置，并获取两个（原生大小）：wi和iw字典，通过在main中传入local_data构建，
+并按照该字典，将local_data进行code化写入oracle。
+
+    初始化真实数据评价指标 docsim和Nll    pass
+
+    下面一行在函数里定义了一个函数，将generator的代码转化为文本写入test文件，下面会调用，pass
+
+    然后是全局变量的初始化，定义预训练轮数，这里可以调整G和D的训练比例，还有对抗训练的轮数
+
+    日志信息的写入     pass
+
+调用了utils文件下的generate_samples进行生成文本写入generator，
+    generate_samples又调用了SeqganGenerator文件下的generate，建立会话，获取代码输出self.gen_x
+    《努力到无能为力，拼搏到感动自己》
+    self.gen_x是通过建立while_loop循环，调用_g_recurrence来生成指定序列长度的code。
+    while_loop的输入参数有五个：1）用于计数当前生成的序列长度 2）根据正太分布随机生成都embedding，中提取的首个token(起始字符)
+    3）h_0大概是神经网络的节点     4）gen_o是one-hot编码与输出o_t的softmax点乘再求和求平均
+
+self.gen_data_loader.create_batches对oracle数据进行建立批次
+
+然后开始预训练计算平均损失loss=pre_train_epoch（self.sess会话, self.generator生成器, self.gen_data_loader 数据oracle）
+    调用utils文件下的pre_train_epoch，再调用SeqganGenerator下的pretrain_step预训练 计算 更新和损失pretrain_loss。
+    pretrain_loss把oracle数据变成one-hot编码，再与预测结果g_predictions的log值相乘计算损失求和，
+    然后除以序列长度和批大小的积求平均损失。将oracle数据作为最终目标，以达到更新h0的目的。
+        g_predictions通过while_loop建立循环调用_pretrain_recurrence，四个输入：1）常数0的张量，2）start_token的词嵌入
+        3）self.h0隐层网络，4）g_predictions输出结果的softmax值
+
+        《只有永不遏制的奋斗，才能使青春之花即使是凋谢也是壮丽的》
+    每五批按照训练好的参数h0进行生成样例，并重新获取generator生成的样例
+    get_real_test_file()将code转换为test文本
+    self.evaluate()最终进行评价
+
+开始预训练判别器train_discriminator
+    generate_samples生成样例数据，加载oracle数据和generator数据dis_data_loader.load_train_data，然后计算损失
+    pass
+
+开始对抗训练
+self.reward = Reward(self.generator, update_rate=0.8)配置奖励生成器
+samples = self.generator.generate(self.sess)获取样例，从0开始用h_0参数重新生成了一遍
+rewards = self.reward.get_reward调用SeqganReward下的get_reward()获得一个反馈结果,输入四个参数：
+1）会话，2）样例，3）rollout_num 延迟收益中的过程序列数为16，4）判别器
+返回结果：一个奖励值。
+    首先rollout_num建立循环遍历，
+        然后根据所给序列的长度遍历得到，重新生成的样例，再将重新生成的样例输入判别器，
+        获取其最终的softmax值为ypred_for_auc，得到一个列表reward用于存储奖励。
+        然后将原始的get_reward的输入 传入判别器 与上一步的rewards对应相加，之后将rewards除以延迟收益中的过程序列数16得到reward_res
+然后将当前的 样例 和 奖励值 作为输入传入生成网络中，再去计算损失，更新之类的
+然后就是对抗训练，每五轮生成一次结果，更新奖励参数。
+然后进行判别器的训练，更新参数，迭代15次
+
+
+
+《自觉心是进步之母，自贱心是堕落之源，故自觉心不可无，自贱心不可有》
+《在劳力上劳心，是一切发明之母。事事在劳力上劳心，便可得事物之真理。——陶行知》
+你曾有过这种感觉吗——在车水马龙的街头，人潮拥挤的地铁口，突然看到一张熟悉的脸，好像穿越时光走到你面前，却再也没有其他记忆了，
+你甚至记不起他的名字来。所有的相遇啊，原来都是久别重逢——在遇上的第一个瞬间，就一眼万年。
+
+
+
+

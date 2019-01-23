@@ -1,0 +1,3239 @@
+D:\Anaconda3\envs\tensorflow1.0\python.exe D:/Workspace_Python/Gans/seqgan/main.py
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library cublas64_80.dll locally
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library cudnn64_5.dll locally
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library cufft64_80.dll locally
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library nvcuda.dll locally
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\stream_executor\dso_loader.cc:135] successfully opened CUDA library curand64_80.dll locally
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\tly\AppData\Roaming\nltk_data...
+[nltk_data]   Unzipping tokenizers\punkt.zip.
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:885] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti
+major: 6 minor: 1 memoryClockRate (GHz) 1.6575
+pciBusID 0000:01:00.0
+Total memory: 11.00GiB
+Free memory: 9.10GiB
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:906] DMA: 0 
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:916] 0:   Y 
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "BestSplits" device_type: "CPU"') for unknown op: BestSplits
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "CountExtremelyRandomStats" device_type: "CPU"') for unknown op: CountExtremelyRandomStats
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "FinishedNodes" device_type: "CPU"') for unknown op: FinishedNodes
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "GrowTree" device_type: "CPU"') for unknown op: GrowTree
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "ReinterpretStringToFloat" device_type: "CPU"') for unknown op: ReinterpretStringToFloat
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "SampleInputs" device_type: "CPU"') for unknown op: SampleInputs
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "ScatterAddNdim" device_type: "CPU"') for unknown op: ScatterAddNdim
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "TopNInsert" device_type: "CPU"') for unknown op: TopNInsert
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "TopNRemove" device_type: "CPU"') for unknown op: TopNRemove
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "TreePredictions" device_type: "CPU"') for unknown op: TreePredictions
+E c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\framework\op_kernel.cc:943] OpKernel ('op: "UpdateFertileSlots" device_type: "CPU"') for unknown op: UpdateFertileSlots
+g_predictions: <class 'tensorflow.python.ops.tensor_array_ops.TensorArray'> <tensorflow.python.ops.tensor_array_ops.TensorArray object at 0x000002255AF2B438>
+start pre-train generator:
+generator epoch:0	 time:340.2239627838135	 loss:2.53679
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 733.6531746387482
+time elapsed of nll-test: 218.49917840957642
+evaluate epoch:1	EmbeddingSimilarity:-0.0177835631578	nll-test:1.58316	
+generator epoch:1	 time:339.69486379623413	 loss:1.53424
+generator epoch:2	 time:339.4593822956085	 loss:1.45996
+generator epoch:3	 time:338.9488708972931	 loss:1.42027
+generator epoch:4	 time:339.1795508861542	 loss:1.39427
+generator epoch:5	 time:339.225692987442	 loss:1.3752
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 54.42564845085144
+time elapsed of nll-test: 216.76844549179077
+evaluate epoch:6	EmbeddingSimilarity:-0.0171928474439	nll-test:1.34621	
+generator epoch:6	 time:340.70281767845154	 loss:1.36076
+generator epoch:7	 time:339.2862205505371	 loss:1.34933
+generator epoch:8	 time:339.0524425506592	 loss:1.33997
+generator epoch:9	 time:340.37145590782166	 loss:1.33188
+start pre-train discriminator:
+discriminator epoch:0
+第 0 批的判别损失： [ 3.93222284]
+第 1 批的判别损失： [ 3.74226642]
+第 2 批的判别损失： [ 3.96004772]
+discriminator epoch:1
+第 0 批的判别损失： [ 3.74429941]
+第 1 批的判别损失： [ 3.70304346]
+第 2 批的判别损失： [ 4.26098156]
+discriminator epoch:2
+第 0 批的判别损失： [ 3.83895063]
+第 1 批的判别损失： [ 3.88503695]
+第 2 批的判别损失： [ 3.95675421]
+discriminator epoch:3
+第 0 批的判别损失： [ 4.01608419]
+第 1 批的判别损失： [ 3.9117918]
+第 2 批的判别损失： [ 3.9805057]
+discriminator epoch:4
+第 0 批的判别损失： [ 3.76014376]
+第 1 批的判别损失： [ 3.76177096]
+第 2 批的判别损失： [ 3.95265341]
+discriminator epoch:5
+第 0 批的判别损失： [ 4.08381224]
+第 1 批的判别损失： [ 3.84819913]
+第 2 批的判别损失： [ 3.89306593]
+discriminator epoch:6
+第 0 批的判别损失： [ 3.98403811]
+第 1 批的判别损失： [ 3.9064548]
+第 2 批的判别损失： [ 3.80773282]
+discriminator epoch:7
+第 0 批的判别损失： [ 3.81021452]
+第 1 批的判别损失： [ 3.91458249]
+第 2 批的判别损失： [ 3.95504045]
+discriminator epoch:8
+第 0 批的判别损失： [ 4.01061726]
+第 1 批的判别损失： [ 3.87098241]
+第 2 批的判别损失： [ 3.91580558]
+discriminator epoch:9
+第 0 批的判别损失： [ 4.04696941]
+第 1 批的判别损失： [ 3.51206517]
+第 2 批的判别损失： [ 3.93832278]
+adversarial training:
+第 0 次reward更新损失： 57.5037
+adversarial epoch:0	 time:69.91255068778992
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 55.34926104545593
+time elapsed of nll-test: 219.70306968688965
+evaluate epoch:11	EmbeddingSimilarity:-0.0172267689401	nll-test:1.30751	
+train_discriminator_ 1
+第 0 批的判别损失： [ 3.82130527]
+第 1 批的判别损失： [ 3.72450209]
+第 2 批的判别损失： [ 3.62324667]
+train_discriminator_ 2
+第 0 批的判别损失： [ 3.49114442]
+第 1 批的判别损失： [ 3.81077051]
+第 2 批的判别损失： [ 3.58791327]
+train_discriminator_ 3
+第 0 批的判别损失： [ 3.63742876]
+第 1 批的判别损失： [ 3.82559133]
+第 2 批的判别损失： [ 3.65322685]
+train_discriminator_ 4
+第 0 批的判别损失： [ 3.53339124]
+第 1 批的判别损失： [ 3.73890781]
+第 2 批的判别损失： [ 3.56095934]
+train_discriminator_ 5
+第 0 批的判别损失： [ 3.61904669]
+第 1 批的判别损失： [ 3.59810233]
+第 2 批的判别损失： [ 3.52447605]
+train_discriminator_ 6
+第 0 批的判别损失： [ 3.62039399]
+第 1 批的判别损失： [ 3.57307148]
+第 2 批的判别损失： [ 3.45501733]
+train_discriminator_ 7
+第 0 批的判别损失： [ 3.42950058]
+第 1 批的判别损失： [ 3.6338017]
+第 2 批的判别损失： [ 3.16290164]
+train_discriminator_ 8
+第 0 批的判别损失： [ 3.55811381]
+第 1 批的判别损失： [ 3.41436648]
+第 2 批的判别损失： [ 3.43226624]
+train_discriminator_ 9
+第 0 批的判别损失： [ 3.37370801]
+第 1 批的判别损失： [ 3.42055869]
+第 2 批的判别损失： [ 3.34722853]
+train_discriminator_ 10
+第 0 批的判别损失： [ 3.30482936]
+第 1 批的判别损失： [ 3.32385182]
+第 2 批的判别损失： [ 3.43630314]
+train_discriminator_ 11
+第 0 批的判别损失： [ 3.39762187]
+第 1 批的判别损失： [ 3.32465363]
+第 2 批的判别损失： [ 3.09581089]
+train_discriminator_ 12
+第 0 批的判别损失： [ 3.11245155]
+第 1 批的判别损失： [ 3.13130283]
+第 2 批的判别损失： [ 3.17654443]
+train_discriminator_ 13
+第 0 批的判别损失： [ 3.18003774]
+第 1 批的判别损失： [ 3.27279687]
+第 2 批的判别损失： [ 2.91005278]
+train_discriminator_ 14
+第 0 批的判别损失： [ 2.94352889]
+第 1 批的判别损失： [ 3.11027312]
+第 2 批的判别损失： [ 2.82527184]
+train_discriminator_ 15
+第 0 批的判别损失： [ 3.10957742]
+第 1 批的判别损失： [ 2.828125]
+第 2 批的判别损失： [ 2.82079959]
+第 0 次reward更新损失： 186.559
+adversarial epoch:1	 time:69.16069912910461
+train_discriminator_ 1
+第 0 批的判别损失： [ 2.82516837]
+第 1 批的判别损失： [ 2.80351138]
+第 2 批的判别损失： [ 2.77219725]
+train_discriminator_ 2
+第 0 批的判别损失： [ 2.85810494]
+第 1 批的判别损失： [ 2.78806925]
+第 2 批的判别损失： [ 2.85702085]
+train_discriminator_ 3
+第 0 批的判别损失： [ 2.57334137]
+第 1 批的判别损失： [ 2.61185789]
+第 2 批的判别损失： [ 2.62917876]
+train_discriminator_ 4
+第 0 批的判别损失： [ 2.55648994]
+第 1 批的判别损失： [ 2.7033422]
+第 2 批的判别损失： [ 2.63738823]
+train_discriminator_ 5
+第 0 批的判别损失： [ 2.49674773]
+第 1 批的判别损失： [ 2.4752059]
+第 2 批的判别损失： [ 2.50226641]
+train_discriminator_ 6
+第 0 批的判别损失： [ 2.39269495]
+第 1 批的判别损失： [ 2.4763875]
+第 2 批的判别损失： [ 2.45853114]
+train_discriminator_ 7
+第 0 批的判别损失： [ 2.24327445]
+第 1 批的判别损失： [ 2.46519732]
+第 2 批的判别损失： [ 2.43166447]
+train_discriminator_ 8
+第 0 批的判别损失： [ 2.43188405]
+第 1 批的判别损失： [ 2.20209289]
+第 2 批的判别损失： [ 2.25883341]
+train_discriminator_ 9
+第 0 批的判别损失： [ 2.25261569]
+第 1 批的判别损失： [ 1.99678636]
+第 2 批的判别损失： [ 2.17872643]
+train_discriminator_ 10
+第 0 批的判别损失： [ 2.01320529]
+第 1 批的判别损失： [ 2.15377259]
+第 2 批的判别损失： [ 1.97254443]
+train_discriminator_ 11
+第 0 批的判别损失： [ 2.02529693]
+第 1 批的判别损失： [ 1.92047203]
+第 2 批的判别损失： [ 1.96697342]
+train_discriminator_ 12
+第 0 批的判别损失： [ 1.93006516]
+第 1 批的判别损失： [ 1.95197225]
+第 2 批的判别损失： [ 1.88198316]
+train_discriminator_ 13
+第 0 批的判别损失： [ 1.8777988]
+第 1 批的判别损失： [ 1.82221878]
+第 2 批的判别损失： [ 1.805848]
+train_discriminator_ 14
+第 0 批的判别损失： [ 1.77428079]
+第 1 批的判别损失： [ 1.75951052]
+第 2 批的判别损失： [ 1.77655613]
+train_discriminator_ 15
+第 0 批的判别损失： [ 1.69267046]
+第 1 批的判别损失： [ 1.6597625]
+第 2 批的判别损失： [ 1.72454548]
+第 0 次reward更新损失： 926.068
+adversarial epoch:2	 time:69.46001863479614
+train_discriminator_ 1
+第 0 批的判别损失： [ 1.58526349]
+第 1 批的判别损失： [ 1.63568044]
+第 2 批的判别损失： [ 1.6201638]
+train_discriminator_ 2
+第 0 批的判别损失： [ 1.64409578]
+第 1 批的判别损失： [ 1.56457186]
+第 2 批的判别损失： [ 1.52195144]
+train_discriminator_ 3
+第 0 批的判别损失： [ 1.49533319]
+第 1 批的判别损失： [ 1.46554184]
+第 2 批的判别损失： [ 1.45673311]
+train_discriminator_ 4
+第 0 批的判别损失： [ 1.48040462]
+第 1 批的判别损失： [ 1.45041323]
+第 2 批的判别损失： [ 1.34675026]
+train_discriminator_ 5
+第 0 批的判别损失： [ 1.39764941]
+第 1 批的判别损失： [ 1.35932863]
+第 2 批的判别损失： [ 1.34948516]
+train_discriminator_ 6
+第 0 批的判别损失： [ 1.34873176]
+第 1 批的判别损失： [ 1.36960959]
+第 2 批的判别损失： [ 1.30871117]
+train_discriminator_ 7
+第 0 批的判别损失： [ 1.32997465]
+第 1 批的判别损失： [ 1.25647926]
+第 2 批的判别损失： [ 1.24697089]
+train_discriminator_ 8
+第 0 批的判别损失： [ 1.28013754]
+第 1 批的判别损失： [ 1.23302102]
+第 2 批的判别损失： [ 1.23387825]
+train_discriminator_ 9
+第 0 批的判别损失： [ 1.23860574]
+第 1 批的判别损失： [ 1.19639289]
+第 2 批的判别损失： [ 1.19677353]
+train_discriminator_ 10
+第 0 批的判别损失： [ 1.18642783]
+第 1 批的判别损失： [ 1.1429652]
+第 2 批的判别损失： [ 1.14317811]
+train_discriminator_ 11
+第 0 批的判别损失： [ 1.13352084]
+第 1 批的判别损失： [ 1.14526987]
+第 2 批的判别损失： [ 1.11638796]
+train_discriminator_ 12
+第 0 批的判别损失： [ 1.10957491]
+第 1 批的判别损失： [ 1.06940532]
+第 2 批的判别损失： [ 1.01126206]
+train_discriminator_ 13
+第 0 批的判别损失： [ 1.08274519]
+第 1 批的判别损失： [ 1.05431831]
+第 2 批的判别损失： [ 0.9941889]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.98643041]
+第 1 批的判别损失： [ 0.98895252]
+第 2 批的判别损失： [ 0.9733268]
+train_discriminator_ 15
+第 0 批的判别损失： [ 1.04922295]
+第 1 批的判别损失： [ 0.98119688]
+第 2 批的判别损失： [ 0.9616158]
+第 0 次reward更新损失： 1900.5
+adversarial epoch:3	 time:69.3343493938446
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.97122312]
+第 1 批的判别损失： [ 0.89862156]
+第 2 批的判别损失： [ 0.92426848]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.95887196]
+第 1 批的判别损失： [ 0.94668353]
+第 2 批的判别损失： [ 0.95769274]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.93111604]
+第 1 批的判别损失： [ 0.86648577]
+第 2 批的判别损失： [ 0.96216935]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.89064831]
+第 1 批的判别损失： [ 0.91149879]
+第 2 批的判别损失： [ 0.90251482]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.88924897]
+第 1 批的判别损失： [ 0.91841286]
+第 2 批的判别损失： [ 0.82047343]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.84640646]
+第 1 批的判别损失： [ 0.79450697]
+第 2 批的判别损失： [ 0.86053586]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.85458833]
+第 1 批的判别损失： [ 0.85881847]
+第 2 批的判别损失： [ 0.8947897]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.81410754]
+第 1 批的判别损失： [ 0.88545156]
+第 2 批的判别损失： [ 0.79680693]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.89154327]
+第 1 批的判别损失： [ 0.84690166]
+第 2 批的判别损失： [ 0.82816637]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.87195623]
+第 1 批的判别损失： [ 0.73191023]
+第 2 批的判别损失： [ 0.7892282]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.74049318]
+第 1 批的判别损失： [ 0.75799692]
+第 2 批的判别损失： [ 0.75595599]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.71304154]
+第 1 批的判别损失： [ 0.81358105]
+第 2 批的判别损失： [ 0.76918888]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.8454082]
+第 1 批的判别损失： [ 0.84743583]
+第 2 批的判别损失： [ 0.89480269]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.72266173]
+第 1 批的判别损失： [ 0.81644666]
+第 2 批的判别损失： [ 0.8506844]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.74240571]
+第 1 批的判别损失： [ 0.74493974]
+第 2 批的判别损失： [ 0.86444104]
+第 0 次reward更新损失： 2395.52
+adversarial epoch:4	 time:69.5995192527771
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.86843479]
+第 1 批的判别损失： [ 0.77193266]
+第 2 批的判别损失： [ 0.8119626]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.8962481]
+第 1 批的判别损失： [ 0.69255602]
+第 2 批的判别损失： [ 0.84127522]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.81486607]
+第 1 批的判别损失： [ 0.74837828]
+第 2 批的判别损失： [ 0.83046949]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.69681925]
+第 1 批的判别损失： [ 0.78282464]
+第 2 批的判别损失： [ 0.71696198]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.6785351]
+第 1 批的判别损失： [ 0.73098093]
+第 2 批的判别损失： [ 0.85392582]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.82626915]
+第 1 批的判别损失： [ 0.64194131]
+第 2 批的判别损失： [ 0.72766584]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.79221952]
+第 1 批的判别损失： [ 0.73905993]
+第 2 批的判别损失： [ 0.83441949]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.7086103]
+第 1 批的判别损失： [ 0.72923201]
+第 2 批的判别损失： [ 0.73089474]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.77262765]
+第 1 批的判别损失： [ 0.78764153]
+第 2 批的判别损失： [ 0.79343146]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.6100772]
+第 1 批的判别损失： [ 0.80449235]
+第 2 批的判别损失： [ 0.86695379]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.7967577]
+第 1 批的判别损失： [ 0.83873594]
+第 2 批的判别损失： [ 0.81901574]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.7413981]
+第 1 批的判别损失： [ 0.83399963]
+第 2 批的判别损失： [ 0.72277224]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.74419796]
+第 1 批的判别损失： [ 0.8224315]
+第 2 批的判别损失： [ 0.67413664]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.69056344]
+第 1 批的判别损失： [ 0.7274065]
+第 2 批的判别损失： [ 0.8016941]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.7450757]
+第 1 批的判别损失： [ 0.83246493]
+第 2 批的判别损失： [ 0.8667388]
+第 0 次reward更新损失： 2429.51
+adversarial epoch:5	 time:69.45849537849426
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 55.379281520843506
+time elapsed of nll-test: 223.59681177139282
+evaluate epoch:16	EmbeddingSimilarity:-0.0171042884515	nll-test:1.30765	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.83727211]
+第 1 批的判别损失： [ 0.87529385]
+第 2 批的判别损失： [ 0.8072027]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.86556607]
+第 1 批的判别损失： [ 0.68015456]
+第 2 批的判别损失： [ 0.83484477]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.86930114]
+第 1 批的判别损失： [ 0.88394523]
+第 2 批的判别损失： [ 0.7285322]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.69732273]
+第 1 批的判别损失： [ 0.71368581]
+第 2 批的判别损失： [ 0.64746761]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.70463622]
+第 1 批的判别损失： [ 0.86535376]
+第 2 批的判别损失： [ 0.73914629]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.6963008]
+第 1 批的判别损失： [ 0.74756628]
+第 2 批的判别损失： [ 0.70935309]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.66747475]
+第 1 批的判别损失： [ 0.79744589]
+第 2 批的判别损失： [ 0.76632702]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.86655277]
+第 1 批的判别损失： [ 0.68937963]
+第 2 批的判别损失： [ 0.7947281]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.8486135]
+第 1 批的判别损失： [ 0.7712357]
+第 2 批的判别损失： [ 0.9671433]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.82683659]
+第 1 批的判别损失： [ 0.85445696]
+第 2 批的判别损失： [ 0.69671786]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.80046988]
+第 1 批的判别损失： [ 0.77129632]
+第 2 批的判别损失： [ 0.7854259]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.8887803]
+第 1 批的判别损失： [ 0.82121754]
+第 2 批的判别损失： [ 0.80979311]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.76381719]
+第 1 批的判别损失： [ 0.81410396]
+第 2 批的判别损失： [ 0.85057008]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.72691458]
+第 1 批的判别损失： [ 0.66952986]
+第 2 批的判别损失： [ 0.71772647]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.75494295]
+第 1 批的判别损失： [ 0.77626777]
+第 2 批的判别损失： [ 0.69935048]
+第 0 次reward更新损失： 2555.96
+adversarial epoch:6	 time:69.2681348323822
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.92680854]
+第 1 批的判别损失： [ 0.83958626]
+第 2 批的判别损失： [ 0.88182425]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.74566102]
+第 1 批的判别损失： [ 0.81671119]
+第 2 批的判别损失： [ 0.76867914]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.72489929]
+第 1 批的判别损失： [ 0.72531337]
+第 2 批的判别损失： [ 0.73843741]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.73935646]
+第 1 批的判别损失： [ 0.73274148]
+第 2 批的判别损失： [ 0.65490067]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.76119936]
+第 1 批的判别损失： [ 0.83525562]
+第 2 批的判别损失： [ 0.81835234]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.84618032]
+第 1 批的判别损失： [ 0.65544283]
+第 2 批的判别损失： [ 0.90368271]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.72891313]
+第 1 批的判别损失： [ 0.70154631]
+第 2 批的判别损失： [ 0.71799761]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.72085261]
+第 1 批的判别损失： [ 0.87380707]
+第 2 批的判别损失： [ 0.74689841]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.79483026]
+第 1 批的判别损失： [ 0.7271452]
+第 2 批的判别损失： [ 0.68203163]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.81090665]
+第 1 批的判别损失： [ 0.79800761]
+第 2 批的判别损失： [ 0.67097723]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.76724946]
+第 1 批的判别损失： [ 0.87411189]
+第 2 批的判别损失： [ 0.76863968]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.60799628]
+第 1 批的判别损失： [ 0.69289082]
+第 2 批的判别损失： [ 0.83095688]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.87861192]
+第 1 批的判别损失： [ 0.77234316]
+第 2 批的判别损失： [ 0.72033799]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.74522197]
+第 1 批的判别损失： [ 0.67673928]
+第 2 批的判别损失： [ 0.64923245]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.71341461]
+第 1 批的判别损失： [ 0.81027246]
+第 2 批的判别损失： [ 0.67153817]
+第 0 次reward更新损失： 2713.41
+adversarial epoch:7	 time:69.62873268127441
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.59182256]
+第 1 批的判别损失： [ 0.97862196]
+第 2 批的判别损失： [ 0.63123333]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.66260666]
+第 1 批的判别损失： [ 0.7309953]
+第 2 批的判别损失： [ 0.66969842]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.62846094]
+第 1 批的判别损失： [ 0.76144612]
+第 2 批的判别损失： [ 0.74505782]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.7777316]
+第 1 批的判别损失： [ 0.68401605]
+第 2 批的判别损失： [ 0.94244015]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.82332897]
+第 1 批的判别损失： [ 0.69843692]
+第 2 批的判别损失： [ 0.63779724]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.6770426]
+第 1 批的判别损失： [ 0.7035777]
+第 2 批的判别损失： [ 1.07787478]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.71880692]
+第 1 批的判别损失： [ 0.73417366]
+第 2 批的判别损失： [ 0.61857331]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.6718899]
+第 1 批的判别损失： [ 0.75872064]
+第 2 批的判别损失： [ 0.62351251]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.6377871]
+第 1 批的判别损失： [ 0.66562414]
+第 2 批的判别损失： [ 0.69289148]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.62277722]
+第 1 批的判别损失： [ 0.80489504]
+第 2 批的判别损失： [ 0.75453627]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.9717254]
+第 1 批的判别损失： [ 0.71554071]
+第 2 批的判别损失： [ 0.76129162]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.76181573]
+第 1 批的判别损失： [ 0.77158332]
+第 2 批的判别损失： [ 0.85831594]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.75344622]
+第 1 批的判别损失： [ 0.91123056]
+第 2 批的判别损失： [ 0.92864364]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.75607073]
+第 1 批的判别损失： [ 0.56864899]
+第 2 批的判别损失： [ 0.69700313]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.6722393]
+第 1 批的判别损失： [ 0.7122786]
+第 2 批的判别损失： [ 0.85765547]
+第 0 次reward更新损失： 2896.35
+adversarial epoch:8	 time:69.4897449016571
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.8020125]
+第 1 批的判别损失： [ 0.90575385]
+第 2 批的判别损失： [ 0.60768318]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.67011929]
+第 1 批的判别损失： [ 0.70480782]
+第 2 批的判别损失： [ 0.7027173]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.88927358]
+第 1 批的判别损失： [ 0.83754933]
+第 2 批的判别损失： [ 0.7982316]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.72074193]
+第 1 批的判别损失： [ 0.82629728]
+第 2 批的判别损失： [ 0.6960699]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.69885045]
+第 1 批的判别损失： [ 0.80457866]
+第 2 批的判别损失： [ 0.70921963]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.71022403]
+第 1 批的判别损失： [ 0.76486671]
+第 2 批的判别损失： [ 0.86548412]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.75808203]
+第 1 批的判别损失： [ 0.75712991]
+第 2 批的判别损失： [ 0.72521925]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.76219559]
+第 1 批的判别损失： [ 0.68709183]
+第 2 批的判别损失： [ 0.72296113]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.67986262]
+第 1 批的判别损失： [ 0.6935854]
+第 2 批的判别损失： [ 0.81224477]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.67371249]
+第 1 批的判别损失： [ 0.6762867]
+第 2 批的判别损失： [ 0.73202145]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.75910819]
+第 1 批的判别损失： [ 0.80616975]
+第 2 批的判别损失： [ 0.66828841]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.63891256]
+第 1 批的判别损失： [ 0.68058431]
+第 2 批的判别损失： [ 0.70269632]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.83771288]
+第 1 批的判别损失： [ 0.77050924]
+第 2 批的判别损失： [ 0.75266385]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.72116995]
+第 1 批的判别损失： [ 0.82824481]
+第 2 批的判别损失： [ 0.62520844]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.675569]
+第 1 批的判别损失： [ 0.7416271]
+第 2 批的判别损失： [ 0.84155285]
+第 0 次reward更新损失： 2819.17
+adversarial epoch:9	 time:69.63198590278625
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.63941306]
+第 1 批的判别损失： [ 0.84879887]
+第 2 批的判别损失： [ 0.66640306]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.88274986]
+第 1 批的判别损失： [ 0.58902323]
+第 2 批的判别损失： [ 0.76093674]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.59588772]
+第 1 批的判别损失： [ 0.66076684]
+第 2 批的判别损失： [ 0.73447376]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.70416403]
+第 1 批的判别损失： [ 0.75098765]
+第 2 批的判别损失： [ 0.94155365]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.75888973]
+第 1 批的判别损失： [ 0.71337312]
+第 2 批的判别损失： [ 1.07280612]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.87282622]
+第 1 批的判别损失： [ 0.71721792]
+第 2 批的判别损失： [ 0.72604614]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.84818411]
+第 1 批的判别损失： [ 0.72483879]
+第 2 批的判别损失： [ 0.59953815]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.71510923]
+第 1 批的判别损失： [ 0.61128747]
+第 2 批的判别损失： [ 0.8392821]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.83424199]
+第 1 批的判别损失： [ 0.74812847]
+第 2 批的判别损失： [ 0.913041]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.7097615]
+第 1 批的判别损失： [ 0.86623025]
+第 2 批的判别损失： [ 0.84846556]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.69129658]
+第 1 批的判别损失： [ 0.81829441]
+第 2 批的判别损失： [ 0.91082627]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.63973188]
+第 1 批的判别损失： [ 0.60231441]
+第 2 批的判别损失： [ 0.88808191]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.57154429]
+第 1 批的判别损失： [ 0.66609502]
+第 2 批的判别损失： [ 0.71862209]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.71085578]
+第 1 批的判别损失： [ 0.62386578]
+第 2 批的判别损失： [ 1.02141523]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.69540143]
+第 1 批的判别损失： [ 0.70165819]
+第 2 批的判别损失： [ 0.83671606]
+第 0 次reward更新损失： 3117.49
+adversarial epoch:10	 time:69.08639764785767
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 54.115142583847046
+time elapsed of nll-test: 216.86427426338196
+evaluate epoch:21	EmbeddingSimilarity:-0.0170584240069	nll-test:1.3079	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.71416765]
+第 1 批的判别损失： [ 0.8078028]
+第 2 批的判别损失： [ 0.79492533]
+train_discriminator_ 2
+第 0 批的判别损失： [ 1.05536664]
+第 1 批的判别损失： [ 0.97532535]
+第 2 批的判别损失： [ 0.71038342]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.73151004]
+第 1 批的判别损失： [ 0.70387173]
+第 2 批的判别损失： [ 0.88854378]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.85236758]
+第 1 批的判别损失： [ 0.66767979]
+第 2 批的判别损失： [ 0.75954676]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.78682983]
+第 1 批的判别损失： [ 0.73767048]
+第 2 批的判别损失： [ 0.69745129]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.88567257]
+第 1 批的判别损失： [ 0.71889782]
+第 2 批的判别损失： [ 0.77496111]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.67788601]
+第 1 批的判别损失： [ 0.66671389]
+第 2 批的判别损失： [ 0.70053566]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.76401329]
+第 1 批的判别损失： [ 0.67034245]
+第 2 批的判别损失： [ 0.63864857]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.66680056]
+第 1 批的判别损失： [ 0.73702669]
+第 2 批的判别损失： [ 0.60910606]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.80027556]
+第 1 批的判别损失： [ 0.77310288]
+第 2 批的判别损失： [ 0.67295629]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.84057105]
+第 1 批的判别损失： [ 0.75601172]
+第 2 批的判别损失： [ 0.58631831]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.72950459]
+第 1 批的判别损失： [ 0.67459029]
+第 2 批的判别损失： [ 0.61923933]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.9208703]
+第 1 批的判别损失： [ 0.66340667]
+第 2 批的判别损失： [ 0.79228908]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.7809236]
+第 1 批的判别损失： [ 0.77213407]
+第 2 批的判别损失： [ 0.57998872]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.74505115]
+第 1 批的判别损失： [ 0.76142138]
+第 2 批的判别损失： [ 0.89176655]
+第 0 次reward更新损失： 2802.85
+adversarial epoch:11	 time:69.04612040519714
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.85294884]
+第 1 批的判别损失： [ 0.76852804]
+第 2 批的判别损失： [ 0.68400395]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.71512723]
+第 1 批的判别损失： [ 0.80171257]
+第 2 批的判别损失： [ 0.76415062]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.76218808]
+第 1 批的判别损失： [ 0.77423698]
+第 2 批的判别损失： [ 0.59221721]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.76337636]
+第 1 批的判别损失： [ 0.89042878]
+第 2 批的判别损失： [ 0.74374211]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.7082442]
+第 1 批的判别损失： [ 0.66582525]
+第 2 批的判别损失： [ 0.74739242]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.7048142]
+第 1 批的判别损失： [ 0.71985519]
+第 2 批的判别损失： [ 0.67064989]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.69975108]
+第 1 批的判别损失： [ 0.72146368]
+第 2 批的判别损失： [ 0.85968733]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.8179031]
+第 1 批的判别损失： [ 0.69617862]
+第 2 批的判别损失： [ 0.6278162]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.6474793]
+第 1 批的判别损失： [ 0.65079224]
+第 2 批的判别损失： [ 0.67965597]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.72566265]
+第 1 批的判别损失： [ 0.70273811]
+第 2 批的判别损失： [ 0.81089878]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.57785374]
+第 1 批的判别损失： [ 0.85065758]
+第 2 批的判别损失： [ 0.7260173]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.83686161]
+第 1 批的判别损失： [ 0.57696587]
+第 2 批的判别损失： [ 0.83886313]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.69822329]
+第 1 批的判别损失： [ 0.66774213]
+第 2 批的判别损失： [ 0.6761263]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.73832095]
+第 1 批的判别损失： [ 0.58090365]
+第 2 批的判别损失： [ 0.76128441]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.61706007]
+第 1 批的判别损失： [ 0.76057923]
+第 2 批的判别损失： [ 0.74469388]
+第 0 次reward更新损失： 3053.61
+adversarial epoch:12	 time:69.33089089393616
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.70417309]
+第 1 批的判别损失： [ 0.76685214]
+第 2 批的判别损失： [ 0.7896921]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.81407785]
+第 1 批的判别损失： [ 0.87761885]
+第 2 批的判别损失： [ 0.62501729]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.77970839]
+第 1 批的判别损失： [ 0.80362374]
+第 2 批的判别损失： [ 0.66744971]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.71635205]
+第 1 批的判别损失： [ 0.73614776]
+第 2 批的判别损失： [ 0.65310633]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.70411497]
+第 1 批的判别损失： [ 0.65550029]
+第 2 批的判别损失： [ 0.81500143]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.75828099]
+第 1 批的判别损失： [ 0.8231889]
+第 2 批的判别损失： [ 0.67567146]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.85210383]
+第 1 批的判别损失： [ 0.68040454]
+第 2 批的判别损失： [ 0.73759097]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.78659868]
+第 1 批的判别损失： [ 0.72009587]
+第 2 批的判别损失： [ 0.62467986]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.65919745]
+第 1 批的判别损失： [ 0.63697809]
+第 2 批的判别损失： [ 0.68349314]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.83952332]
+第 1 批的判别损失： [ 0.84642231]
+第 2 批的判别损失： [ 0.78475368]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.79088366]
+第 1 批的判别损失： [ 0.89087683]
+第 2 批的判别损失： [ 0.74327815]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.63269842]
+第 1 批的判别损失： [ 0.68449736]
+第 2 批的判别损失： [ 0.76302946]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.82802129]
+第 1 批的判别损失： [ 0.83168745]
+第 2 批的判别损失： [ 0.82374239]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.9338516]
+第 1 批的判别损失： [ 0.76648104]
+第 2 批的判别损失： [ 0.8065846]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.8120923]
+第 1 批的判别损失： [ 0.64007121]
+第 2 批的判别损失： [ 0.77115899]
+第 0 次reward更新损失： 2787.27
+adversarial epoch:13	 time:69.51931071281433
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.83024836]
+第 1 批的判别损失： [ 0.70341688]
+第 2 批的判别损失： [ 0.73466825]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.87888396]
+第 1 批的判别损失： [ 0.55769801]
+第 2 批的判别损失： [ 0.8034485]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.66079819]
+第 1 批的判别损失： [ 0.70578688]
+第 2 批的判别损失： [ 0.63033456]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.72806412]
+第 1 批的判别损失： [ 0.73971951]
+第 2 批的判别损失： [ 0.72378159]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.80646431]
+第 1 批的判别损失： [ 0.66393876]
+第 2 批的判别损失： [ 0.77070957]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.89207077]
+第 1 批的判别损失： [ 0.74863511]
+第 2 批的判别损失： [ 0.57428706]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.79630828]
+第 1 批的判别损失： [ 0.66946256]
+第 2 批的判别损失： [ 0.75417602]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.7487154]
+第 1 批的判别损失： [ 0.78356171]
+第 2 批的判别损失： [ 0.79146481]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.64837825]
+第 1 批的判别损失： [ 0.73628139]
+第 2 批的判别损失： [ 0.93069053]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.76494849]
+第 1 批的判别损失： [ 0.80956864]
+第 2 批的判别损失： [ 0.62451017]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.65628654]
+第 1 批的判别损失： [ 0.8532055]
+第 2 批的判别损失： [ 0.66257608]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.82645154]
+第 1 批的判别损失： [ 0.68917841]
+第 2 批的判别损失： [ 0.7133714]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.65428704]
+第 1 批的判别损失： [ 0.76811862]
+第 2 批的判别损失： [ 0.62100625]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.74023718]
+第 1 批的判别损失： [ 0.81005418]
+第 2 批的判别损失： [ 0.78211689]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.81229407]
+第 1 批的判别损失： [ 0.69120526]
+第 2 批的判别损失： [ 0.80205643]
+第 0 次reward更新损失： 2883.37
+adversarial epoch:14	 time:69.26334738731384
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.61639172]
+第 1 批的判别损失： [ 0.82324624]
+第 2 批的判别损失： [ 0.62580121]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.57294929]
+第 1 批的判别损失： [ 0.84792459]
+第 2 批的判别损失： [ 0.78129196]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.88865161]
+第 1 批的判别损失： [ 0.76615232]
+第 2 批的判别损失： [ 0.70297116]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.83761042]
+第 1 批的判别损失： [ 0.76215857]
+第 2 批的判别损失： [ 0.8183955]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.78529716]
+第 1 批的判别损失： [ 0.67029321]
+第 2 批的判别损失： [ 0.85080433]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.62824333]
+第 1 批的判别损失： [ 0.69735938]
+第 2 批的判别损失： [ 0.78044325]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.72121632]
+第 1 批的判别损失： [ 0.65248162]
+第 2 批的判别损失： [ 0.65555549]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.68926209]
+第 1 批的判别损失： [ 0.78609073]
+第 2 批的判别损失： [ 0.75627923]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.65535051]
+第 1 批的判别损失： [ 0.74396479]
+第 2 批的判别损失： [ 0.72857779]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.8422634]
+第 1 批的判别损失： [ 0.77152216]
+第 2 批的判别损失： [ 0.61711591]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.76909828]
+第 1 批的判别损失： [ 0.92438602]
+第 2 批的判别损失： [ 0.79882038]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.69775033]
+第 1 批的判别损失： [ 0.71570265]
+第 2 批的判别损失： [ 0.61458004]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.66940188]
+第 1 批的判别损失： [ 0.70147467]
+第 2 批的判别损失： [ 0.59281915]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.71904546]
+第 1 批的判别损失： [ 0.68520236]
+第 2 批的判别损失： [ 0.73353302]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.7180295]
+第 1 批的判别损失： [ 0.58442926]
+第 2 批的判别损失： [ 0.78568113]
+第 0 次reward更新损失： 2942.95
+adversarial epoch:15	 time:69.45487070083618
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 53.2394003868103
+time elapsed of nll-test: 220.00269508361816
+evaluate epoch:26	EmbeddingSimilarity:-0.0172117315009	nll-test:1.3082	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.60940981]
+第 1 批的判别损失： [ 0.74813282]
+第 2 批的判别损失： [ 0.56975472]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.73216462]
+第 1 批的判别损失： [ 0.77177095]
+第 2 批的判别损失： [ 0.65730208]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.62554002]
+第 1 批的判别损失： [ 0.61286318]
+第 2 批的判别损失： [ 0.83191741]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.66516948]
+第 1 批的判别损失： [ 0.74783659]
+第 2 批的判别损失： [ 0.60410404]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.83350265]
+第 1 批的判别损失： [ 0.65601754]
+第 2 批的判别损失： [ 0.70931184]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.72404397]
+第 1 批的判别损失： [ 0.74739385]
+第 2 批的判别损失： [ 0.66720611]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.69429433]
+第 1 批的判别损失： [ 0.65168405]
+第 2 批的判别损失： [ 0.71729064]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.9030478]
+第 1 批的判别损失： [ 0.75664079]
+第 2 批的判别损失： [ 0.78272581]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.92560589]
+第 1 批的判别损失： [ 0.74054348]
+第 2 批的判别损失： [ 0.67699784]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.64832842]
+第 1 批的判别损失： [ 0.89615524]
+第 2 批的判别损失： [ 0.72465396]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.68308008]
+第 1 批的判别损失： [ 0.70444334]
+第 2 批的判别损失： [ 1.02403152]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.73936248]
+第 1 批的判别损失： [ 0.70256323]
+第 2 批的判别损失： [ 0.69509053]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.8426674]
+第 1 批的判别损失： [ 0.75339454]
+第 2 批的判别损失： [ 0.72608697]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.70431584]
+第 1 批的判别损失： [ 0.65663081]
+第 2 批的判别损失： [ 0.58838308]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.66121745]
+第 1 批的判别损失： [ 0.67934704]
+第 2 批的判别损失： [ 0.70362186]
+第 0 次reward更新损失： 2575.44
+adversarial epoch:16	 time:69.4424180984497
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.74446088]
+第 1 批的判别损失： [ 0.6259039]
+第 2 批的判别损失： [ 0.80694723]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.64397812]
+第 1 批的判别损失： [ 0.81822467]
+第 2 批的判别损失： [ 0.68544877]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.69660896]
+第 1 批的判别损失： [ 0.53360921]
+第 2 批的判别损失： [ 0.84021437]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.73537832]
+第 1 批的判别损失： [ 0.83913517]
+第 2 批的判别损失： [ 0.77540207]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.76747143]
+第 1 批的判别损失： [ 0.77267075]
+第 2 批的判别损失： [ 0.69439173]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.70638037]
+第 1 批的判别损失： [ 0.70319009]
+第 2 批的判别损失： [ 0.76506162]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.75983369]
+第 1 批的判别损失： [ 0.5431906]
+第 2 批的判别损失： [ 0.75064677]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.71730864]
+第 1 批的判别损失： [ 0.75045276]
+第 2 批的判别损失： [ 0.63250351]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.74443078]
+第 1 批的判别损失： [ 0.77969438]
+第 2 批的判别损失： [ 0.75587344]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.71400309]
+第 1 批的判别损失： [ 0.72694075]
+第 2 批的判别损失： [ 0.61513913]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.73139715]
+第 1 批的判别损失： [ 0.69143796]
+第 2 批的判别损失： [ 0.79223657]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.72254252]
+第 1 批的判别损失： [ 0.79961467]
+第 2 批的判别损失： [ 0.72267401]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.88103151]
+第 1 批的判别损失： [ 0.72837317]
+第 2 批的判别损失： [ 0.69775778]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.74338609]
+第 1 批的判别损失： [ 0.62783617]
+第 2 批的判别损失： [ 0.68501127]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.77841127]
+第 1 批的判别损失： [ 0.72725117]
+第 2 批的判别损失： [ 0.68044591]
+第 0 次reward更新损失： 2869.47
+adversarial epoch:17	 time:69.50492715835571
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.76906854]
+第 1 批的判别损失： [ 0.65021473]
+第 2 批的判别损失： [ 0.7880702]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.65314937]
+第 1 批的判别损失： [ 0.74355423]
+第 2 批的判别损失： [ 0.67668658]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.74847591]
+第 1 批的判别损失： [ 0.6929732]
+第 2 批的判别损失： [ 0.63372308]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.61511308]
+第 1 批的判别损失： [ 0.67306542]
+第 2 批的判别损失： [ 0.87799466]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.63958097]
+第 1 批的判别损失： [ 0.74871945]
+第 2 批的判别损失： [ 0.86669129]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.83603734]
+第 1 批的判别损失： [ 0.7463696]
+第 2 批的判别损失： [ 0.62132323]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.723279]
+第 1 批的判别损失： [ 0.65045977]
+第 2 批的判别损失： [ 0.70740759]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.80022418]
+第 1 批的判别损失： [ 0.56241989]
+第 2 批的判别损失： [ 0.80361152]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.68048632]
+第 1 批的判别损失： [ 0.653162]
+第 2 批的判别损失： [ 0.7434153]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.719836]
+第 1 批的判别损失： [ 0.67307794]
+第 2 批的判别损失： [ 0.77298951]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.642609]
+第 1 批的判别损失： [ 0.68005049]
+第 2 批的判别损失： [ 0.63989258]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.7831223]
+第 1 批的判别损失： [ 0.86501539]
+第 2 批的判别损失： [ 0.61927372]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.64524984]
+第 1 批的判别损失： [ 0.70745122]
+第 2 批的判别损失： [ 0.77820802]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.65879703]
+第 1 批的判别损失： [ 0.63463503]
+第 2 批的判别损失： [ 0.71077222]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.84859669]
+第 1 批的判别损失： [ 0.68491507]
+第 2 批的判别损失： [ 0.69203329]
+第 0 次reward更新损失： 2964.23
+adversarial epoch:18	 time:69.81965827941895
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.76426566]
+第 1 批的判别损失： [ 0.58459902]
+第 2 批的判别损失： [ 0.75648642]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.77275991]
+第 1 批的判别损失： [ 0.62331867]
+第 2 批的判别损失： [ 0.56640422]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.74048519]
+第 1 批的判别损失： [ 0.59530663]
+第 2 批的判别损失： [ 0.68739909]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.5542891]
+第 1 批的判别损失： [ 0.63502347]
+第 2 批的判别损失： [ 0.72864461]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.55044901]
+第 1 批的判别损失： [ 0.89838374]
+第 2 批的判别损失： [ 0.56381953]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.77915204]
+第 1 批的判别损失： [ 0.67367357]
+第 2 批的判别损失： [ 0.72884369]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.77385253]
+第 1 批的判别损失： [ 0.69160128]
+第 2 批的判别损失： [ 0.67126995]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.69409359]
+第 1 批的判别损失： [ 0.74704242]
+第 2 批的判别损失： [ 0.60936761]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.86502767]
+第 1 批的判别损失： [ 0.65719652]
+第 2 批的判别损失： [ 0.76038754]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.8373127]
+第 1 批的判别损失： [ 0.81663275]
+第 2 批的判别损失： [ 0.62860024]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.60996842]
+第 1 批的判别损失： [ 0.76890182]
+第 2 批的判别损失： [ 0.73635924]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.67668754]
+第 1 批的判别损失： [ 0.7022841]
+第 2 批的判别损失： [ 0.65795994]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.73214227]
+第 1 批的判别损失： [ 0.8126303]
+第 2 批的判别损失： [ 0.86743391]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.64714378]
+第 1 批的判别损失： [ 0.8042649]
+第 2 批的判别损失： [ 0.71047568]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.76988083]
+第 1 批的判别损失： [ 0.83073378]
+第 2 批的判别损失： [ 0.76779133]
+第 0 次reward更新损失： 2554.57
+adversarial epoch:19	 time:69.3807852268219
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.71884263]
+第 1 批的判别损失： [ 0.60237575]
+第 2 批的判别损失： [ 0.66929758]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.85507631]
+第 1 批的判别损失： [ 0.53415841]
+第 2 批的判别损失： [ 0.60851467]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.73372447]
+第 1 批的判别损失： [ 0.6750834]
+第 2 批的判别损失： [ 0.6407156]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.56097043]
+第 1 批的判别损失： [ 0.72397625]
+第 2 批的判别损失： [ 0.74586052]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.71242088]
+第 1 批的判别损失： [ 0.66152108]
+第 2 批的判别损失： [ 0.59164476]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.88404143]
+第 1 批的判别损失： [ 0.71589953]
+第 2 批的判别损失： [ 0.69454014]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.64841205]
+第 1 批的判别损失： [ 0.67892647]
+第 2 批的判别损失： [ 0.8329246]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.69713229]
+第 1 批的判别损失： [ 0.63244522]
+第 2 批的判别损失： [ 0.56289041]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.64787602]
+第 1 批的判别损失： [ 0.64179611]
+第 2 批的判别损失： [ 0.75317335]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.67327857]
+第 1 批的判别损失： [ 0.5999192]
+第 2 批的判别损失： [ 0.67995083]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.78655076]
+第 1 批的判别损失： [ 0.80599833]
+第 2 批的判别损失： [ 0.67441249]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.71412539]
+第 1 批的判别损失： [ 0.59417099]
+第 2 批的判别损失： [ 0.7937789]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.69651556]
+第 1 批的判别损失： [ 0.66415209]
+第 2 批的判别损失： [ 0.6012376]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.63166237]
+第 1 批的判别损失： [ 0.97212577]
+第 2 批的判别损失： [ 0.62624907]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.70931941]
+第 1 批的判别损失： [ 0.55815506]
+第 2 批的判别损失： [ 0.64487416]
+第 0 次reward更新损失： 2593.46
+adversarial epoch:20	 time:69.73976421356201
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 55.80122375488281
+time elapsed of nll-test: 217.46086621284485
+evaluate epoch:31	EmbeddingSimilarity:-0.0171703850176	nll-test:1.30866	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.87163091]
+第 1 批的判别损失： [ 0.74847806]
+第 2 批的判别损失： [ 0.88487262]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.72935164]
+第 1 批的判别损失： [ 0.63543904]
+第 2 批的判别损失： [ 0.67456448]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.763336]
+第 1 批的判别损失： [ 0.64820379]
+第 2 批的判别损失： [ 0.73552555]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.74975383]
+第 1 批的判别损失： [ 0.63345641]
+第 2 批的判别损失： [ 0.76074809]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.67298442]
+第 1 批的判别损失： [ 0.5914284]
+第 2 批的判别损失： [ 0.70545161]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.73165905]
+第 1 批的判别损失： [ 0.66715491]
+第 2 批的判别损失： [ 0.73921883]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.84119141]
+第 1 批的判别损失： [ 0.6384393]
+第 2 批的判别损失： [ 0.6647476]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.82300043]
+第 1 批的判别损失： [ 0.65211129]
+第 2 批的判别损失： [ 0.74919683]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.77678561]
+第 1 批的判别损失： [ 0.60093957]
+第 2 批的判别损失： [ 0.73202598]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.71500659]
+第 1 批的判别损失： [ 0.82075667]
+第 2 批的判别损失： [ 0.62687743]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.6914314]
+第 1 批的判别损失： [ 0.59064245]
+第 2 批的判别损失： [ 0.71418726]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.55975646]
+第 1 批的判别损失： [ 0.74005842]
+第 2 批的判别损失： [ 0.73866904]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.70732361]
+第 1 批的判别损失： [ 0.68081152]
+第 2 批的判别损失： [ 0.71812212]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.75381911]
+第 1 批的判别损失： [ 0.59680438]
+第 2 批的判别损失： [ 0.68902618]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.68510604]
+第 1 批的判别损失： [ 0.55836421]
+第 2 批的判别损失： [ 0.68684047]
+第 0 次reward更新损失： 2955.34
+adversarial epoch:21	 time:69.59984707832336
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.72758126]
+第 1 批的判别损失： [ 0.63974166]
+第 2 批的判别损失： [ 0.8058207]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.71563184]
+第 1 批的判别损失： [ 0.66406173]
+第 2 批的判别损失： [ 0.58906269]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.80289656]
+第 1 批的判别损失： [ 0.66416168]
+第 2 批的判别损失： [ 0.70145208]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.70905083]
+第 1 批的判别损失： [ 0.63548189]
+第 2 批的判别损失： [ 0.66855556]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.65407127]
+第 1 批的判别损失： [ 0.8032856]
+第 2 批的判别损失： [ 0.73221672]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.63602877]
+第 1 批的判别损失： [ 0.74334073]
+第 2 批的判别损失： [ 0.7771889]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.73852217]
+第 1 批的判别损失： [ 0.68388063]
+第 2 批的判别损失： [ 0.67644346]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.72965211]
+第 1 批的判别损失： [ 0.66919917]
+第 2 批的判别损失： [ 0.68332267]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.69698632]
+第 1 批的判别损失： [ 0.6551609]
+第 2 批的判别损失： [ 0.75879347]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.64766771]
+第 1 批的判别损失： [ 0.7040354]
+第 2 批的判别损失： [ 0.72908711]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.83046091]
+第 1 批的判别损失： [ 0.71451753]
+第 2 批的判别损失： [ 0.69003451]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.81672496]
+第 1 批的判别损失： [ 0.78176069]
+第 2 批的判别损失： [ 0.63951528]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.66256928]
+第 1 批的判别损失： [ 0.73584318]
+第 2 批的判别损失： [ 0.65942508]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.86400479]
+第 1 批的判别损失： [ 0.70597506]
+第 2 批的判别损失： [ 0.67372078]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.72482383]
+第 1 批的判别损失： [ 0.57250047]
+第 2 批的判别损失： [ 0.72202015]
+第 0 次reward更新损失： 2545.97
+adversarial epoch:22	 time:69.4812560081482
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.70378202]
+第 1 批的判别损失： [ 0.70978832]
+第 2 批的判别损失： [ 0.78142655]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.81585002]
+第 1 批的判别损失： [ 0.76706064]
+第 2 批的判别损失： [ 0.69317377]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.65570283]
+第 1 批的判别损失： [ 0.66377336]
+第 2 批的判别损失： [ 0.80018461]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.86752582]
+第 1 批的判别损失： [ 0.68360245]
+第 2 批的判别损失： [ 0.76917315]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.61133748]
+第 1 批的判别损失： [ 0.69297528]
+第 2 批的判别损失： [ 0.62312984]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.63600802]
+第 1 批的判别损失： [ 0.62561011]
+第 2 批的判别损失： [ 0.66360801]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.55064529]
+第 1 批的判别损失： [ 0.68068504]
+第 2 批的判别损失： [ 0.66873974]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.59539747]
+第 1 批的判别损失： [ 0.77736068]
+第 2 批的判别损失： [ 0.74752843]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.71032381]
+第 1 批的判别损失： [ 0.86152059]
+第 2 批的判别损失： [ 0.6576612]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.69831252]
+第 1 批的判别损失： [ 0.59396785]
+第 2 批的判别损失： [ 0.79143155]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.8241384]
+第 1 批的判别损失： [ 0.6958406]
+第 2 批的判别损失： [ 0.77417493]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.68129802]
+第 1 批的判别损失： [ 0.66653538]
+第 2 批的判别损失： [ 0.7423315]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.66178221]
+第 1 批的判别损失： [ 0.71118605]
+第 2 批的判别损失： [ 0.66825247]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.67768157]
+第 1 批的判别损失： [ 0.77244246]
+第 2 批的判别损失： [ 0.81715763]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.88826954]
+第 1 批的判别损失： [ 0.72245651]
+第 2 批的判别损失： [ 0.64364344]
+第 0 次reward更新损失： 2753.32
+adversarial epoch:23	 time:69.50802898406982
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.64675611]
+第 1 批的判别损失： [ 0.74328732]
+第 2 批的判别损失： [ 0.69460833]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.74663752]
+第 1 批的判别损失： [ 0.62220073]
+第 2 批的判别损失： [ 0.63577235]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.65539992]
+第 1 批的判别损失： [ 0.62963015]
+第 2 批的判别损失： [ 0.7996881]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.77970839]
+第 1 批的判别损失： [ 0.66397524]
+第 2 批的判别损失： [ 0.68882477]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.77258682]
+第 1 批的判别损失： [ 0.71944261]
+第 2 批的判别损失： [ 0.74438322]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.77844453]
+第 1 批的判别损失： [ 0.68018758]
+第 2 批的判别损失： [ 0.65993589]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.68779361]
+第 1 批的判别损失： [ 0.65946525]
+第 2 批的判别损失： [ 0.66675532]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.63474941]
+第 1 批的判别损失： [ 0.73498386]
+第 2 批的判别损失： [ 0.63892162]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.69404042]
+第 1 批的判别损失： [ 0.63519084]
+第 2 批的判别损失： [ 0.80477494]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.7738868]
+第 1 批的判别损失： [ 0.80599141]
+第 2 批的判别损失： [ 0.67951822]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.78478634]
+第 1 批的判别损失： [ 0.61223078]
+第 2 批的判别损失： [ 0.74806321]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.7429269]
+第 1 批的判别损失： [ 0.56212586]
+第 2 批的判别损失： [ 0.6918478]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.78490269]
+第 1 批的判别损失： [ 0.74223495]
+第 2 批的判别损失： [ 0.57643002]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.67838365]
+第 1 批的判别损失： [ 0.58313429]
+第 2 批的判别损失： [ 0.65842032]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.65387368]
+第 1 批的判别损失： [ 0.69380856]
+第 2 批的判别损失： [ 0.59551454]
+第 0 次reward更新损失： 2835.13
+adversarial epoch:24	 time:69.4438157081604
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.51640451]
+第 1 批的判别损失： [ 0.69676864]
+第 2 批的判别损失： [ 0.82382125]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.52023989]
+第 1 批的判别损失： [ 0.65085566]
+第 2 批的判别损失： [ 0.7668364]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.68017626]
+第 1 批的判别损失： [ 0.66622043]
+第 2 批的判别损失： [ 0.68351781]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.64516312]
+第 1 批的判别损失： [ 0.76136291]
+第 2 批的判别损失： [ 0.61570585]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.69781965]
+第 1 批的判别损失： [ 0.73849702]
+第 2 批的判别损失： [ 0.6947515]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.79764456]
+第 1 批的判别损失： [ 0.77931279]
+第 2 批的判别损失： [ 0.75808746]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.66378856]
+第 1 批的判别损失： [ 0.65462011]
+第 2 批的判别损失： [ 0.66480052]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.61467052]
+第 1 批的判别损失： [ 0.67633039]
+第 2 批的判别损失： [ 0.66758585]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.72957349]
+第 1 批的判别损失： [ 0.77049536]
+第 2 批的判别损失： [ 0.650985]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.72909319]
+第 1 批的判别损失： [ 0.62161326]
+第 2 批的判别损失： [ 0.82688498]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.67702663]
+第 1 批的判别损失： [ 0.73359382]
+第 2 批的判别损失： [ 0.65590811]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.62131917]
+第 1 批的判别损失： [ 0.73458672]
+第 2 批的判别损失： [ 0.87523198]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.596048]
+第 1 批的判别损失： [ 0.54433513]
+第 2 批的判别损失： [ 0.59362066]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.66637552]
+第 1 批的判别损失： [ 0.78626579]
+第 2 批的判别损失： [ 0.65058982]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.76599336]
+第 1 批的判别损失： [ 0.80283058]
+第 2 批的判别损失： [ 0.58457017]
+第 0 次reward更新损失： 3020.19
+adversarial epoch:25	 time:69.16159510612488
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 54.5518159866333
+time elapsed of nll-test: 218.87563157081604
+evaluate epoch:36	EmbeddingSimilarity:-0.017220655448	nll-test:1.30894	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.66354632]
+第 1 批的判别损失： [ 0.73836756]
+第 2 批的判别损失： [ 0.74052203]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.69553286]
+第 1 批的判别损失： [ 0.68898499]
+第 2 批的判别损失： [ 0.6583811]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.58961993]
+第 1 批的判别损失： [ 0.79687893]
+第 2 批的判别损失： [ 0.7649157]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.61888552]
+第 1 批的判别损失： [ 0.70943838]
+第 2 批的判别损失： [ 0.86665213]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.65228331]
+第 1 批的判别损失： [ 0.79671872]
+第 2 批的判别损失： [ 0.64336276]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.79934812]
+第 1 批的判别损失： [ 0.59218407]
+第 2 批的判别损失： [ 0.7453348]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.64799631]
+第 1 批的判别损失： [ 0.73381776]
+第 2 批的判别损失： [ 0.63402957]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.67054594]
+第 1 批的判别损失： [ 0.81554258]
+第 2 批的判别损失： [ 0.7734971]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.63248646]
+第 1 批的判别损失： [ 0.61172092]
+第 2 批的判别损失： [ 0.55954337]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.67807531]
+第 1 批的判别损失： [ 0.6121676]
+第 2 批的判别损失： [ 0.64958477]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.67368585]
+第 1 批的判别损失： [ 0.60520118]
+第 2 批的判别损失： [ 0.63301241]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.74155319]
+第 1 批的判别损失： [ 0.66822922]
+第 2 批的判别损失： [ 0.68001294]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.60361505]
+第 1 批的判别损失： [ 0.66081727]
+第 2 批的判别损失： [ 0.72007132]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.6161418]
+第 1 批的判别损失： [ 0.54332137]
+第 2 批的判别损失： [ 0.71777165]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.56563723]
+第 1 批的判别损失： [ 0.60019255]
+第 2 批的判别损失： [ 0.72865784]
+第 0 次reward更新损失： 2845.77
+adversarial epoch:26	 time:69.441974401474
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.69443691]
+第 1 批的判别损失： [ 0.67210758]
+第 2 批的判别损失： [ 0.71990263]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.67323458]
+第 1 批的判别损失： [ 0.72628003]
+第 2 批的判别损失： [ 0.61205786]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.60489333]
+第 1 批的判别损失： [ 0.86868954]
+第 2 批的判别损失： [ 0.59840584]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.57788384]
+第 1 批的判别损失： [ 0.64992189]
+第 2 批的判别损失： [ 0.73557913]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.90788174]
+第 1 批的判别损失： [ 0.65517992]
+第 2 批的判别损失： [ 0.61702794]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.82973957]
+第 1 批的判别损失： [ 0.74778587]
+第 2 批的判别损失： [ 0.68228012]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.72716439]
+第 1 批的判别损失： [ 0.74599195]
+第 2 批的判别损失： [ 0.5818665]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.62461096]
+第 1 批的判别损失： [ 0.71072221]
+第 2 批的判别损失： [ 0.80594122]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.66923481]
+第 1 批的判别损失： [ 0.72223532]
+第 2 批的判别损失： [ 0.57639974]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.71591449]
+第 1 批的判别损失： [ 0.70559132]
+第 2 批的判别损失： [ 0.69035304]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.65203828]
+第 1 批的判别损失： [ 0.70443869]
+第 2 批的判别损失： [ 0.74764419]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.69133091]
+第 1 批的判别损失： [ 0.57393909]
+第 2 批的判别损失： [ 0.62342167]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.73052514]
+第 1 批的判别损失： [ 0.58453065]
+第 2 批的判别损失： [ 0.84046495]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.65442264]
+第 1 批的判别损失： [ 0.6697033]
+第 2 批的判别损失： [ 0.79115379]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.73278522]
+第 1 批的判别损失： [ 0.77213979]
+第 2 批的判别损失： [ 0.76022172]
+第 0 次reward更新损失： 2623.17
+adversarial epoch:27	 time:69.73041772842407
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.62868273]
+第 1 批的判别损失： [ 0.70696604]
+第 2 批的判别损失： [ 0.72522032]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.65205878]
+第 1 批的判别损失： [ 0.68926144]
+第 2 批的判别损失： [ 0.59271711]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.66971689]
+第 1 批的判别损失： [ 0.59278297]
+第 2 批的判别损失： [ 0.65472776]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.59435666]
+第 1 批的判别损失： [ 0.69149327]
+第 2 批的判别损失： [ 0.61684364]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.72496879]
+第 1 批的判别损失： [ 0.75642174]
+第 2 批的判别损失： [ 0.57682669]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.60294926]
+第 1 批的判别损失： [ 0.60452121]
+第 2 批的判别损失： [ 0.59283835]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.55014288]
+第 1 批的判别损失： [ 0.62890089]
+第 2 批的判别损失： [ 0.6092605]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.73092955]
+第 1 批的判别损失： [ 0.62279314]
+第 2 批的判别损失： [ 0.68454444]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.74129665]
+第 1 批的判别损失： [ 0.71829915]
+第 2 批的判别损失： [ 0.78954375]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.67141223]
+第 1 批的判别损失： [ 0.58067209]
+第 2 批的判别损失： [ 0.7303406]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.55040693]
+第 1 批的判别损失： [ 0.69571865]
+第 2 批的判别损失： [ 0.60203671]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.67979598]
+第 1 批的判别损失： [ 0.67811924]
+第 2 批的判别损失： [ 0.57828355]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.57776725]
+第 1 批的判别损失： [ 0.64113724]
+第 2 批的判别损失： [ 0.63943315]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.72098851]
+第 1 批的判别损失： [ 0.6474883]
+第 2 批的判别损失： [ 0.64536083]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.81872821]
+第 1 批的判别损失： [ 0.60658431]
+第 2 批的判别损失： [ 0.60711133]
+第 0 次reward更新损失： 2831.09
+adversarial epoch:28	 time:69.43808913230896
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.66474974]
+第 1 批的判别损失： [ 0.74134851]
+第 2 批的判别损失： [ 0.69700909]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.6633476]
+第 1 批的判别损失： [ 0.56559312]
+第 2 批的判别损失： [ 0.63903105]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.63402903]
+第 1 批的判别损失： [ 0.66874975]
+第 2 批的判别损失： [ 0.61226678]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.65323061]
+第 1 批的判别损失： [ 0.61131918]
+第 2 批的判别损失： [ 0.64207673]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.77408838]
+第 1 批的判别损失： [ 0.78597486]
+第 2 批的判别损失： [ 0.61771333]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.71151292]
+第 1 批的判别损失： [ 0.69407892]
+第 2 批的判别损失： [ 0.78843713]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.69475329]
+第 1 批的判别损失： [ 0.57258141]
+第 2 批的判别损失： [ 0.68074119]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.69061822]
+第 1 批的判别损失： [ 0.73394638]
+第 2 批的判别损失： [ 0.68590879]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.80848801]
+第 1 批的判别损失： [ 0.60213387]
+第 2 批的判别损失： [ 0.79997277]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.687374]
+第 1 批的判别损失： [ 0.6440261]
+第 2 批的判别损失： [ 0.66315281]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.64605141]
+第 1 批的判别损失： [ 0.8140533]
+第 2 批的判别损失： [ 0.87288576]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.61743987]
+第 1 批的判别损失： [ 0.54494876]
+第 2 批的判别损失： [ 0.64514542]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.61305749]
+第 1 批的判别损失： [ 0.62108505]
+第 2 批的判别损失： [ 0.62909561]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.63995302]
+第 1 批的判别损失： [ 0.79828411]
+第 2 批的判别损失： [ 0.6775437]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.68372893]
+第 1 批的判别损失： [ 0.60878384]
+第 2 批的判别损失： [ 0.60552931]
+第 0 次reward更新损失： 2817.32
+adversarial epoch:29	 time:69.51909494400024
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.65706742]
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\pool_allocator.cc:247] PoolAllocator: After 25019598 get requests, put_count=25019586 evicted_count=1000 eviction_rate=3.99687e-05 and unsatisfied allocation rate=4.44452e-05
+第 1 批的判别损失： [ 0.77807212]
+第 2 批的判别损失： [ 0.64860833]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.6566748]
+第 1 批的判别损失： [ 0.72009665]
+第 2 批的判别损失： [ 0.65885586]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.68739343]
+第 1 批的判别损失： [ 0.68223035]
+第 2 批的判别损失： [ 0.67350805]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.65487742]
+第 1 批的判别损失： [ 0.59136117]
+第 2 批的判别损失： [ 0.60059679]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.68468785]
+第 1 批的判别损失： [ 0.56706554]
+第 2 批的判别损失： [ 0.73686981]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.65647006]
+第 1 批的判别损失： [ 0.70286274]
+第 2 批的判别损失： [ 0.76251006]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.7369529]
+第 1 批的判别损失： [ 0.62418193]
+第 2 批的判别损失： [ 0.54587388]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.52529132]
+第 1 批的判别损失： [ 0.72712749]
+第 2 批的判别损失： [ 0.55912626]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.82030833]
+第 1 批的判别损失： [ 0.76530981]
+第 2 批的判别损失： [ 0.7125293]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.63490474]
+第 1 批的判别损失： [ 0.87137699]
+第 2 批的判别损失： [ 0.70891094]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.62626004]
+第 1 批的判别损失： [ 0.61806005]
+第 2 批的判别损失： [ 0.62494332]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.6659469]
+第 1 批的判别损失： [ 0.69678104]
+第 2 批的判别损失： [ 0.6877321]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.68242562]
+第 1 批的判别损失： [ 0.72335541]
+第 2 批的判别损失： [ 0.62353426]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.65983844]
+第 1 批的判别损失： [ 0.74497724]
+第 2 批的判别损失： [ 0.62731785]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.67150331]
+第 1 批的判别损失： [ 0.56633079]
+第 2 批的判别损失： [ 0.53350466]
+第 0 次reward更新损失： 3022.03
+adversarial epoch:30	 time:69.409832239151
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 55.08222150802612
+time elapsed of nll-test: 218.47026228904724
+evaluate epoch:41	EmbeddingSimilarity:-0.0172964843772	nll-test:1.31072	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.93924391]
+第 1 批的判别损失： [ 0.65518206]
+第 2 批的判别损失： [ 0.56750613]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.67564642]
+第 1 批的判别损失： [ 0.58564717]
+第 2 批的判别损失： [ 0.63080883]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.64288867]
+第 1 批的判别损失： [ 0.79622078]
+第 2 批的判别损失： [ 0.65371549]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.68613029]
+第 1 批的判别损失： [ 0.61185122]
+第 2 批的判别损失： [ 0.66343582]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.74894631]
+第 1 批的判别损失： [ 0.57473356]
+第 2 批的判别损失： [ 0.53858066]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.63593429]
+第 1 批的判别损失： [ 0.57980657]
+第 2 批的判别损失： [ 0.66703492]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.59627181]
+第 1 批的判别损失： [ 0.5886392]
+第 2 批的判别损失： [ 0.67896533]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.74837959]
+第 1 批的判别损失： [ 0.61441886]
+第 2 批的判别损失： [ 0.62791622]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.65072417]
+第 1 批的判别损失： [ 0.59012771]
+第 2 批的判别损失： [ 0.60534525]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.76125354]
+第 1 批的判别损失： [ 0.74584007]
+第 2 批的判别损失： [ 0.83091307]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.56812555]
+第 1 批的判别损失： [ 0.73826921]
+第 2 批的判别损失： [ 0.69354975]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.56486148]
+第 1 批的判别损失： [ 0.59813184]
+第 2 批的判别损失： [ 0.68297321]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.60476029]
+第 1 批的判别损失： [ 0.67927909]
+第 2 批的判别损失： [ 0.80181122]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.76736778]
+第 1 批的判别损失： [ 0.70338619]
+第 2 批的判别损失： [ 0.75971532]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.79413855]
+第 1 批的判别损失： [ 0.81228536]
+第 2 批的判别损失： [ 0.5685004]
+第 0 次reward更新损失： 2588.39
+adversarial epoch:31	 time:69.6611852645874
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.54028344]
+第 1 批的判别损失： [ 0.68527031]
+第 2 批的判别损失： [ 0.65664673]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.67524433]
+第 1 批的判别损失： [ 0.5943172]
+第 2 批的判别损失： [ 0.66144919]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.57202864]
+第 1 批的判别损失： [ 0.6426475]
+第 2 批的判别损失： [ 0.67905629]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.73572755]
+第 1 批的判别损失： [ 0.70911634]
+第 2 批的判别损失： [ 0.73560214]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.70228815]
+第 1 批的判别损失： [ 0.56515378]
+第 2 批的判别损失： [ 0.66439158]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.63140243]
+第 1 批的判别损失： [ 0.71428263]
+第 2 批的判别损失： [ 0.57169092]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.60635197]
+第 1 批的判别损失： [ 0.63949072]
+第 2 批的判别损失： [ 0.71951783]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.64349884]
+第 1 批的判别损失： [ 0.64143175]
+第 2 批的判别损失： [ 0.5595507]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.64334404]
+第 1 批的判别损失： [ 0.64284503]
+第 2 批的判别损失： [ 0.65889955]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.69551831]
+第 1 批的判别损失： [ 0.88245738]
+第 2 批的判别损失： [ 0.65738696]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.6772629]
+第 1 批的判别损失： [ 0.79498875]
+第 2 批的判别损失： [ 0.63893867]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.5661732]
+第 1 批的判别损失： [ 0.71946669]
+第 2 批的判别损失： [ 0.62275958]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.66816109]
+第 1 批的判别损失： [ 0.63822997]
+第 2 批的判别损失： [ 0.52889502]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.64335805]
+第 1 批的判别损失： [ 0.6282329]
+第 2 批的判别损失： [ 0.54438066]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.64432746]
+第 1 批的判别损失： [ 0.7317186]
+第 2 批的判别损失： [ 0.63163626]
+第 0 次reward更新损失： 2888.2
+adversarial epoch:32	 time:69.36163330078125
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.72332597]
+第 1 批的判别损失： [ 0.59819221]
+第 2 批的判别损失： [ 0.75077021]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.74894375]
+第 1 批的判别损失： [ 0.6042636]
+第 2 批的判别损失： [ 0.60492122]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.62459624]
+第 1 批的判别损失： [ 0.71746111]
+第 2 批的判别损失： [ 0.54869962]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.76603758]
+第 1 批的判别损失： [ 0.67073119]
+第 2 批的判别损失： [ 0.59905219]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.59727609]
+第 1 批的判别损失： [ 0.67180669]
+第 2 批的判别损失： [ 0.5198732]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.68720591]
+第 1 批的判别损失： [ 0.74354494]
+第 2 批的判别损失： [ 0.73726928]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.61453068]
+第 1 批的判别损失： [ 0.72077918]
+第 2 批的判别损失： [ 0.60124302]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.75685686]
+第 1 批的判别损失： [ 0.52994275]
+第 2 批的判别损失： [ 0.71466708]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.73322332]
+第 1 批的判别损失： [ 0.55972379]
+第 2 批的判别损失： [ 0.61513251]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.55053133]
+第 1 批的判别损失： [ 0.65567636]
+第 2 批的判别损失： [ 0.60833782]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.75494623]
+第 1 批的判别损失： [ 0.59210157]
+第 2 批的判别损失： [ 0.61057931]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.63651335]
+第 1 批的判别损失： [ 0.618752]
+第 2 批的判别损失： [ 0.67878467]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.56947756]
+第 1 批的判别损失： [ 0.74248576]
+第 2 批的判别损失： [ 0.59575295]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.5915333]
+第 1 批的判别损失： [ 0.59197032]
+第 2 批的判别损失： [ 0.63057971]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.59792989]
+第 1 批的判别损失： [ 0.57768524]
+第 2 批的判别损失： [ 0.56390166]
+第 0 次reward更新损失： 3042.02
+adversarial epoch:33	 time:69.55008125305176
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.7255106]
+第 1 批的判别损失： [ 0.77054465]
+第 2 批的判别损失： [ 0.65911186]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.55622947]
+第 1 批的判别损失： [ 0.59911847]
+第 2 批的判别损失： [ 0.6654616]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.64602667]
+第 1 批的判别损失： [ 0.54874736]
+第 2 批的判别损失： [ 0.63851309]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.71228826]
+第 1 批的判别损失： [ 0.60212624]
+第 2 批的判别损失： [ 0.76524609]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.78692776]
+第 1 批的判别损失： [ 0.56596464]
+第 2 批的判别损失： [ 0.73071134]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.70113289]
+第 1 批的判别损失： [ 0.54837036]
+第 2 批的判别损失： [ 0.73536253]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.68007708]
+第 1 批的判别损失： [ 0.66866994]
+第 2 批的判别损失： [ 0.81193674]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.5933156]
+第 1 批的判别损失： [ 0.78419411]
+第 2 批的判别损失： [ 0.56289464]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.67130393]
+第 1 批的判别损失： [ 0.66743612]
+第 2 批的判别损失： [ 0.68303883]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.61463153]
+第 1 批的判别损失： [ 0.61427069]
+第 2 批的判别损失： [ 0.49745563]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.72552252]
+第 1 批的判别损失： [ 0.6285969]
+第 2 批的判别损失： [ 0.66889501]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.58706367]
+第 1 批的判别损失： [ 0.6838702]
+第 2 批的判别损失： [ 0.51623988]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.59762836]
+第 1 批的判别损失： [ 0.69355655]
+第 2 批的判别损失： [ 0.62802619]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.75658381]
+第 1 批的判别损失： [ 0.64696366]
+第 2 批的判别损失： [ 0.69064021]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.66791338]
+第 1 批的判别损失： [ 0.63153809]
+第 2 批的判别损失： [ 0.55180854]
+第 0 次reward更新损失： 2185.88
+adversarial epoch:34	 time:69.22232627868652
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.71069062]
+第 1 批的判别损失： [ 0.60033298]
+第 2 批的判别损失： [ 0.80015337]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.59570736]
+第 1 批的判别损失： [ 0.68676126]
+第 2 批的判别损失： [ 0.78503978]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.71114504]
+第 1 批的判别损失： [ 0.77250016]
+第 2 批的判别损失： [ 0.73169446]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.72111189]
+第 1 批的判别损失： [ 0.67653918]
+第 2 批的判别损失： [ 0.68301713]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.71119332]
+第 1 批的判别损失： [ 0.7153905]
+第 2 批的判别损失： [ 0.68744123]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.68129897]
+第 1 批的判别损失： [ 0.63431114]
+第 2 批的判别损失： [ 0.75849628]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.77954727]
+第 1 批的判别损失： [ 0.57854617]
+第 2 批的判别损失： [ 0.542983]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.68772501]
+第 1 批的判别损失： [ 0.70779026]
+第 2 批的判别损失： [ 0.62532389]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.61679518]
+第 1 批的判别损失： [ 0.66491556]
+第 2 批的判别损失： [ 0.54566675]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.63556796]
+第 1 批的判别损失： [ 0.64106131]
+第 2 批的判别损失： [ 0.71705234]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.56877625]
+第 1 批的判别损失： [ 0.67957669]
+第 2 批的判别损失： [ 0.61779672]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.65177679]
+第 1 批的判别损失： [ 0.65025687]
+第 2 批的判别损失： [ 0.61683083]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.59054077]
+第 1 批的判别损失： [ 0.62320626]
+第 2 批的判别损失： [ 0.70371151]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.67517126]
+第 1 批的判别损失： [ 0.61141163]
+第 2 批的判别损失： [ 0.62285733]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.76550567]
+第 1 批的判别损失： [ 0.6500544]
+第 2 批的判别损失： [ 0.75900626]
+第 0 次reward更新损失： 2630.37
+adversarial epoch:35	 time:69.59813714027405
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 54.86430263519287
+time elapsed of nll-test: 213.5469560623169
+evaluate epoch:46	EmbeddingSimilarity:-0.0172351346674	nll-test:1.3115	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.6239621]
+第 1 批的判别损失： [ 0.70985711]
+第 2 批的判别损失： [ 0.6384421]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.49430624]
+第 1 批的判别损失： [ 0.58366793]
+第 2 批的判别损失： [ 0.72890252]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.64835519]
+第 1 批的判别损失： [ 0.68735063]
+第 2 批的判别损失： [ 0.55004239]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.74487913]
+第 1 批的判别损失： [ 0.62481987]
+第 2 批的判别损失： [ 0.54866779]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.69733131]
+第 1 批的判别损失： [ 0.65275061]
+第 2 批的判别损失： [ 0.52535993]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.73476374]
+第 1 批的判别损失： [ 0.63906455]
+第 2 批的判别损失： [ 0.5769698]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.58562779]
+第 1 批的判别损失： [ 0.69248414]
+第 2 批的判别损失： [ 0.64032465]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.5798859]
+第 1 批的判别损失： [ 0.72355515]
+第 2 批的判别损失： [ 0.66893852]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.65297258]
+第 1 批的判别损失： [ 0.73283958]
+第 2 批的判别损失： [ 0.58371562]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.72366238]
+第 1 批的判别损失： [ 0.6905818]
+第 2 批的判别损失： [ 0.51988739]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.58528829]
+第 1 批的判别损失： [ 0.61966431]
+第 2 批的判别损失： [ 0.62729859]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.52102166]
+第 1 批的判别损失： [ 0.62616104]
+第 2 批的判别损失： [ 0.69958323]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.7690028]
+第 1 批的判别损失： [ 0.52215451]
+第 2 批的判别损失： [ 0.6486336]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.60988331]
+第 1 批的判别损失： [ 0.68591189]
+第 2 批的判别损失： [ 0.80748665]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.59829628]
+第 1 批的判别损失： [ 0.57483977]
+第 2 批的判别损失： [ 0.75376773]
+第 0 次reward更新损失： 2911.58
+adversarial epoch:36	 time:69.50444006919861
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.5794822]
+第 1 批的判别损失： [ 0.70831215]
+第 2 批的判别损失： [ 0.59597516]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.54918766]
+第 1 批的判别损失： [ 0.58007598]
+第 2 批的判别损失： [ 0.61901617]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.63415509]
+第 1 批的判别损失： [ 0.78200233]
+第 2 批的判别损失： [ 0.77411687]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.5088644]
+第 1 批的判别损失： [ 0.78407681]
+第 2 批的判别损失： [ 0.65285945]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.63655984]
+第 1 批的判别损失： [ 0.62233353]
+第 2 批的判别损失： [ 0.60847771]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.69193459]
+第 1 批的判别损失： [ 0.72395539]
+第 2 批的判别损失： [ 0.60984319]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.69442469]
+第 1 批的判别损失： [ 0.64408314]
+第 2 批的判别损失： [ 0.67127806]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.75967073]
+第 1 批的判别损失： [ 0.51671606]
+第 2 批的判别损失： [ 0.60638028]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.63231218]
+第 1 批的判别损失： [ 0.59765327]
+第 2 批的判别损失： [ 0.55109799]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.52028465]
+第 1 批的判别损失： [ 0.68390155]
+第 2 批的判别损失： [ 0.61066109]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.70927453]
+第 1 批的判别损失： [ 0.56527609]
+第 2 批的判别损失： [ 0.67858016]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.5886355]
+第 1 批的判别损失： [ 0.54636824]
+第 2 批的判别损失： [ 0.63951141]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.6631701]
+第 1 批的判别损失： [ 0.78530598]
+第 2 批的判别损失： [ 0.58705348]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.82663369]
+第 1 批的判别损失： [ 0.70283091]
+第 2 批的判别损失： [ 0.48334914]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.6769489]
+第 1 批的判别损失： [ 0.54204446]
+第 2 批的判别损失： [ 0.65667772]
+第 0 次reward更新损失： 2643.03
+adversarial epoch:37	 time:69.44179439544678
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.66723299]
+第 1 批的判别损失： [ 0.73480421]
+第 2 批的判别损失： [ 0.58158207]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.67539632]
+第 1 批的判别损失： [ 0.66339695]
+第 2 批的判别损失： [ 0.67579061]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.5452283]
+第 1 批的判别损失： [ 0.63548303]
+第 2 批的判别损失： [ 0.67822015]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.73443776]
+第 1 批的判别损失： [ 0.72595966]
+第 2 批的判别损失： [ 0.67073107]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.7382772]
+第 1 批的判别损失： [ 0.58817595]
+第 2 批的判别损失： [ 0.70872784]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.75592923]
+第 1 批的判别损失： [ 0.6257441]
+第 2 批的判别损失： [ 0.75015759]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.60850632]
+第 1 批的判别损失： [ 0.61357033]
+第 2 批的判别损失： [ 0.64945614]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.73034292]
+第 1 批的判别损失： [ 0.65226102]
+第 2 批的判别损失： [ 0.78157985]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.6632809]
+第 1 批的判别损失： [ 0.61247385]
+第 2 批的判别损失： [ 0.59372139]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.65089375]
+第 1 批的判别损失： [ 0.56937277]
+第 2 批的判别损失： [ 0.70080256]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.78521299]
+第 1 批的判别损失： [ 0.70302689]
+第 2 批的判别损失： [ 0.70667875]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.65991503]
+第 1 批的判别损失： [ 0.62356561]
+第 2 批的判别损失： [ 0.67951238]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.70992446]
+第 1 批的判别损失： [ 0.63598752]
+第 2 批的判别损失： [ 0.65702093]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.65818131]
+第 1 批的判别损失： [ 0.57977486]
+第 2 批的判别损失： [ 0.6677835]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.7638315]
+第 1 批的判别损失： [ 0.67194009]
+第 2 批的判别损失： [ 0.73175621]
+第 0 次reward更新损失： 2570.77
+adversarial epoch:38	 time:69.45720601081848
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.66881877]
+第 1 批的判别损失： [ 0.61539936]
+第 2 批的判别损失： [ 0.6235171]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.60145599]
+第 1 批的判别损失： [ 0.74901104]
+第 2 批的判别损失： [ 0.56166995]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.63361579]
+第 1 批的判别损失： [ 0.5243625]
+第 2 批的判别损失： [ 0.63938135]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.63432062]
+第 1 批的判别损失： [ 0.59523195]
+第 2 批的判别损失： [ 0.5746966]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.67618716]
+第 1 批的判别损失： [ 0.6952709]
+第 2 批的判别损失： [ 0.6485973]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.62633985]
+第 1 批的判别损失： [ 0.67186081]
+第 2 批的判别损失： [ 0.60950577]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.61498797]
+第 1 批的判别损失： [ 0.65886891]
+第 2 批的判别损失： [ 0.58268124]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.63687956]
+第 1 批的判别损失： [ 0.63739014]
+第 2 批的判别损失： [ 0.59178644]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.60391712]
+第 1 批的判别损失： [ 0.70494986]
+第 2 批的判别损失： [ 0.57492644]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.60857511]
+第 1 批的判别损失： [ 0.61348879]
+第 2 批的判别损失： [ 0.71250731]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.71016759]
+第 1 批的判别损失： [ 0.67898214]
+第 2 批的判别损失： [ 0.52374297]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.62195945]
+第 1 批的判别损失： [ 0.56930333]
+第 2 批的判别损失： [ 0.73581398]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.59260726]
+第 1 批的判别损失： [ 0.66661364]
+第 2 批的判别损失： [ 0.63724458]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.60682487]
+第 1 批的判别损失： [ 0.5858655]
+第 2 批的判别损失： [ 0.56360149]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.63019621]
+第 1 批的判别损失： [ 0.64062476]
+第 2 批的判别损失： [ 0.75713539]
+第 0 次reward更新损失： 2878.59
+adversarial epoch:39	 time:69.2127833366394
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.62785673]
+第 1 批的判别损失： [ 0.83850485]
+第 2 批的判别损失： [ 0.53282183]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.58871377]
+第 1 批的判别损失： [ 0.62563318]
+第 2 批的判别损失： [ 0.6968869]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.54252619]
+第 1 批的判别损失： [ 0.79809743]
+第 2 批的判别损失： [ 0.57369471]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.63623208]
+第 1 批的判别损失： [ 0.72543728]
+第 2 批的判别损失： [ 0.5973019]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.66021359]
+第 1 批的判别损失： [ 0.64352727]
+第 2 批的判别损失： [ 0.63602245]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.63608479]
+第 1 批的判别损失： [ 0.70131731]
+第 2 批的判别损失： [ 0.71264148]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.63379717]
+第 1 批的判别损失： [ 0.61403298]
+第 2 批的判别损失： [ 0.48696065]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.5773108]
+第 1 批的判别损失： [ 0.69846785]
+第 2 批的判别损失： [ 0.65473926]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.68290842]
+第 1 批的判别损失： [ 0.58087516]
+第 2 批的判别损失： [ 0.68621832]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.57965118]
+第 1 批的判别损失： [ 0.71114063]
+第 2 批的判别损失： [ 0.59166867]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.57753611]
+第 1 批的判别损失： [ 0.60571045]
+第 2 批的判别损失： [ 0.64766288]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.6744175]
+第 1 批的判别损失： [ 0.55521929]
+第 2 批的判别损失： [ 0.63119841]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.75608873]
+第 1 批的判别损失： [ 0.66287625]
+第 2 批的判别损失： [ 0.63454461]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.65068257]
+第 1 批的判别损失： [ 0.72387123]
+第 2 批的判别损失： [ 0.57811904]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.57696033]
+第 1 批的判别损失： [ 0.65213913]
+第 2 批的判别损失： [ 0.6090405]
+第 0 次reward更新损失： 2326.36
+adversarial epoch:40	 time:68.99905514717102
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 54.088735580444336
+time elapsed of nll-test: 219.8284046649933
+evaluate epoch:51	EmbeddingSimilarity:-0.0171170719182	nll-test:1.31385	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.60792911]
+第 1 批的判别损失： [ 0.59199691]
+第 2 批的判别损失： [ 0.57769954]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.55548847]
+第 1 批的判别损失： [ 0.64962673]
+第 2 批的判别损失： [ 0.63289905]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.72974283]
+第 1 批的判别损失： [ 0.83012193]
+第 2 批的判别损失： [ 0.58570635]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.51150417]
+第 1 批的判别损失： [ 0.7195183]
+第 2 批的判别损失： [ 0.57733274]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.54071856]
+第 1 批的判别损失： [ 0.60760427]
+第 2 批的判别损失： [ 0.68191558]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.65377843]
+第 1 批的判别损失： [ 0.64629352]
+第 2 批的判别损失： [ 0.61362982]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.63624531]
+第 1 批的判别损失： [ 0.54659057]
+第 2 批的判别损失： [ 0.61093909]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.62008989]
+第 1 批的判别损失： [ 0.61531615]
+第 2 批的判别损失： [ 0.56145495]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.56022948]
+第 1 批的判别损失： [ 0.63613963]
+第 2 批的判别损失： [ 0.52250379]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.66672742]
+第 1 批的判别损失： [ 0.63694543]
+第 2 批的判别损失： [ 0.53820908]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.55277205]
+第 1 批的判别损失： [ 0.72800452]
+第 2 批的判别损失： [ 0.62679482]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.47279099]
+第 1 批的判别损失： [ 0.73605365]
+第 2 批的判别损失： [ 0.66507149]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.64665705]
+第 1 批的判别损失： [ 0.58877057]
+第 2 批的判别损失： [ 0.56749237]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.63069326]
+第 1 批的判别损失： [ 0.67001235]
+第 2 批的判别损失： [ 0.59662509]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.54032987]
+第 1 批的判别损失： [ 0.73070794]
+第 2 批的判别损失： [ 0.63299227]
+第 0 次reward更新损失： 2583.97
+adversarial epoch:41	 time:69.10106015205383
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.60288727]
+第 1 批的判别损失： [ 0.75585711]
+第 2 批的判别损失： [ 0.6282987]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.62759864]
+第 1 批的判别损失： [ 0.66021657]
+第 2 批的判别损失： [ 0.57664877]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.57316577]
+第 1 批的判别损失： [ 0.60376632]
+第 2 批的判别损失： [ 0.70877826]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.62973142]
+第 1 批的判别损失： [ 0.55255103]
+第 2 批的判别损失： [ 0.65721035]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.65757227]
+第 1 批的判别损失： [ 0.69825351]
+第 2 批的判别损失： [ 0.53795105]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.57523626]
+第 1 批的判别损失： [ 0.59403515]
+第 2 批的判别损失： [ 0.71264088]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.62693095]
+第 1 批的判别损失： [ 0.67928541]
+第 2 批的判别损失： [ 0.70925748]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.66152966]
+第 1 批的判别损失： [ 0.56475979]
+第 2 批的判别损失： [ 0.59455836]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.60391641]
+第 1 批的判别损失： [ 0.64951706]
+第 2 批的判别损失： [ 0.59322476]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.61656952]
+第 1 批的判别损失： [ 0.65033937]
+第 2 批的判别损失： [ 0.70938957]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.61194754]
+第 1 批的判别损失： [ 0.60786378]
+第 2 批的判别损失： [ 0.59567916]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.66879761]
+第 1 批的判别损失： [ 0.7154659]
+第 2 批的判别损失： [ 0.6630317]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.62514126]
+第 1 批的判别损失： [ 0.60187554]
+第 2 批的判别损失： [ 0.55765992]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.64568949]
+第 1 批的判别损失： [ 0.54867166]
+第 2 批的判别损失： [ 0.57903743]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.55266368]
+第 1 批的判别损失： [ 0.73643649]
+第 2 批的判别损失： [ 0.5568257]
+第 0 次reward更新损失： 2442.41
+adversarial epoch:42	 time:69.36558651924133
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.5098474]
+第 1 批的判别损失： [ 0.49802235]
+第 2 批的判别损失： [ 0.58386242]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.6357882]
+第 1 批的判别损失： [ 0.52703667]
+第 2 批的判别损失： [ 0.60599864]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.65469861]
+第 1 批的判别损失： [ 0.62247026]
+第 2 批的判别损失： [ 0.72103536]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.58923233]
+第 1 批的判别损失： [ 0.66731012]
+第 2 批的判别损失： [ 0.58783001]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.6190753]
+第 1 批的判别损失： [ 0.61909771]
+第 2 批的判别损失： [ 0.68035877]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.55951536]
+第 1 批的判别损失： [ 0.63849211]
+第 2 批的判别损失： [ 0.60179472]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.55516231]
+第 1 批的判别损失： [ 0.65826631]
+第 2 批的判别损失： [ 0.70305252]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.72582984]
+第 1 批的判别损失： [ 0.59156013]
+第 2 批的判别损失： [ 0.58431464]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.52665544]
+第 1 批的判别损失： [ 0.56550562]
+第 2 批的判别损失： [ 0.64531064]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.64045376]
+第 1 批的判别损失： [ 0.62453187]
+第 2 批的判别损失： [ 0.6128552]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.65756428]
+第 1 批的判别损失： [ 0.69409645]
+第 2 批的判别损失： [ 0.66493905]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.59879375]
+第 1 批的判别损失： [ 0.47883451]
+第 2 批的判别损失： [ 0.65281773]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.54693609]
+第 1 批的判别损失： [ 0.59802836]
+第 2 批的判别损失： [ 0.58427978]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.66831571]
+第 1 批的判别损失： [ 0.72461498]
+第 2 批的判别损失： [ 0.72015977]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.69494283]
+第 1 批的判别损失： [ 0.60004318]
+第 2 批的判别损失： [ 0.55571491]
+第 0 次reward更新损失： 2709.08
+adversarial epoch:43	 time:69.0989556312561
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.71636349]
+第 1 批的判别损失： [ 0.57445097]
+第 2 批的判别损失： [ 0.75221318]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.57883096]
+第 1 批的判别损失： [ 0.58561647]
+第 2 批的判别损失： [ 0.61002326]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.65842158]
+第 1 批的判别损失： [ 0.71655244]
+第 2 批的判别损失： [ 0.53271472]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.67686915]
+第 1 批的判别损失： [ 0.64597958]
+第 2 批的判别损失： [ 0.49585357]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.64905047]
+第 1 批的判别损失： [ 0.57523555]
+第 2 批的判别损失： [ 0.61135542]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.78453815]
+第 1 批的判别损失： [ 0.56609792]
+第 2 批的判别损失： [ 0.67912912]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.59373111]
+第 1 批的判别损失： [ 0.63522887]
+第 2 批的判别损失： [ 0.61254013]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.66367835]
+第 1 批的判别损失： [ 0.69189179]
+第 2 批的判别损失： [ 0.55586553]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.77528512]
+第 1 批的判别损失： [ 0.57880986]
+第 2 批的判别损失： [ 0.56707776]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.57460618]
+第 1 批的判别损失： [ 0.64232308]
+第 2 批的判别损失： [ 0.78868961]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.53098595]
+第 1 批的判别损失： [ 0.73934746]
+第 2 批的判别损失： [ 0.58340991]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.57686692]
+第 1 批的判别损失： [ 0.64856601]
+第 2 批的判别损失： [ 0.60351998]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.61948729]
+第 1 批的判别损失： [ 0.62590909]
+第 2 批的判别损失： [ 0.60179663]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.58204842]
+第 1 批的判别损失： [ 0.69888449]
+第 2 批的判别损失： [ 0.56125069]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.62192333]
+第 1 批的判别损失： [ 0.51632422]
+第 2 批的判别损失： [ 0.59529626]
+第 0 次reward更新损失： 2876.43
+adversarial epoch:44	 time:69.16110801696777
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.69030118]
+第 1 批的判别损失： [ 0.70482737]
+第 2 批的判别损失： [ 0.55682755]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.57002115]
+第 1 批的判别损失： [ 0.63862801]
+第 2 批的判别损失： [ 0.68417746]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.55812156]
+第 1 批的判别损失： [ 0.53438365]
+第 2 批的判别损失： [ 0.74100959]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.66688967]
+第 1 批的判别损失： [ 0.65899551]
+第 2 批的判别损失： [ 0.57925332]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.55491209]
+第 1 批的判别损失： [ 0.61486536]
+第 2 批的判别损失： [ 0.73196185]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.5748986]
+第 1 批的判别损失： [ 0.58269441]
+第 2 批的判别损失： [ 0.61938894]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.75303406]
+第 1 批的判别损失： [ 0.60550946]
+第 2 批的判别损失： [ 0.62773925]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.54882091]
+第 1 批的判别损失： [ 0.63262296]
+第 2 批的判别损失： [ 0.73067963]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.54549778]
+第 1 批的判别损失： [ 0.65436381]
+第 2 批的判别损失： [ 0.57722807]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.69407374]
+第 1 批的判别损失： [ 0.61102855]
+第 2 批的判别损失： [ 0.52958488]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.65458703]
+第 1 批的判别损失： [ 0.49688625]
+第 2 批的判别损失： [ 0.60812414]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.65024221]
+第 1 批的判别损失： [ 0.64364564]
+第 2 批的判别损失： [ 0.58548254]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.65632778]
+第 1 批的判别损失： [ 0.74836493]
+第 2 批的判别损失： [ 0.62142885]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.56535077]
+第 1 批的判别损失： [ 0.64019442]
+第 2 批的判别损失： [ 0.63133347]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.64091051]
+第 1 批的判别损失： [ 0.59558988]
+第 2 批的判别损失： [ 0.61599135]
+第 0 次reward更新损失： 2750.92
+adversarial epoch:45	 time:69.30223202705383
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 54.80871367454529
+time elapsed of nll-test: 218.90792632102966
+evaluate epoch:56	EmbeddingSimilarity:-0.0174318426973	nll-test:1.31709	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.60886514]
+第 1 批的判别损失： [ 0.58116949]
+第 2 批的判别损失： [ 0.71679795]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.5339756]
+第 1 批的判别损失： [ 0.52279067]
+第 2 批的判别损失： [ 0.73387051]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.60059428]
+第 1 批的判别损失： [ 0.56677186]
+第 2 批的判别损失： [ 0.5926218]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.69393992]
+第 1 批的判别损失： [ 0.59793437]
+第 2 批的判别损失： [ 0.68725431]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.6248675]
+第 1 批的判别损失： [ 0.53676564]
+第 2 批的判别损失： [ 0.5658884]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.69755518]
+第 1 批的判别损失： [ 0.67747283]
+第 2 批的判别损失： [ 0.63035518]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.63277185]
+第 1 批的判别损失： [ 0.58965153]
+第 2 批的判别损失： [ 0.61473942]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.56251544]
+第 1 批的判别损失： [ 0.68966413]
+第 2 批的判别损失： [ 0.60060269]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.6202898]
+第 1 批的判别损失： [ 0.66955501]
+第 2 批的判别损失： [ 0.58055466]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.51743639]
+第 1 批的判别损失： [ 0.63050091]
+第 2 批的判别损失： [ 0.65879226]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.57553929]
+第 1 批的判别损失： [ 0.64377332]
+第 2 批的判别损失： [ 0.74462116]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.66843367]
+第 1 批的判别损失： [ 0.72265941]
+第 2 批的判别损失： [ 0.76510382]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.64229518]
+第 1 批的判别损失： [ 0.64935684]
+第 2 批的判别损失： [ 0.60759413]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.6909281]
+第 1 批的判别损失： [ 0.51484358]
+第 2 批的判别损失： [ 0.58955961]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.62280649]
+第 1 批的判别损失： [ 0.61343592]
+第 2 批的判别损失： [ 0.59478939]
+第 0 次reward更新损失： 2709.37
+adversarial epoch:46	 time:68.97462940216064
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.58447778]
+第 1 批的判别损失： [ 0.65920359]
+第 2 批的判别损失： [ 0.54015785]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.59726328]
+第 1 批的判别损失： [ 0.63297588]
+第 2 批的判别损失： [ 0.57423663]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.63275117]
+第 1 批的判别损失： [ 0.67212594]
+第 2 批的判别损失： [ 0.56983924]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.73587024]
+第 1 批的判别损失： [ 0.61820447]
+第 2 批的判别损失： [ 0.60616845]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.52533185]
+第 1 批的判别损失： [ 0.5705837]
+第 2 批的判别损失： [ 0.75209588]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.53356624]
+第 1 批的判别损失： [ 0.59449279]
+第 2 批的判别损失： [ 0.6050837]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.6727463]
+第 1 批的判别损失： [ 0.65255481]
+第 2 批的判别损失： [ 0.64148295]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.5972746]
+第 1 批的判别损失： [ 0.54239857]
+第 2 批的判别损失： [ 0.49550951]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.65598357]
+第 1 批的判别损失： [ 0.6524477]
+第 2 批的判别损失： [ 0.49071977]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.63645571]
+第 1 批的判别损失： [ 0.5839923]
+第 2 批的判别损失： [ 0.68105173]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.56347442]
+第 1 批的判别损失： [ 0.67156506]
+第 2 批的判别损失： [ 0.61536777]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.56365687]
+第 1 批的判别损失： [ 0.6593253]
+第 2 批的判别损失： [ 0.58757532]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.61639714]
+第 1 批的判别损失： [ 0.56786954]
+第 2 批的判别损失： [ 0.61464095]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.58598369]
+第 1 批的判别损失： [ 0.59685326]
+第 2 批的判别损失： [ 0.56268346]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.53807592]
+第 1 批的判别损失： [ 0.5429014]
+第 2 批的判别损失： [ 0.54652274]
+第 0 次reward更新损失： 2724.53
+adversarial epoch:47	 time:68.86220192909241
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.52069294]
+第 1 批的判别损失： [ 0.73975116]
+第 2 批的判别损失： [ 0.71496511]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.63907754]
+第 1 批的判别损失： [ 0.7042321]
+第 2 批的判别损失： [ 0.55177981]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.54101813]
+第 1 批的判别损失： [ 0.75075603]
+第 2 批的判别损失： [ 0.52674633]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.50887704]
+第 1 批的判别损失： [ 0.58401459]
+第 2 批的判别损失： [ 0.59798193]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.70697188]
+第 1 批的判别损失： [ 0.76823574]
+第 2 批的判别损失： [ 0.59909666]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.61213803]
+第 1 批的判别损失： [ 0.58425725]
+第 2 批的判别损失： [ 0.57940757]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.63815868]
+第 1 批的判别损失： [ 0.61932278]
+第 2 批的判别损失： [ 0.59519565]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.57409465]
+第 1 批的判别损失： [ 0.62046444]
+第 2 批的判别损失： [ 0.69269538]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.67493868]
+第 1 批的判别损失： [ 0.61762029]
+第 2 批的判别损失： [ 0.58837807]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.67221534]
+第 1 批的判别损失： [ 0.57825017]
+第 2 批的判别损失： [ 0.58885276]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.58927691]
+第 1 批的判别损失： [ 0.73882842]
+第 2 批的判别损失： [ 0.61305189]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.5948472]
+第 1 批的判别损失： [ 0.60601258]
+第 2 批的判别损失： [ 0.58115292]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.73167646]
+第 1 批的判别损失： [ 0.64774072]
+第 2 批的判别损失： [ 0.682262]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.64464736]
+第 1 批的判别损失： [ 0.59479767]
+第 2 批的判别损失： [ 0.60321379]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.53254676]
+第 1 批的判别损失： [ 0.64582062]
+第 2 批的判别损失： [ 0.66252065]
+第 0 次reward更新损失： 2668.35
+adversarial epoch:48	 time:69.16067051887512
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.6163038]
+第 1 批的判别损失： [ 0.57588202]
+第 2 批的判别损失： [ 0.63099539]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.74196506]
+第 1 批的判别损失： [ 0.59226745]
+第 2 批的判别损失： [ 0.55684632]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.55072093]
+第 1 批的判别损失： [ 0.51971531]
+第 2 批的判别损失： [ 0.62499416]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.65563643]
+第 1 批的判别损失： [ 0.55476248]
+第 2 批的判别损失： [ 0.64213592]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.52206296]
+第 1 批的判别损失： [ 0.52497417]
+第 2 批的判别损失： [ 0.59116662]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.59951234]
+第 1 批的判别损失： [ 0.69686663]
+第 2 批的判别损失： [ 0.5722428]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.62750399]
+第 1 批的判别损失： [ 0.67710531]
+第 2 批的判别损失： [ 0.54833186]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.6075412]
+第 1 批的判别损失： [ 0.5139249]
+第 2 批的判别损失： [ 0.65733361]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.48949906]
+第 1 批的判别损失： [ 0.58938456]
+第 2 批的判别损失： [ 0.50069696]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.65328062]
+第 1 批的判别损失： [ 0.52718294]
+第 2 批的判别损失： [ 0.58655006]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.63404047]
+第 1 批的判别损失： [ 0.62243253]
+第 2 批的判别损失： [ 0.47781864]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.58642459]
+第 1 批的判别损失： [ 0.59442866]
+第 2 批的判别损失： [ 0.48507679]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.51553023]
+第 1 批的判别损失： [ 0.51594722]
+第 2 批的判别损失： [ 0.61320579]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.71258831]
+第 1 批的判别损失： [ 0.65678936]
+第 2 批的判别损失： [ 0.54880273]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.50866139]
+第 1 批的判别损失： [ 0.55723149]
+第 2 批的判别损失： [ 0.64194411]
+第 0 次reward更新损失： 2940.46
+adversarial epoch:49	 time:69.52977776527405
+I c:\tf_jenkins\home\workspace\release-win\device\gpu\os\windows\tensorflow\core\common_runtime\gpu\gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0)
+time elapsed of EmbeddingSimilarity: 54.48899865150452
+time elapsed of nll-test: 218.7457845211029
+evaluate epoch:60	EmbeddingSimilarity:-0.0173751904764	nll-test:1.31978	
+train_discriminator_ 1
+第 0 批的判别损失： [ 0.5123688]
+第 1 批的判别损失： [ 0.53585398]
+第 2 批的判别损失： [ 0.47499657]
+train_discriminator_ 2
+第 0 批的判别损失： [ 0.64062238]
+第 1 批的判别损失： [ 0.63095391]
+第 2 批的判别损失： [ 0.52731508]
+train_discriminator_ 3
+第 0 批的判别损失： [ 0.69883287]
+第 1 批的判别损失： [ 0.64051819]
+第 2 批的判别损失： [ 0.55634022]
+train_discriminator_ 4
+第 0 批的判别损失： [ 0.56841648]
+第 1 批的判别损失： [ 0.62351233]
+第 2 批的判别损失： [ 0.70971811]
+train_discriminator_ 5
+第 0 批的判别损失： [ 0.64804745]
+第 1 批的判别损失： [ 0.56503975]
+第 2 批的判别损失： [ 0.54767513]
+train_discriminator_ 6
+第 0 批的判别损失： [ 0.57440579]
+第 1 批的判别损失： [ 0.67987025]
+第 2 批的判别损失： [ 0.60967946]
+train_discriminator_ 7
+第 0 批的判别损失： [ 0.5576942]
+第 1 批的判别损失： [ 0.61083686]
+第 2 批的判别损失： [ 0.66258943]
+train_discriminator_ 8
+第 0 批的判别损失： [ 0.64310682]
+第 1 批的判别损失： [ 0.51733357]
+第 2 批的判别损失： [ 0.55820376]
+train_discriminator_ 9
+第 0 批的判别损失： [ 0.66472441]
+第 1 批的判别损失： [ 0.63871026]
+第 2 批的判别损失： [ 0.60007942]
+train_discriminator_ 10
+第 0 批的判别损失： [ 0.63836038]
+第 1 批的判别损失： [ 0.61081499]
+第 2 批的判别损失： [ 0.63561535]
+train_discriminator_ 11
+第 0 批的判别损失： [ 0.51075566]
+第 1 批的判别损失： [ 0.64721584]
+第 2 批的判别损失： [ 0.66425061]
+train_discriminator_ 12
+第 0 批的判别损失： [ 0.6070888]
+第 1 批的判别损失： [ 0.58795416]
+第 2 批的判别损失： [ 0.5465073]
+train_discriminator_ 13
+第 0 批的判别损失： [ 0.57320726]
+第 1 批的判别损失： [ 0.63789153]
+第 2 批的判别损失： [ 0.48977643]
+train_discriminator_ 14
+第 0 批的判别损失： [ 0.50506663]
+第 1 批的判别损失： [ 0.56418878]
+第 2 批的判别损失： [ 0.6339215]
+train_discriminator_ 15
+第 0 批的判别损失： [ 0.63892829]
+第 1 批的判别损失： [ 0.64132679]
+第 2 批的判别损失： [ 0.68893886]
+
+Process finished with exit code 0

@@ -1,0 +1,331 @@
+2018.10.24     20：55
+小实验数据集
+        self.vocab_size = 8000  # 词库大小，被设定为5000
+        self.emb_dim = 100  # 32
+        self.hidden_dim = 500  # 32
+        self.sequence_length = 28  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 4096  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+        self.pre_epoch_num = 80  # 预训练的轮数 生成和判别共用
+        self.adversarial_epoch_num = 100  # 对抗训练的轮数
+2018.10.31  15:29
+        # you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 100  # 32
+        self.hidden_dim = 500  # 32
+        self.sequence_length = 28  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 4096  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+        # self.positive = 'data/msrp_demo_positive.txt'
+        self.positive = 'data/quora_50K_positive.txt'
+        self.positive_file = 'save/positive.txt'  # 原始句对用于判别的正例文件
+        self.negitive_file = 'save/negitive.txt'  # 原始句子+生成的句子构成的反例文件
+        self.oracle_file = 'save/oracle.txt'  # 原始的文件
+        self.generator_file = 'save/generator.txt'  # 生成的令牌文件
+        self.test_file = 'save/test_file.txt'  # 生成的用来测试的文件
+失敗現象：無法生成有效字符，衹能生成空白的文件
+失敗原因：可能是因爲空白字符的原因
+改變方案：
+    1、減小序列長度，降低隱層數量，
+    2、將填充字符的方式從原來的 sen1+sen2+eof_code變成sen1+eof_code + sen2 +eof_code（理论分析过，不影响，暂时弃用）
+    3、改变原有的卷积网络结构或句子的交互方式（不影响，暂时弃用）
+2018.11.1  12:51
+        # you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 100  # 32
+
+        self.hidden_dim = 100  # 32
+        self.sequence_length = 20  # 序列长度
+
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数，即通道数量
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 4096  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+
+        self.pre_epoch_num = 50  # 预训练的轮数 生成和判别共用
+        self.adversarial_epoch_num = 80  # 对抗训练的轮数
+        self.adversarial_epoch_dis_num = 5  # 一次對抗中，進行幾次判別
+
+
+        # self.positive = 'data/msrp_demo_positive.txt'
+        self.positive = 'data/quora_50K_positive.txt'
+        self.positive_file = 'save/positive.txt'  # 原始句对用于判别的正例文件
+        self.negitive_file = 'save/negitive.txt'  # 原始句子+生成的句子构成的反例文件
+        self.oracle_file = 'save/oracle.txt'  # 原始的文件
+        self.generator_file = 'save/generator.txt'  # 生成的令牌文件
+        self.test_file = 'save/test_file.txt'  # 生成的用来测试的文件
+
+
+展示样例：
+my girlfriend follow on my instagram can be it with my money how do they deal with me
+my girlfriend follow on earth improvement on one moment what does it make it that the best day trip in kerala in the internet for students
+my girlfriend follow on my time what does it feel that you do not
+my girlfriend follow on quora what should be do
+失败现象：生成大量重复内容和格式
+失败原因：可能是因为原始输入属于随机噪声，导致生成模式单一
+改变方案：将输入信息改成原始句子输入   或     原始句子输入+噪声信息
+2018.11.2   10:13
+         # you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 100  # 32
+
+        self.hidden_dim = 100  # 32
+        self.sequence_length = 20  # 序列长度
+
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数，即通道数量
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 640  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+
+        self.pre_epoch_num = 50  # 预训练的轮数 生成和判别共用
+        self.adversarial_epoch_num = 80  # 对抗训练的轮数
+        self.adversarial_epoch_dis_num = 5  # 一次對抗中，進行幾次判別
+
+
+        # self.positive = 'data/msrp_demo_positive.txt'
+        self.positive = 'data/quora_50K_positive.txt'
+        self.positive_file = 'save/positive.txt'  # 原始句对用于判别的正例文件
+        self.negitive_file = 'save/negitive.txt'  # 原始句子+生成的句子构成的反例文件
+        self.oracle_file = 'save/oracle.txt'  # 原始的文件
+        self.generator_file = 'save/generator.txt'  # 生成的令牌文件
+        self.test_file = 'save/test_file.txt'  # 生成的用来测试的文件
+失败原因与结果，同上
+
+改进方案：参考WGAN进行改进
+Wasserstein GAN（下面简称WGAN）成功地做到了以下爆炸性的几点：
+
+1、彻底解决GAN训练不稳定的问题，不再需要小心平衡生成器和判别器的训练程度
+2、基本解决了collapse mode的问题，确保了生成样本的多样性
+3、训练过程中终于有一个像交叉熵、准确率这样的数值来指示训练的进程，这个数值越小代表GAN训练得越好，代表生成器产生的图像质量越高（如题图所示）
+4、以上一切好处不需要精心设计的网络架构，最简单的多层全连接网络就可以做到
+
+具体改进方案：
+判别器最后一层去掉sigmoid（本来就没有用sigmoid）
+生成器和判别器的loss不取log(改)
+每次更新判别器的参数之后把它们的绝对值截断到不超过一个固定常数c（已经截断）
+不要用基于动量的优化算法（包括momentum和Adam），推荐RMSProp，SGD也行（改）
+（失败，）
+2018.11.4  10:18
+        # you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 100  # 32
+        self.hidden_dim = 100  # 32
+        self.sequence_length = 20  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数，即通道数量
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 640  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+
+        self.pre_epoch_num = 20  # 预训练的轮数 生成和判别共用      #  80
+        self.adversarial_epoch_num = 150  # 对抗训练的轮数    # 100
+        self.adversarial_epoch_dis_num = 2  # 一次對抗中，進行幾次判別  # 15原始
+
+
+        # self.positive = 'data/msrp_demo_positive.txt'
+        self.positive = 'data/quora_50K_positive.txt'
+        self.positive_file = 'save/positive.txt'  # 原始句对用于判别的正例文件
+        self.negitive_file = 'save/negitive.txt'  # 原始句子+生成的句子构成的反例文件
+        self.oracle_file = 'save/oracle.txt'  # 原始的文件
+        self.generator_file = 'save/generator.txt'  # 生成的令牌文件
+        self.test_file = 'save/test_file.txt'  # 生成的用来测试的文件
+
+调整判别器学习率1e-5
+失败现象：生成大量重复内容和格式，损失没有降下来，应该是判别器的学习力度不够导致的
+失败原因：损失没有降下来，应该是判别器的学习力度不够导致的
+
+2018.11.4  10:18
+        # you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 100  # 32
+        self.hidden_dim = 100  # 32
+        self.sequence_length = 20  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数，即通道数量
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 640  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+
+        self.pre_epoch_num = 26  # 预训练的轮数 生成和判别共用      #  80
+        self.adversarial_epoch_num = 150  # 对抗训练的轮数    # 100
+        self.adversarial_epoch_dis_num = 10  # 一次對抗中，進行幾次判別  # 15原始
+
+
+        # self.positive = 'data/msrp_demo_positive.txt'
+        self.positive = 'data/quora_50K_positive.txt'
+        self.positive_file = 'save/positive.txt'  # 原始句对用于判别的正例文件
+        self.negitive_file = 'save/negitive.txt'  # 原始句子+生成的句子构成的反例文件
+        self.oracle_file = 'save/oracle.txt'  # 原始的文件
+        self.generator_file = 'save/generator.txt'  # 生成的令牌文件
+        self.test_file = 'save/test_file.txt'  # 生成的用来测试的文件
+
+调整判别器学习率1e-4
+失败现象：生成大量重复内容和格式，损失没有降下来，应该是判别器的学习力度不够导致的
+失败原因：损失没有降下来，应该是判别器的学习力度不够导致的
+
+2018.11.5  10:10
+ # you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 100  # 32
+        self.hidden_dim = 100  # 32
+        self.sequence_length = 20  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数，即通道数量
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 640  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+
+        self.pre_epoch_num = 26  # 预训练的轮数 生成和判别共用      #  80
+        self.adversarial_epoch_num = 150  # 对抗训练的轮数    # 100
+        self.adversarial_epoch_dis_num = 10  # 一次對抗中，進行幾次判別  # 15原始
+
+
+        # self.positive = 'data/msrp_demo_positive.txt'
+        self.positive = 'data/quora_50K_positive.txt'
+        self.positive_file = 'save/positive.txt'  # 原始句对用于判别的正例文件
+        self.negitive_file = 'save/negitive.txt'  # 原始句子+生成的句子构成的反例文件
+        self.oracle_file = 'save/oracle.txt'  # 原始的文件
+        self.generator_file = 'save/generator.txt'  # 生成的令牌文件
+        self.test_file = 'save/test_file.txt'  # 生成的用来测试的文件
+
+失败现象：生成大量重复内容和格式，g_loss 和 d_loss 的损失倒是降下来，
+失败原因：模型崩溃，生成模式单一
+
+2018.11.8 18:33
+# you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 32  # 32
+        self.hidden_dim = 32  # 32
+        self.sequence_length = 20  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数，即通道数量
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 640  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+
+        self.pre_epoch_num = 80  # 预训练的轮数 生成和判别共用      #  80
+        self.adversarial_epoch_num = 100  # 对抗训练的轮数    # 100
+        self.adversarial_epoch_dis_num = 15  # 一次對抗中，進行幾次判別  # 15原始
+
+
+        # self.positive = 'data/msrp_demo_positive.txt'
+        self.positive = 'data/quora_50K_positive.txt'
+        self.positive_file = 'save/positive.txt'  # 原始句对用于判别的正例文件
+        self.negitive_file = 'save/negitive.txt'  # 原始句子+生成的句子构成的反例文件
+        self.oracle_file = 'save/oracle.txt'  # 原始的文件
+        self.generator_file = 'save/generator.txt'  # 生成的令牌文件
+        self.test_file = 'save/test_file.txt'  # 生成的用来测试的文件
+
+# 2018.11.10号
+        # you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 32  # 32
+        self.hidden_dim = 32  # 32
+        self.sequence_length = 20  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数，即通道数量
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 640  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+
+        self.pre_epoch_num = 3  # 预训练的轮数 生成和判别共用      #  80
+        self.adversarial_epoch_num = 10  # 对抗训练的轮数    # 100
+        self.adversarial_epoch_dis_num = 15  # 一次對抗中，進行幾次判別  # 15原始
+
+实验结果总结：
+本次试验所使用参数设置倒是可以生成可用的句子，然而，生成的句子语义与原句有较大差别，且训练和对抗轮数较少，
+未对原始的句子有较大改变
+# 2018.11.15
+        # you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 32  # 32
+        self.hidden_dim = 32  # 32
+        self.sequence_length = 20  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数，即通道数量
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 640  # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+
+        self.pre_epoch_num = 30  # 预训练的轮数 生成和判别共用      #  80
+        self.adversarial_epoch_num = 80  # 对抗训练的轮数    # 100
+        self.adversarial_epoch_dis_num = 15  # 一次對抗中，進行幾次判別  # 15原始
+
+2018.11.18
+ # you can change parameters, generator here
+        self.vocab_size = 5000  # 词库大小，被设定为5000
+        self.emb_dim = 32  # 32
+        self.hidden_dim = 32  # 32
+        self.sequence_length = 20  # 序列长度
+        self.filter_size = [2, 3]  # 两层核大小
+        self.num_filters = [100, 200]  # 两层核个数，即通道数量
+        self.l2_reg_lambda = 0.2  # 正则化参数
+        self.dropout_keep_prob = 0.75  # 用于随机丢弃的节点比例
+        self.batch_size = 64  # 批大小
+        self.generate_num = 1000 # 生成样例的数量，被设定为10000
+        self.start_token = 0  # 开始的时候的选取的令牌值
+
+
+        self.pre_epoch_num = 5  # 预训练的轮数 生成和判别共用      #  80
+        self.adversarial_epoch_num = 30  # 对抗训练的轮数    # 100
+        self.adversarial_epoch_dis_num = 15  # 一次對抗中，進行幾次判別  # 15原始
+
+
+        # self.positive = 'data/msrp_demo_positive.txt'
+        self.positive = 'data/quora_50K_positive.txt'
+        self.positive_file = 'save/positive.txt'  # 原始句对用于判别的正例文件
+        self.negitive_file = 'save/negitive.txt'  # 原始句子+生成的句子构成的反例文件
+        self.oracle_file = 'save/oracle.txt'  # 原始的文件
+        self.generator_file = 'save/generator.txt'  # 生成的令牌文件
+        self.test_file = 'save/test_file.txt'  # 生成的用来测试的文件
+
+
+
+
+
+
+
+
+
+
+
+
+
