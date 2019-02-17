@@ -1,6 +1,6 @@
 import numpy as np
 
-from seqgan.utils.metrics.Metrics import Metrics
+from GAN_Tian.seqgan.utils.metrics.Metrics import Metrics
 
 
 class Nll(Metrics):

@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from seqgan.utils.utils import init_sess
+from GAN_Tian.seqgan.utils.utils import init_sess
 
 
 class Gan:

@@ -1,10 +1,11 @@
 # -*- coding:utf-8 -*-
 import nltk
 from GAN_Tian.seqgan.Seqgan import Seqgan
-
+import sys
 if __name__ =='__main__':
-    # import nltk
-    # nltk.download('punkt')
+    print(sys.executable)
+    nltk.download('punkt')
+    print("下载完成")
     gan = Seqgan()
     # train_model = 'real'  # oracle    cfg     real
     # local_data = 'data/en_demo2.txt'

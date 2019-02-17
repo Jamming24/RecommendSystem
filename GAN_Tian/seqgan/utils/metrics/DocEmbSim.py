@@ -7,7 +7,7 @@ import numpy as np
 import tensorflow as tf
 from scipy.spatial.distance import cosine
 
-from seqgan.utils.metrics.Metrics import Metrics
+from GAN_Tian.seqgan.utils.metrics.Metrics import Metrics
 
 
 class DocEmbSim(Metrics):

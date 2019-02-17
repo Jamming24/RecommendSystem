@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.spatial.distance import cosine
 
-from seqgan.utils.metrics.Metrics import Metrics
+from GAN_Tian.seqgan.utils.metrics.Metrics import Metrics
 
 
 class EmbSim(Metrics):

@@ -2,19 +2,19 @@
 import json
 from time import time
 
-from seqgan.Gan import Gan
-from seqgan.SeqganDataLoader import DataLoader, DisDataloader
-from seqgan.SeqganDiscriminator import Discriminator
-from seqgan.SeqganGenerator import Generator
-from seqgan.SeqganReward import Reward
+from GAN_Tian.seqgan.Gan import Gan
+from GAN_Tian.seqgan.SeqganDataLoader import DataLoader, DisDataloader
+from GAN_Tian.seqgan.SeqganDiscriminator import Discriminator
+from GAN_Tian.seqgan.SeqganGenerator import Generator
+from GAN_Tian.seqgan.SeqganReward import Reward
 # 评价和文本处理的代码
-from seqgan.utils.metrics.Cfg import Cfg
-from seqgan.utils.metrics.EmbSim import EmbSim
-from seqgan.utils.metrics.Nll import Nll
-from seqgan.utils.oracle.OracleCfg import OracleCfg
-from seqgan.utils.oracle.OracleLstm import OracleLstm
-from seqgan.utils.text_process import *
-from seqgan.utils.utils import *
+from GAN_Tian.seqgan.utils.metrics.Cfg import Cfg
+from GAN_Tian.seqgan.utils.metrics.EmbSim import EmbSim
+from GAN_Tian.seqgan.utils.metrics.Nll import Nll
+from GAN_Tian.seqgan.utils.oracle.OracleCfg import OracleCfg
+from GAN_Tian.seqgan.utils.oracle.OracleLstm import OracleLstm
+from GAN_Tian.seqgan.utils.text_process import *
+from GAN_Tian.seqgan.utils.utils import *
 
 
 class Seqgan(Gan):
@@ -124,8 +124,8 @@ class Seqgan(Gan):
 
     # 初始化真实数据的训练配置
     def init_real_trainng(self, data_loc=None):
-        from seqgan.utils.text_process import text_precess, text_to_code, text_to_code_p
-        from seqgan.utils.text_process import get_tokenlized, get_word_list, get_dict
+        from GAN_Tian.seqgan.utils.text_process import text_precess, text_to_code, text_to_code_p
+        from GAN_Tian.seqgan.utils.text_process import get_tokenlized, get_word_list, get_dict
         if data_loc is None:
             data_loc = 'data/image_coco.txt'
         # 先给他禁了，这个重置了词库大小和序列长度，不能禁止这个，——改
@@ -171,7 +171,7 @@ class Seqgan(Gan):
 
     # 初始化真实数据的评价指标
     def init_real_metric(self):
-        from seqgan.utils.metrics.DocEmbSim import DocEmbSim
+        from GAN_Tian.seqgan.utils.metrics.DocEmbSim import DocEmbSim
         docsim = DocEmbSim(oracle_file=self.oracle_file, generator_file=self.generator_file,
                            num_vocabulary=self.vocab_size)
         self.add_metric(docsim)
@@ -182,8 +182,8 @@ class Seqgan(Gan):
 
     # 开始真实数据的训练
     def train_real(self, data_loc=None):
-        from seqgan.utils.text_process import code_to_text
-        from seqgan.utils.text_process import get_tokenlized
+        from GAN_Tian.seqgan.utils.text_process import code_to_text
+        from GAN_Tian.seqgan.utils.text_process import get_tokenlized
         # 调用配置函数，配置并初始化判别器和生成器，并得到原始数据获得的 单词-索引 和 索引-单词 字典
         wi_dict, iw_dict = self.init_real_trainng(data_loc)
         # 初始化真实数据的评价指标

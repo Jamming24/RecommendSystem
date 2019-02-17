@@ -4,7 +4,7 @@ import random
 from nltk import CFG
 from nltk.parse.generate import generate
 
-from seqgan.utils.text_process import *
+from GAN_Tian.seqgan.utils.text_process import *
 
 
 
