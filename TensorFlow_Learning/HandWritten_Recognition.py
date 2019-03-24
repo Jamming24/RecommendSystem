@@ -28,7 +28,7 @@ y = tf.placeholder(tf.float32, [None, 10])
 # 模型需要权重值和偏置量，他们被统一叫做学习参数，在tensorflow里使用Variable定义学习参数
 # 一个Variable代表一个可以修改的张量，在tensorflow的图中  本身也是一个变量
 # W 设置为随机值， b设置为零
-W = tf.Variable(tf.random_normal([784, 10]))  # 为啥是第二个参数是10呢？？？？？？
+W = tf.Variable(tf.random_normal([784, 10]))  # 为啥是第二个参数是10呢？答：因为有10个输出，每一层就要有是个节点，对应10个偏置项
 b = tf.Variable(tf.zeros([10]))
 pred = tf.nn.softmax(tf.matmul(x, W) + b)  # softmax分类
 # 损失函数
@@ -44,29 +44,29 @@ display_step = 1
 saver = tf.train.Saver()
 model_path = "log/HandWritten_recognition.ckpt"
 # # 启动session
-# with tf.Session() as sess:
-#     init = tf.global_variables_initializer()
-#     sess.run(init)
-#     # 启动循环开始训练
-#     for epoch in range(training_epochs):
-#         avg_cost = 0
-#         total_batch = int(mnist.train.num_examples / batch_size)
-#         # 使用随机批梯度下降循环所以数据集
-#         for i in range(total_batch):
-#             batch_xs, batch_ys = mnist.train.next_batch(batch_size)
-#             # 运行优化器
-#             c = sess.run([optimizer, cost], feed_dict={x: batch_xs, y: batch_ys})
-#             # 计算平均loss值
-#             # print(type(c))
-#             # print(c)
-#             avg_cost += c[1] / total_batch
-#         # 显示训练中的详细信息
-#         if (epoch + 1) % display_step == 0:
-#             # '%04d' % (epoch+1) 表示格式化输出 4表示 总计位数
-#             print("Epoch:", '%04d' % (epoch + 1), "cost=", "{:.9f}".format(avg_cost))
-#     print("Training Finished!")
-#     # 测试Model  用tf.arg_max返回onehot编码中数值为1那个元素的下标 这三行代码都是干什么用的呢？？？？？？？
-#     correct_prediction = tf.equal(tf.arg_max(pred, 1), tf.arg_max(y, 1))
+with tf.Session() as sess:
+    init = tf.global_variables_initializer()
+    sess.run(init)
+    # 启动循环开始训练
+    for epoch in range(training_epochs):
+        avg_cost = 0
+        total_batch = int(mnist.train.num_examples / batch_size)
+        # 使用随机批梯度下降循环所以数据集
+        for i in range(total_batch):
+            batch_xs, batch_ys = mnist.train.next_batch(batch_size)
+            # 运行优化器
+            c = sess.run([optimizer, cost], feed_dict={x: batch_xs, y: batch_ys})
+            # 计算平均loss值
+            # print(type(c))
+            # print(c)
+            avg_cost += c[1] / total_batch
+        # 显示训练中的详细信息
+        if (epoch + 1) % display_step == 0:
+            # '%04d' % (epoch+1) 表示格式化输出 4表示 总计位数
+            print("Epoch:", '%04d' % (epoch + 1), "cost=", "{:.9f}".format(avg_cost))
+    print("Training Finished!")
+    # 测试Model  用tf.arg_max返回onehot编码中数值为1那个元素的下标 这三行代码都是干什么用的呢？？？？？？？
+    correct_prediction = tf.equal(tf.arg_max(pred, 1), tf.arg_max(y, 1))
 #     # 计算准确率
 #     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 #     print("Accuracy:", accuracy.eval({x: mnist.test.images, y: mnist.test.labels}))
@@ -76,29 +76,29 @@ model_path = "log/HandWritten_recognition.ckpt"
 
 
 # 读取和测试模型
-print("Starting 2nd session.....")
-with tf.Session() as sess:
-    # 初始化变量
-    sess.run(tf.global_variables_initializer())
-    # 恢复模型变量
-    saver.restore(sess, model_path)
-    # 测试model
-    correct_prediction = tf.equal(tf.arg_max(pred, 1), tf.arg_max(y, 1))
-    # 计算准确率
-    accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-    print("Accuracy:", accuracy.eval({x:mnist.test.images, y:mnist.test.labels}))
-
-    output = tf.arg_max(pred, 1)
-    batch_xs, batch_ys = mnist.train.next_batch(2)
-    outputval, predv = sess.run([output, pred], feed_dict={x:batch_xs})
-    print(outputval, predv, batch_ys)
-    im = batch_xs[0]
-    im = im.reshape(-1, 28)
-    pylab.imshow(im)
-    pylab.show()
-
-    im = batch_xs[1]
-    im = im.reshape(-1, 28)
-    pylab.imshow(im)
-    pylab.show()
+# print("Starting 2nd session.....")
+# with tf.Session() as sess:
+#     # 初始化变量
+#     sess.run(tf.global_variables_initializer())
+#     # 恢复模型变量
+#     saver.restore(sess, model_path)
+#     # 测试model
+#     correct_prediction = tf.equal(tf.arg_max(pred, 1), tf.arg_max(y, 1))
+#     # 计算准确率
+#     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+#     print("Accuracy:", accuracy.eval({x:mnist.test.images, y:mnist.test.labels}))
+#
+#     output = tf.arg_max(pred, 1)
+#     batch_xs, batch_ys = mnist.train.next_batch(2)
+#     outputval, predv = sess.run([output, pred], feed_dict={x:batch_xs})
+#     print(outputval, predv, batch_ys)
+#     im = batch_xs[0]
+#     im = im.reshape(-1, 28)
+#     pylab.imshow(im)
+#     pylab.show()
+#
+#     im = batch_xs[1]
+#     im = im.reshape(-1, 28)
+#     pylab.imshow(im)
+#     pylab.show()
 
