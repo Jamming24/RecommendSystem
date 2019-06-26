@@ -4,8 +4,8 @@ from GAN_Tian.seqgan.Seqgan import Seqgan
 import sys
 if __name__ =='__main__':
     print(sys.executable)
-    nltk.download('punkt')
-    print("下载完成")
+    # nltk.download('punkt')
+    # print("下载完成")
     gan = Seqgan()
     # train_model = 'real'  # oracle    cfg     real
     # local_data = 'data/en_demo2.txt'
