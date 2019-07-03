@@ -7,8 +7,13 @@
 
 import pandas as pd
 from sklearn.model_selection import StratifiedShuffleSplit
-
-root_path = "E:/Fire2019/评测任务三/"
+from nltk.stem.porter import PorterStemmer
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+from nltk import data
+# 添加自己的NLTK下载数据路径
+data.path.append(r"D:\PycharmWorkSpace\Machine_learning\datasets\nltk_data")
+# nltk.download('wordnet')
 
 
 def standard_generating_data(data_path):
@@ -94,9 +99,42 @@ def standard_generating_CIQ_data():
     print(f"CIQ测试集数据：{CIQ_test_set.shape[0]}行")
 
 
-train_data_path = root_path + '源文件/train.csv'
-pd.set_option("display.max_columns", None)
-pd.set_option("display.max_rows", None)
-standard_generating_data(data_path=train_data_path)
-get_ICQtrian_content()
-standard_generating_CIQ_data()
+def main():
+    train_data_path = root_path + '源文件/train.csv'
+    standard_generating_data(data_path=train_data_path)
+    get_ICQtrian_content()
+    standard_generating_CIQ_data()
+
+
+def load_data_contents(data_path):
+    csv_data = pd.read_csv(open(data_path, encoding='UTF-8'), sep='\t')
+    return csv_data['question_text']
+
+
+def text_stemmer(contents, flag=1):
+    # flag = 1 表示词形还原， 0表示词干提取
+    stemmer_contents = []
+    lemmatizer = WordNetLemmatizer()
+    porter_stemmer = PorterStemmer()
+    for line in contents:
+        Stemmer_words = []
+        words = word_tokenize(line)
+        for w in words:
+            if flag == 1:
+                stemmer_word = lemmatizer.lemmatize(word=w)
+            elif flag == 0:
+                stemmer_word = porter_stemmer.stem(word=w)
+            Stemmer_words.append(stemmer_word)
+        # print("lemmatizer句子", " ".join(Stemmer_words))
+        stemmer_contents.append(" ".join(Stemmer_words))
+    return pd.Series(stemmer_contents)
+
+
+def main_2():
+    root_path = "E:/Fire2019/评测任务三/"
+    pd.set_option("display.max_columns", None)
+    pd.set_option("display.max_rows", None)
+    CIQ_train_path = root_path + "实验文件/CIQ_train.tsv"
+    data_contents = load_data_contents(CIQ_train_path)
+    print(text_stemmer(data_contents, flag=0))
+

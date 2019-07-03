@@ -9,10 +9,11 @@ import pandas as pd
 from sklearn.externals import joblib
 from Fire2019_CIQ.Binary_Classifier_CIQ import getTF_IDF_matrix
 from sklearn.linear_model import LogisticRegression
-from matplotlib import pyplot as plt
+from sklearn.svm import SVC
 from sklearn.preprocessing import normalize
 from sklearn.metrics import classification_report
 from sklearn.linear_model import SGDClassifier
+from Fire2019_CIQ import data_process
 
 
 # 如果二分类能够将所有的虚假问题都能跳出来，即 1标签的召回率为100% 进行五分类，不足100% 进行二分类
@@ -51,36 +52,58 @@ def get_CIQ_predict_one(min_train_path, CIQ_test_data, save_path):
     print("开发集合中用SVM二分类预测为一的文件输出完成")
 
 
-def multi_classifier(CIQ_train, CIQ_dev):
+def multi_LR_classifier(CIQ_train, CIQ_dev):
+    train_csv = pd.read_csv(open(CIQ_train, encoding="UTF-8"), sep="\t")
+    dev_csv = pd.read_csv(open(CIQ_dev, encoding="UTF-8"), sep="\t")
+    # train_data = train_csv["question_text"].tolist()
+    train_data = data_process.text_stemmer(train_csv["question_text"], flag=1).tolist()
+    train_label = train_csv["target"]
+    # dev_data = dev_csv["question_text"].tolist()
+    dev_data = data_process.text_stemmer(dev_csv["question_text"], flag=1).tolist()
+    dev_label = dev_csv["target"]
+
+    tf_idf_vertorize = getTF_IDF_matrix(train_data)
+    train_tf_idf_vectorize = normalize(tf_idf_vertorize.transform(train_data), norm='l2')
+    dev_tf_idf_vectorize = normalize(tf_idf_vertorize.transform(dev_data), norm='l2')
+    # 训练模型
+    softmax_reg = LogisticRegression(multi_class="multionmial", solver="lbfgs", C=10)
+    softmax_reg.fit(train_tf_idf_vectorize, train_label)
+    # 得到模型
+    # sgd_clf = SGDClassifier(random_state=42)
+    # sgd_clf.fit(train_tf_idf_vectorize, train_label)
+    # 多元逻辑回归
+    print("多元逻辑回归")
+    softmax_reg = LogisticRegression(multi_class="multinomial", solver="lbfgs", C=15)
+    softmax_reg.fit(train_tf_idf_vectorize, train_label)
+    y_predict = softmax_reg.predict(dev_tf_idf_vectorize)
+    # predict() 输出预测类别， predict_proba()输出预测概率
+    # decision_function 返回实例分数
+    # print(sgd_clf.decision_function(dev_tf_idf_vectorize))
+    # y_predict = sgd_clf.predict(dev_tf_idf_vectorize)
+    classifier_report = classification_report(dev_label, y_predict)
+    print(classifier_report)
+
+
+def multi_svm_classifier(CIQ_train, CIQ_dev):
     train_csv = pd.read_csv(open(CIQ_train, encoding="UTF-8"), sep="\t")
     dev_csv = pd.read_csv(open(CIQ_dev, encoding="UTF-8"), sep="\t")
     train_data = train_csv["question_text"].tolist()
     train_label = train_csv["target"]
     dev_data = dev_csv["question_text"].tolist()
     dev_label = dev_csv["target"]
-    train_data_process = []
-    dev_data_process = []
-    for data in train_data:
-        data = data.replace("?", " ").replace("\"", " ").replace(".", " ").replace(",", " ").replace("\“", " ").replace("”", " ")
-        train_data_process.append(data)
-    for data in dev_data:
-        data = data.replace("?", " ").replace("\"", " ").replace(".", " ").replace(",", " ").replace("\“", " ").replace("”", " ")
-        dev_data_process.append(data)
 
+    tf_idf_vertorize = getTF_IDF_matrix(train_data)
+    train_tf_idf_vectorize = normalize(tf_idf_vertorize.transform(train_data), norm='l2')
+    dev_tf_idf_vectorize = normalize(tf_idf_vertorize.transform(dev_data), norm='l2')
+    print("多项式SVM")
 
-    tf_idf_vertorize = getTF_IDF_matrix(train_data_process)
-    train_tf_idf_vectorize = normalize(tf_idf_vertorize.transform(train_data_process), norm='l2')
-    dev_tf_idf_vectorize = normalize(tf_idf_vertorize.transform(dev_data_process), norm='l2')
-    # 训练模型
-    # softmax_reg = LogisticRegression(multi_class="multionmial", solver="lbfgs", C=10)
-    # softmax_reg.fit(train_tf_idf_vectorize, train_label)
-    # 得到模型
-    sgd_clf = SGDClassifier(random_state=42)
-    sgd_clf.fit(train_tf_idf_vectorize, train_label)
+    poly_kernel_svm = SVC(decision_function_shape='ovo')
+    poly_kernel_svm.fit(train_tf_idf_vectorize, train_label)
+    y_predict = poly_kernel_svm.predict(dev_tf_idf_vectorize)
     # predict() 输出预测类别， predict_proba()输出预测概率
     # decision_function 返回实例分数
     # print(sgd_clf.decision_function(dev_tf_idf_vectorize))
-    y_predict = sgd_clf.predict(dev_tf_idf_vectorize)
+    # y_predict = sgd_clf.predict(dev_tf_idf_vectorize)
     classifier_report = classification_report(dev_label, y_predict)
     print(classifier_report)
 
@@ -96,7 +119,13 @@ def mian():
 root_path = "E:/Fire2019/评测任务三/"
 CIQ_train_path = root_path + "实验文件/CIQ_train.tsv"
 CIQ_dev_path = root_path + "实验文件/CIQ_dev.tsv"
-multi_classifier(CIQ_train_path, CIQ_dev_path)
+multi_LR_classifier(CIQ_train_path, CIQ_dev_path)
+multi_svm_classifier(CIQ_train_path, CIQ_dev_path)
+# -----------------------
+# 对数据进行去停用词 取词干 词型还原等操作
+# 加入embedding作为特征 word2vector doc2vector
+# 分类器加入 随机森林
+# -------------------------
 # csv = pd.read_csv(open(CIQ_train_path, encoding="UTF-8"), sep='\t')
 # csv.hist(bins=5, figsize=(10, 5))
 # plt.show()
