@@ -2,6 +2,7 @@
 
 import sys
 from urllib.parse import parse_qs
+import this
 
 my_values = parse_qs('red=5&blue=0&green=', keep_blank_values=True)
 print(my_values)
@@ -11,6 +12,7 @@ if not test:
     print('空字典')
 else:
     print(my_values)
+
 
 def to_str(bytes_or_str):
     if isinstance(bytes_or_str, bytes):

@@ -11,9 +11,16 @@ from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 from nltk import data
+import gensim
+from rake_nltk import Rake
+from nltk.corpus import PlaintextCorpusReader
+import warnings
+warnings.filterwarnings("ignore")
 # 添加自己的NLTK下载数据路径
 data.path.append(r"D:\PycharmWorkSpace\Machine_learning\datasets\nltk_data")
 # nltk.download('wordnet')
+
+root_path = "E:/Fire2019/评测任务三/"
 
 
 def standard_generating_data(data_path):
@@ -57,23 +64,25 @@ def standard_generating_data(data_path):
     print(f"二分类mini测试集数据：{min_test_set.shape[0]}行")
 
 
-def get_ICQtrian_content():
+def get_ICQtrian_content(id_file, out_file):
     train_ICQ_df = pd.DataFrame()
     csv_data_all = pd.read_csv(open(root_path + '源文件/train.csv', encoding='UTF-8'))
     csv_data_all.drop(["target"], axis=1, inplace=True)
-    ICQ_csv = pd.read_csv(open(root_path+"源文件/CIQ-traindata.tsv", encoding='UTF-8'), sep='\t')
+    # ICQ_csv = pd.read_csv(open(root_path+"源文件/CIQ-traindata.tsv", encoding='UTF-8'), sep='\t')
+    ICQ_csv = pd.read_csv(open(id_file, encoding='UTF-8'), sep='\t')
     # 此时的csv_id 是一个Series 可以通过append方法添加到DateFrame中
     csv_id = ICQ_csv["qid"]
-    csv_target = ICQ_csv["Label"].tolist()
+    # csv_target = ICQ_csv["Label"].tolist()
     print(f"六分类数据总计有{csv_id.count()}行")
     for i in range(csv_id.count()):
         df = csv_data_all[csv_data_all['qid'] == csv_id[i]]
         train_ICQ_df = pd.concat([train_ICQ_df, df])
     print("处理完成")
     print(train_ICQ_df.info())
-    train_ICQ_df.insert(2, 'target', csv_target)
+    # train_ICQ_df.insert(2, 'target', csv_target)
     print(train_ICQ_df.info())
-    train_ICQ_df.to_csv(root_path+"实验文件/CIQ_traindata_contents.tsv", sep='\t', index=False, encoding='UTF-8')
+    # train_ICQ_df.to_csv(root_path+"实验文件/CIQ_traindata_contents.tsv", sep='\t', index=False, encoding='UTF-8')
+    train_ICQ_df.to_csv(out_file, sep='\t', index=False, encoding='UTF-8')
     print("写入成功")
 
 
@@ -131,10 +140,55 @@ def text_stemmer(contents, flag=1):
 
 
 def main_2():
-    root_path = "E:/Fire2019/评测任务三/"
     pd.set_option("display.max_columns", None)
     pd.set_option("display.max_rows", None)
     CIQ_train_path = root_path + "实验文件/CIQ_train.tsv"
     data_contents = load_data_contents(CIQ_train_path)
     print(text_stemmer(data_contents, flag=0))
+
+
+def get_CIQ_wordVector():
+    wordlists = PlaintextCorpusReader(root_path + "实验文件", fileids='.*\.tsv')
+    words = wordlists.words("CIQ_traindata_contents.tsv")
+    model = gensim.models.KeyedVectors.load_word2vec_format(root_path + 'GoogleNews-vectors-negative300.bin',
+                                                            binary=True)
+
+    vocabulary = model.wv.vocab.keys()
+    file_object = open(root_path + "实验文件/CIQ_wordVector.tsv", encoding='UTF-8', mode='w')
+    file_object.write(f"{len(vocabulary)}\t{300}\n")
+    for w in words:
+        if len(w) != 20 and w in vocabulary:
+            vector_list = model.get_vector(w).tolist()
+            file_object.write(w + "\t")
+            for index in range(len(vector_list) - 1):
+                file_object.write(str(vector_list[index]) + ",")
+            file_object.write(str(vector_list[len(vector_list) - 1]) + "\n")
+    file_object.close()
+
+
+def get_rake():
+    stopwordlist = "E:/Fire2019/评测任务一/AILA-data/stopwords.txt"
+    rake = Rake(stopwords=stopwordlist, min_length=2)
+    text = "What is the average IQ of Christians?"
+    rake.extract_keywords_from_text(text)
+    print(rake.rank_list)
+    b = rake.get_ranked_phrases()
+    print(b)
+
+    # print("hello")
+    #
+    # r = Rake(min_length=1, max_length=1)
+    # my_test = 'My father was a self-taught mandolin player. He was one of the best string instrument players in our town. He could not read music, but if he heard a tune a few times, he could play it. When he was younger, he was a member of a small country music band. They would play at local dances and on a few occasions would play for the local radio station. He often told us how he had auditioned and earned a position in a band that featured Patsy Cline as their lead singer. He told the family that after he was hired he never went back. Dad was a very religious man. He stated that there was a lot of drinking and cursing the day of his audition and he did not want to be around that type of environment.'
+    # r.extract_keywords_from_text(my_test)
+    # print(r.get_ranked_phrases())
+    # print("==============================")
+    # print(r.get_ranked_phrases_with_scores())
+    # print("===========================")
+    # print(r.stopwords)
+    # print("=============================")
+    # print(r.get_word_degrees())
+
+
+get_ICQtrian_content(id_file=root_path+"源文件/CIQ-testdata_noLabel.tsv", out_file=root_path+"实验文件/CIQ_test_no_Label.tsv")
+
 

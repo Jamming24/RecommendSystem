@@ -9,6 +9,9 @@ from sklearn.datasets import fetch_mldata
 from matplotlib import pyplot as plt
 import numpy as np
 import matplotlib
+from sklearn.multiclass import OneVsOneClassifier, OneVsRestClassifier
+from sklearn.svm import SVC
+from sklearn.linear_model import SGDClassifier
 # from sklearn.datasets.base import get_data_home
 # 获取数据缓存路径
 # print(get_data_home())
@@ -30,9 +33,26 @@ def data_show(X, y):
     print(y[36000])
 
 
-mnist = fetch_mldata("MNIST original", data_home='./datasets')
-X, y = mnist["data"], mnist["target"]
-X_train, X_test, y_train, y_test = X[:60000], X[60000:], y[:60000], y[60000:]
-shuffle_index = np.random.permutation(60000)
-# 对60000个数进行洗牌
-X_train, y_train = X_train[shuffle_index], y_train[shuffle_index]
+def test_OneVSOne():
+    mnist = fetch_mldata("MNIST original", data_home='./datasets')
+    X, y = mnist["data"], mnist["target"]
+    X_train, X_test, y_train, y_test = X[:6000], X[6000:6500], y[:6000], y[6000:6500]
+    shuffle_index = np.random.permutation(6000)
+    # 对60000个数进行洗牌
+    X_train, y_train = X_train[shuffle_index], y_train[shuffle_index]
+    some_digit = X[360]
+    svm_clf = SVC()
+    svm_clf.fit(X_train, y_train)
+    print(svm_clf.predict([some_digit]))
+    some_digit_scores = svm_clf.decision_function([some_digit])
+    print(some_digit_scores)
+    # classes_可以查询分类类别
+    print(svm_clf.classes_)
+    # 强制使用一对一策略
+    ovo_clf = OneVsOneClassifier(SGDClassifier(random_state=42))
+    ovo_clf.fit(X_train, y_train)
+    print(ovo_clf.predict([some_digit]))
+    print(len(ovo_clf.estimators_))
+
+
+test_OneVSOne()
