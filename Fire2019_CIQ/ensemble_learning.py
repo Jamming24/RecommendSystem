@@ -11,6 +11,7 @@ from sklearn.preprocessing import normalize
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import VotingClassifier
 from sklearn.ensemble import AdaBoostClassifier
+from mlxtend.classifier import StackingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import MultinomialNB
@@ -29,8 +30,11 @@ from Fire2019_CIQ.brew.stacking.stacker import EnsembleStack, EnsembleStackClass
 from Fire2019_CIQ.brew.combination.combiner import Combiner
 
 root_path = "E:/Fire2019/评测任务三/"
-CIQ_train_path = root_path + "实验文件/CIQ_train.tsv"
-CIQ_dev_path = root_path + "实验文件/CIQ_dev_test.tsv"
+CIQ_train_path = root_path + "实验文件/CIQ_all_train.tsv"
+# CIQ_train_path = root_path + "实验文件/CIQ_train.tsv"
+
+CIQ_dev_path = root_path + "实验文件/CIQ_test_no_Label.tsv"
+# CIQ_dev_path = root_path + "实验文件/CIQ_dev.tsv"
 train_csv = pd.read_csv(open(CIQ_train_path, encoding="UTF-8"), sep="\t")
 train_data = train_csv["question_text"].tolist()
 
@@ -48,7 +52,7 @@ train_tf_idf_vectorize = normalize(tf_idf_vertorize.transform(train_data), norm=
 dev_tf_idf_vectorize = normalize(tf_idf_vertorize.transform(dev_data), norm='l2')
 #
 log_clf = LogisticRegression(max_iter=10)
-svm_clf = SVC(probability=True, decision_function_shape='ovo', kernel="linear", C=1)
+svm_clf = SVC(probability=True, decision_function_shape='ovo', kernel="linear", C=0.2)
 knnclf = KNeighborsClassifier(n_neighbors=10)
 NB_clf = MultinomialNB(alpha=0.01)
 tree_clf = DecisionTreeClassifier(max_depth=3)
@@ -87,13 +91,28 @@ stack.add_layer(layer_2)
 
 sclf = EnsembleStackClassifier(stack)
 
-clf_list = [log_clf, svm_clf, NB_clf, tree_clf, rnd_clf, eclf, sclf]
-lbl_list = ['Logistic Regression', 'SVM', 'NB_clf', 'tree_clf', 'rnd_clf', 'Ensemble', 'Stacking']
+clf_list = [log_clf, svm_clf, NB_clf, knnclf, tree_clf, rnd_clf, eclf, sclf]
+lbl_list = ['Logistic Regression', 'SVM', 'knn', 'NB_clf', 'tree_clf', 'rnd_clf', 'Ensemble', 'Stacking']
 
 itt = itertools.product([0, 1, 2, 3, 4, 5, 6, 7], repeat=8)
 print("brew----------------")
 file_object = open(root_path+"实验文件/commit_result.txt", 'w', encoding='UTF-8')
 out_pred = None
+
+# mxltend
+
+# sclf = StackingClassifier(classifiers=[log_clf, svm_clf, NB_clf, tree_clf, rnd_clf], meta_classifier=log_clf)
+# for clf, label in zip([log_clf, svm_clf, NB_clf, sclf], ['log_clf','svm_clf','NB_clf','StackingClassifier']):
+#     # scores = model_selection.cross_val_score(clf, X, y, cv=3, scoring='accuracy')
+#     # print("Accuracy: %0.2f (+/- %0.2f) [%s]" % (scores.mean(), scores.std(), label))
+#     clf.fit(train_tf_idf_vectorize, train_label)
+#     y_pred = clf.predict(dev_tf_idf_vectorize)
+#     print(clf.__class__.__name__, accuracy_score(dev_label, y_pred), sep=":")
+#
+# print()
+
+
+
 for clf, lab, grd in zip(clf_list, lbl_list, itt):
     clf.fit(train_tf_idf_vectorize, train_label)
     y_pred = clf.predict(dev_tf_idf_vectorize)

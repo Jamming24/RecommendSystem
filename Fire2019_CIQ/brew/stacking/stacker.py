@@ -3,7 +3,7 @@ import numpy as np
 from ..base import Ensemble
 from ..combination.combiner import Combiner
 
-from sklearn import cross_validation
+from sklearn import model_selection
 
 
 class EnsembleStack(object):
@@ -28,8 +28,8 @@ class EnsembleStack(object):
             n_classes = len(set(y)) - 1
             n_classifiers = len(self.layers[layer_idx])
             output = np.zeros((X.shape[0], n_classes * n_classifiers))
-            skf = cross_validation.StratifiedKFold(y, self.cv)
-            for tra, tst in skf:
+            skf = model_selection.StratifiedKFold(self.cv)
+            for tra, tst in skf.split(X, y):
                 self.layers[layer_idx].fit(X[tra], y[tra])
                 out = self.layers[layer_idx].output(X[tst], mode=self.mode)
                 output[tst, :] = out[:, 1:, :].reshape(

@@ -189,6 +189,14 @@ def get_rake():
     # print(r.get_word_degrees())
 
 
-get_ICQtrian_content(id_file=root_path+"源文件/CIQ-testdata_noLabel.tsv", out_file=root_path+"实验文件/CIQ_test_no_Label.tsv")
+def get_Insincere_question():
+    train_data_path = root_path + "源文件/train.csv"
+    train_csv = pd.read_csv(open(train_data_path, encoding='UTF-8'))
+    insincere_question = train_csv[train_csv["target"] == 1]
+    insincere_question.to_csv(root_path+"源文件/insincere_question.csv", index=False)
+
+
+# get_ICQtrian_content(id_file=root_path+"源文件/CIQ-testdata_noLabel.tsv", out_file=root_path+"实验文件/CIQ_test_no_Label.tsv")
+get_Insincere_question()
 
 

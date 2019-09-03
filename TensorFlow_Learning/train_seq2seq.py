@@ -6,10 +6,9 @@
 # @Software: PyCharm
 
 import tensorflow as tf
-import numpy as np
 import random
 import time
-from CCMT.basic_seq2seq import Seq2seq
+from TensorFlow_Learning.basic_seq2seq import Seq2seq
 
 
 tf_config = tf.ConfigProto(allow_soft_placement=True)

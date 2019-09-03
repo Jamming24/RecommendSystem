@@ -12,6 +12,7 @@ r = '[^a-zA-Z ]'  # 仅保留英文字符和空格
 logging.basicConfig(format='%(asctime)s : %(threadName)s : %(levelname)s : %(message)s', level=logging.INFO)
 logging.info("running %s" % " ".join(sys.argv))#13:00开始学习
 
+
 def load_marp():
     content = []
     lines = []
